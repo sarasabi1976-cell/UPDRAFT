@@ -1,20 +1,22 @@
-# Python project backend
+# Python project backend (Flask)
 
-This backend serves the existing frontend and exposes the JSON endpoints its JavaScript requests. It uses only Python's standard library and SQLite.
+This backend uses Flask for HTTP routing, serves the existing frontend, and stores user progress in SQLite. The existing `/api/...` endpoints and browser-cookie account flow are preserved.
 
 ## Run
 
-From the project root:
+From the project root in PowerShell:
 
 ```powershell
+python -m pip install -r Backend/requirements.txt
 python -m Backend
 ```
 
-Open `http://127.0.0.1:8000/`. The root URL serves `Frontend/index.html`; existing relative URLs such as `/pages/plan.html` and `/css/styles.css` are mapped to the `Frontend/` folder. The database is created at `Backend/app.sqlite3` on first start.
+Open `http://127.0.0.1:8000/`. Flask serves `Frontend/index.html` at the root and maps existing URLs such as `/pages/plan.html` and `/css/styles.css` to the `Frontend/` directory. The database is created at `Backend/app.sqlite3` on first start.
 
 ## Files
 
-- `server.py`: local HTTP server, frontend static files, and JSON response helpers.
+- `app.py`: Flask application, frontend file serving, and compatibility adapter for existing API handlers.
+- `server.py`: application entry point used by `python -m Backend`.
 - `api.py`: route handlers and request validation for all screens.
 - `database.py`: SQLite connection and schema initialization.
 - `services.py`: profile, plan, dashboard, and report calculations.
@@ -44,7 +46,6 @@ Guest progress is stored per browser. Users can create an account from the Accou
 
 The backend reads `Frontend/data/questions.json`, `learning-plan.json`, `interview-prompts.json`, and `career-paths.json`. Add quiz records with `id`, `question`, `options`, and the correct option text in `answer`; add plan items under each week's `activities`. Career choices and rule-based recommendation paths come from `career-paths.json`. This is a defined supported catalog, not arbitrary unvalidated input. Answers, focus sessions, and readiness snapshots are stored in SQLite; weekly charts use dated records.
 
-
 ## Latest jobs
 
 The LinkedIn Jobs page opens LinkedIn's own search results for live LinkedIn vacancies. LinkedIn's public Job Posting API is restricted to approved partners and is for submitting/managing postings, not a general job-search feed. The page also supports in-page listings through Adzuna's documented search API. Register for an Adzuna API app ID and key, then set them in the same PowerShell terminal before starting the backend:
@@ -55,4 +56,4 @@ $env:ADZUNA_APP_KEY = "your-app-key"
 python -m Backend
 ```
 
-Without credentials, the page still generates a live LinkedIn search link and explains how to enable the in-page feed. Adzuna listings are credited on the page.
+Without Adzuna credentials, the page still generates a live LinkedIn search link; in-page vacancy cards remain unavailable until a feed is configured.
