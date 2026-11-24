@@ -81,7 +81,7 @@ def search_jobs(profile, query="", location="", country="in"):
         "jobs": [],
     }
     if not result["providerConfigured"]:
-        result["message"] = "Live job cards need Adzuna API credentials. Use the LinkedIn button for live LinkedIn results, or configure ADZUNA_APP_ID and ADZUNA_APP_KEY on the backend."
+        result["message"] = "No recent vacancies are available right now. Try another search or open LinkedIn results."
         return result
 
     params = {

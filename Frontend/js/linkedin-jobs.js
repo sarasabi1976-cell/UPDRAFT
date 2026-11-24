@@ -22,9 +22,6 @@ function renderJobs(data) {
   data.jobs.forEach(job => {
     const article = document.createElement("article");
     article.className = "job-card";
-    const eyebrow = document.createElement("div");
-    eyebrow.className = "eyebrow muted";
-    eyebrow.textContent = "ADZUNA LISTING";
     const heading = document.createElement("h2");
     heading.textContent = job.title || "Job opportunity";
     const meta = document.createElement("p");
@@ -33,7 +30,7 @@ function renderJobs(data) {
     const description = document.createElement("p");
     description.className = "job-description";
     description.textContent = job.description || "Open the listing to view role details.";
-    article.append(eyebrow, heading, meta, description);
+    article.append(heading, meta, description);
     const href = safeExternalUrl(job.url);
     if (href) {
       const link = document.createElement("a");
@@ -45,7 +42,6 @@ function renderJobs(data) {
     }
     list.append(article);
   });
-  status.textContent += " · Listings by Adzuna.";
 }
 
 async function searchJobs(event) {
