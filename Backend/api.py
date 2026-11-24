@@ -209,7 +209,7 @@ class API:
         except Exception as exc:
             print(f"API error: {exc}")
             return self.fail("Internal server error.", 500)
-        self.h.serve_frontend(path)
+        return self.h.serve_frontend(path)
 
     def practice_questions(self, profile):
         career = profile.get("career") or {}
