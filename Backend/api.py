@@ -18,8 +18,8 @@ class API:
     """HTTP API handler. JSON shapes here match Frontend/js fetch calls."""
     def __init__(self, handler): self.h = handler
 
-    def respond(self, data, status=200, cookie=None, cookies=None): self.h.respond(data, status, cookie, cookies)
-    def fail(self, message, status=400): self.respond({"error": message}, status)
+    def respond(self, data, status=200, cookie=None, cookies=None): return self.h.respond(data, status, cookie, cookies)
+    def fail(self, message, status=400): return self.respond({"error": message}, status)
 
     @staticmethod
     def password_hash(password, salt):
