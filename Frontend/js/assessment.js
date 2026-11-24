@@ -12,6 +12,7 @@
   if (!form || !degreeSelect || !specializationSelect || !skillRatings) return;
 
   let degrees = [];
+  let allSkills = [];
 
   function makeOption(label, value = '') {
     return new Option(label, value);
@@ -71,17 +72,25 @@
     });
   }
 
+  function updateSpecializationSkills() {
+    const degree = degrees.find(item => String(item.id) === degreeSelect.value);
+    const specialization = degree?.specializations?.find(item => String(item.id) === specializationSelect.value);
+    const ids = Array.isArray(specialization?.skillIds) ? specialization.skillIds : [];
+    const selectedSkills = ids.map(id => allSkills.find(skill => String(skill.id) === String(id))).filter(Boolean);
+    renderSkills(selectedSkills);
+    submitButton.disabled = !specialization || selectedSkills.length === 0;
+    if (specialization) statusMessage.textContent = `Rate the ${selectedSkills.length} skills for ${specialization.label}.`;
+  }
+
   degreeSelect.addEventListener('change', () => {
     const degree = degrees.find(item => String(item.id) === degreeSelect.value);
-    const specializations = degree?.specializations || [];
-
-    fillSelect(
-      specializationSelect,
-      specializations,
-      degree ? 'Choose a specialization' : 'Choose a degree first'
-    );
+    fillSelect(specializationSelect, degree?.specializations || [], degree ? 'Choose a specialization' : 'Choose a degree first');
     specializationSelect.disabled = !degree;
+    renderSkills([]);
+    submitButton.disabled = true;
   });
+
+  specializationSelect.addEventListener('change', updateSpecializationSkills);
 
   async function loadOptions() {
     statusMessage.textContent = 'Loading education and skill choices…';
@@ -101,7 +110,8 @@
       degrees = Array.isArray(data.degrees) ? data.degrees : [];
 
       fillSelect(degreeSelect, degrees, 'Choose a degree');
-      renderSkills(Array.isArray(data.skills) ? data.skills : []);
+      allSkills = Array.isArray(data.skills) ? data.skills : [];
+      renderSkills([]);
 
       statusMessage.textContent = 'Complete each field, then submit your assessment.';
       submitButton.disabled = false;

@@ -12,15 +12,20 @@ const quizState = {
   index: 0,
   selectedOptionId: null,
   answered: false,
-  loaded: false
+  loaded: false,
+  requestedCount: 5,
+  previousQuestionIds: []
 };
 const warmupState = {
   prompts: [],
   index: 0,
-  loaded: false
+  loaded: false,
+  served: 0,
+  lastPromptId: null
 };
 
 let selectedDuration = 300;
+let sessionStartedAt = null;
 let remainingSeconds = selectedDuration;
 let timerInterval = null;
 let timerDeadline = null;
@@ -81,16 +86,17 @@ function renderQuestion() {
   quizState.answered = false;
 
   if (!question) {
-    get('quiz-count').textContent = 'QUIZ COMPLETE';
+    get('quiz-count').textContent = quizState.questions.length ? 'SET COMPLETE' : 'NO MATCHING QUESTIONS';
     get('quiz-progress').style.width = '100%';
     get('quiz-question').textContent = quizState.questions.length
-      ? 'You have finished the questions selected for you.'
-      : 'No questions are available right now.';
+      ? 'You have finished this question set.'
+      : 'No questions match your current assessment yet.';
     get('quiz-status').textContent = quizState.questions.length
-      ? 'Your answers have been submitted.'
-      : 'Questions will appear here when your backend assigns them.';
+      ? 'Choose a set size and start another fresh question set.'
+      : 'Complete the career or skill assessment to get related questions.';
     get('quiz-submit').hidden = true;
-    get('quiz-next').hidden = true;
+    get('quiz-next').textContent = 'Start another set →';
+    get('quiz-next').hidden = quizState.questions.length === 0;
     return;
   }
 
@@ -138,13 +144,22 @@ function renderQuestion() {
   }
 }
 
-async function loadQuestions() {
-  get('quiz-count').textContent = 'LOADING QUESTIONS…';
+async function loadQuestions({ newSet = false } = {}) {
+  if (newSet && quizState.questions.length) {
+    quizState.previousQuestionIds = [...new Set([...quizState.previousQuestionIds, ...quizState.questions.map(question => String(question.id))])];
+  }
+  const sizeInput = get('quiz-set-size');
+  const requested = Math.max(1, Math.min(10, Number.parseInt(sizeInput.value, 10) || 5));
+  sizeInput.value = String(requested);
+  quizState.requestedCount = requested;
+  get('quiz-count').textContent = 'LOADING YOUR QUESTIONS…';
   get('quiz-status').textContent = '';
   get('quiz-retry').hidden = true;
 
   try {
-    const response = await fetch(`${PRACTICE_API}/questions`, {
+    const params = new URLSearchParams({ limit: String(requested) });
+    if (quizState.previousQuestionIds.length) params.set('exclude', quizState.previousQuestionIds.join(','));
+    const response = await fetch(`${PRACTICE_API}/questions?${params}`, {
       credentials: 'same-origin',
       headers: { Accept: 'application/json' }
     });
@@ -164,6 +179,12 @@ async function loadQuestions() {
     quizState.index = 0;
     quizState.loaded = true;
     renderQuestion();
+    if (data.restartedRound) {
+      quizState.previousQuestionIds = [];
+      get('quiz-status').textContent = 'You have practiced all matching questions. This is a fresh round.';
+    } else if (quizState.questions.length < requested) {
+      get('quiz-status').textContent = `Only ${quizState.questions.length} new matching questions remain in this round.`;
+    }
   } catch (error) {
     console.error('Unable to load practice questions:', error);
     get('quiz-count').textContent = 'QUESTIONS UNAVAILABLE';
@@ -243,6 +264,10 @@ async function submitAnswer() {
 }
 
 function nextQuestion() {
+  if (quizState.index >= quizState.questions.length - 1) {
+    loadQuestions({ newSet: true });
+    return;
+  }
   quizState.index += 1;
   renderQuestion();
 }
@@ -284,20 +309,37 @@ async function loadWarmups() {
 
 function renderWarmupPrompt() {
   const prompt = warmupState.prompts[warmupState.index];
+  if (prompt) { warmupState.served += 1; warmupState.lastPromptId = prompt.id; }
 
   get('warmup-prompt').textContent = prompt
     ? String(prompt.text ?? prompt.prompt ?? '')
     : 'No warm-up prompts are available yet.';
 
   get('warmup-status').textContent = prompt
-    ? `Prompt ${warmupState.index + 1} of ${warmupState.prompts.length}`
+    ? `Prompt ${warmupState.served} · keep going for another prompt`
     : 'Prompts will appear here when your backend assigns them.';
 
-  get('next-prompt').disabled = warmupState.prompts.length < 2;
+  get('next-prompt').disabled = warmupState.prompts.length === 0;
 }
 
 function showTimer() {
-  get('timer').textContent = formatTime(remainingSeconds);
+  const exactRemaining = timerRunning && timerDeadline !== null
+    ? Math.max(0, (timerDeadline - Date.now()) / 1000)
+    : remainingSeconds;
+  const hours = Math.floor(exactRemaining / 3600);
+  const minutes = Math.floor((exactRemaining % 3600) / 60);
+  const seconds = exactRemaining % 60;
+  const minuteAngle = (minutes + seconds / 60) * 6;
+  const hourAngle = ((hours % 12) + minutes / 60) * 30;
+  const elapsed = timerRunning && sessionStartedAt !== null ? (Date.now() - sessionStartedAt) / 1000 : 0;
+  const secondAngle = (elapsed % 60) * 6;
+  get('hour-hand').style.transform = `translateX(-50%) rotate(${hourAngle}deg)`;
+  get('minute-hand').style.transform = `translateX(-50%) rotate(${minuteAngle}deg)`;
+  if (!timerRunning) get('second-hand').style.transform = `translateX(-50%) rotate(${secondAngle}deg)`;
+  const display = formatTime(remainingSeconds);
+  get('timer-readout').textContent = display;
+  get('timer-accessible').textContent = `Timer ${display}`;
+  get('timer').setAttribute('aria-label', `Timer ${display} remaining`);
 }
 
 function stopTimerInterval() {
@@ -312,8 +354,10 @@ function stopTimerInterval() {
 function setTimerDuration(seconds) {
   if (timerRunning) return;
 
-  selectedDuration = seconds;
-  remainingSeconds = seconds;
+  selectedDuration = Math.max(60, Math.min(7200, Math.floor(seconds)));
+  remainingSeconds = selectedDuration;
+  const customMinutes = get('custom-minutes');
+  if (customMinutes) customMinutes.value = String(Math.ceil(selectedDuration / 60));
 
   document.querySelectorAll('.duration-choice').forEach(button => {
     button.setAttribute(
@@ -322,13 +366,12 @@ function setTimerDuration(seconds) {
     );
   });
 
-  get('timer-start').textContent = 'Start focus';
   get('timer-status').textContent = '';
   showTimer();
 }
 
-async function recordFocusSession() {
-  get('timer-status').textContent = 'Time is up. Saving your focus session…';
+async function recordFocusSession(durationSeconds, completed = true) {
+  get('timer-status').textContent = completed ? 'Time is up. Saving your focus session…' : 'Saving the stopped focus session…';
 
   const prompt = warmupState.prompts[warmupState.index];
 
@@ -341,9 +384,9 @@ async function recordFocusSession() {
         Accept: 'application/json'
       },
       body: JSON.stringify({
-        durationSeconds: selectedDuration,
+        durationSeconds,
         promptId: prompt?.id ?? null,
-        completed: true
+        completed
       })
     });
 
@@ -351,79 +394,81 @@ async function recordFocusSession() {
       throw new Error(`Focus session request failed (${response.status})`);
     }
 
-    get('timer-status').textContent = 'Focus session complete and saved.';
+    get('timer-status').textContent = completed ? 'Focus session complete and saved.' : 'Stopped session saved to your activity.';
   } catch (error) {
     console.error('Unable to save focus session:', error);
     get('timer-status').textContent =
-      'Timer complete. The session could not be saved to your account.';
+      'The focus session could not be saved to your account.';
   }
 }
 
 function finishTimer() {
   stopTimerInterval();
   timerRunning = false;
+  get('timer').classList.remove('running');
   remainingSeconds = 0;
-  get('timer-start').textContent = 'Start focus';
+  get('timer-start').disabled = false;
+  get('timer-stop').disabled = true;
+  get('custom-minutes').disabled = false;
+  get('apply-custom-duration').disabled = false;
 
   document.querySelectorAll('.duration-choice').forEach(button => {
     button.disabled = false;
   });
 
   showTimer();
-  recordFocusSession();
+  recordFocusSession(selectedDuration, true);
 }
 
-function startOrPauseTimer() {
-  if (timerRunning) {
-    remainingSeconds = Math.max(
-      0,
-      Math.ceil((timerDeadline - Date.now()) / 1000)
-    );
-
-    timerRunning = false;
-    stopTimerInterval();
-    get('timer-start').textContent = 'Resume focus';
-
-    document.querySelectorAll('.duration-choice').forEach(button => {
-      button.disabled = false;
-    });
-
-    showTimer();
-    return;
-  }
-
-  if (remainingSeconds <= 0) {
-    remainingSeconds = selectedDuration;
-  }
-
+function startTimer() {
+  if (timerRunning) return;
+  if (remainingSeconds <= 0) remainingSeconds = selectedDuration;
   timerRunning = true;
+  get('timer').classList.add('running');
+  sessionStartedAt = Date.now();
   timerDeadline = Date.now() + remainingSeconds * 1000;
-  get('timer-start').textContent = 'Pause';
-  get('timer-status').textContent = 'Focus session in progress.';
-
-  document.querySelectorAll('.duration-choice').forEach(button => {
-    button.disabled = true;
-  });
-
+  get('timer-start').disabled = true;
+  get('timer-stop').disabled = false;
+  get('timer-status').textContent = 'Focus timer is running.';
+  document.querySelectorAll('.duration-choice').forEach(button => { button.disabled = true; });
+  get('custom-minutes').disabled = true;
+  get('apply-custom-duration').disabled = true;
   timerInterval = window.setInterval(() => {
-    remainingSeconds = Math.max(
-      0,
-      Math.ceil((timerDeadline - Date.now()) / 1000)
-    );
-
+    remainingSeconds = Math.max(0, Math.ceil((timerDeadline - Date.now()) / 1000));
     showTimer();
+    if (remainingSeconds === 0) finishTimer();
+    else showTimer();
+  }, 50);
+}
 
-    if (remainingSeconds === 0) {
-      finishTimer();
-    }
-  }, 200);
+function stopTimer() {
+  if (!timerRunning) return;
+  remainingSeconds = Math.max(0, Math.ceil((timerDeadline - Date.now()) / 1000));
+  const elapsed = Math.max(0, Math.floor((Date.now() - sessionStartedAt) / 1000));
+  timerRunning = false;
+  get('timer').classList.remove('running');
+  stopTimerInterval();
+  get('timer-start').disabled = false;
+  get('timer-stop').disabled = true;
+  document.querySelectorAll('.duration-choice').forEach(button => { button.disabled = false; });
+  get('custom-minutes').disabled = false;
+  get('apply-custom-duration').disabled = false;
+  remainingSeconds = selectedDuration;
+  showTimer();
+  if (elapsed > 0) recordFocusSession(elapsed, false);
+  else get('timer-status').textContent = 'Timer stopped before a session began.';
 }
 
 function resetTimer() {
   stopTimerInterval();
   timerRunning = false;
+  get('timer').classList.remove('running');
+  sessionStartedAt = null;
   remainingSeconds = selectedDuration;
-  get('timer-start').textContent = 'Start focus';
+  get('timer-start').disabled = false;
+  get('timer-stop').disabled = true;
+  get('custom-minutes').disabled = false;
+  get('apply-custom-duration').disabled = false;
   get('timer-status').textContent = '';
 
   document.querySelectorAll('.duration-choice').forEach(button => {
@@ -539,15 +584,37 @@ get('quiz-next').addEventListener('click', nextQuestion);
 get('quiz-retry').addEventListener('click', loadQuestions);
 get('review-retry').addEventListener('click', loadReviews);
 get('warmup-retry').addEventListener('click', loadWarmups);
-get('timer-start').addEventListener('click', startOrPauseTimer);
+get('timer-start').addEventListener('click', startTimer);
+get('timer-stop').addEventListener('click', stopTimer);
+get('quiz-start-set').addEventListener('click', () => { quizState.previousQuestionIds = []; loadQuestions(); });
 get('timer-reset').addEventListener('click', resetTimer);
 
 get('next-prompt').addEventListener('click', () => {
   if (warmupState.prompts.length > 1) {
-    warmupState.index =
-      (warmupState.index + 1) % warmupState.prompts.length;
+    if (warmupState.index + 1 >= warmupState.prompts.length) {
+      const lastId = warmupState.lastPromptId;
+      for (let i = warmupState.prompts.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [warmupState.prompts[i], warmupState.prompts[j]] = [warmupState.prompts[j], warmupState.prompts[i]];
+      }
+      if (warmupState.prompts.length > 1 && warmupState.prompts[0].id === lastId) {
+        [warmupState.prompts[0], warmupState.prompts[1]] = [warmupState.prompts[1], warmupState.prompts[0]];
+      }
+      warmupState.index = 0;
+    } else {
+      warmupState.index += 1;
+    }
     renderWarmupPrompt();
   }
+});
+
+get('apply-custom-duration').addEventListener('click', () => {
+  const minutes = Number.parseInt(get('custom-minutes').value, 10);
+  if (!Number.isInteger(minutes) || minutes < 1 || minutes > 120) {
+    get('timer-status').textContent = 'Choose a timer from 1 to 120 minutes.';
+    return;
+  }
+  setTimerDuration(minutes * 60);
 });
 
 document.querySelectorAll('.duration-choice').forEach(button => {
@@ -588,5 +655,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   showTimer();
-  loadQuestions();
+  get('timer-stop').disabled = true;
+  loadWarmups();
+
+  const requestedTab = new URLSearchParams(window.location.search).get('tab');
+  if (requestedTab) {
+    const requestedButton = document.querySelector(`.tab[data-tab="${CSS.escape(requestedTab)}"]`);
+    requestedButton?.click();
+  }
 });

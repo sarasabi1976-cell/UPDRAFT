@@ -15,6 +15,7 @@
     .skill-name { width: 120px; flex: none; }
     .skill-progress { flex: 1; }
     .skill-score { margin-left: 0; }
+    @media print { @page { margin: 14mm; } body { background: #fff !important; } .sidebar,.topbar,.no-print,#report-error { display:none !important; } .main { margin:0 !important; width:100% !important; } .content { padding:0 !important; } .panel,.stat-card { break-inside:avoid; box-shadow:none !important; } }
   </style>
 </head>
 <body>
@@ -27,18 +28,21 @@
       <a class="nav-item" href="plan.html"><span>▦</span> Prep plan</a>
       <a class="nav-item" href="practice.html"><span>⌁</span> Practice arena</a>
       <a class="nav-item active" href="reports.html"><span>↗</span> Progress reports</a>
+      <a class="nav-item" href="linkedin-jobs.html"><span>⌕</span> LinkedIn Jobs</a>
+      <a class="nav-item" href="account.html"><span>◎</span> Account / Switch user</a>
     </nav>
   </aside>
   <main class="main">
     <header class="topbar">
       <div class="breadcrumbs"><a href="../index.html">Workspace</a> <span>/</span> Progress reports</div>
-      <div class="top-actions"><span class="today" id="today"></span><button class="avatar mini" type="button" aria-label="User profile">U</button></div>
+      <div class="top-actions"><span class="today" id="today"></span><a class="avatar mini" href="account.html" aria-label="Account and switch user">U</a></div>
     </header>
     <div class="content">
       <div class="page-head">
         <div class="eyebrow">PROGRESS YOU CAN USE</div>
         <h1>The work is adding up.</h1>
         <p id="report-intro">Your report brings together your assessment choices and activity so far.</p>
+        <button id="export-pdf" class="action no-print" type="button">Export report as PDF</button>
       </div>
       <p class="report-status" id="report-status" role="status" aria-live="polite">Loading your consolidated report…</p>
 

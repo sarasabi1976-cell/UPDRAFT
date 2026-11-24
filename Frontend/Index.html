@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="dashboard-page">
   <aside class="sidebar">
     <a class="brand" href="index.html"><span class="brandmark">u.</span><span>updraft<span class="brand-dot">.</span></span></a>
     <div class="side-label">YOUR WORKSPACE</div>
@@ -18,21 +18,23 @@
       <a class="nav-item" href="pages/plan.html"><span>▦</span> Prep plan</a>
       <a class="nav-item" href="pages/practice.html"><span>⌁</span> Practice arena</a>
       <a class="nav-item" href="pages/reports.html"><span>↗</span> Progress reports</a>
-    </nav>
+          <a class="nav-item" href="pages/linkedin-jobs.html"><span>⌕</span> LinkedIn Jobs</a>
+      <a class="nav-item" href="pages/account.html"><span>◎</span> Account / Switch user</a>
+</nav>
     <div class="side-bottom">
       <div class="streak-card" id="streak-card" hidden><span class="streak-flame">✳</span><div><b id="streak-label">— day streak</b><small>You're building momentum</small></div><span class="streak-num" id="streak-count">—</span></div>
-      <div class="user-row" id="user-row" hidden>
+      <a class="user-row" id="user-row" href="pages/account.html" hidden aria-label="Account and switch user">
         <div class="avatar" id="user-avatar">U</div>
         <div><b id="user-name">User</b><small id="user-role"></small><small id="user-id" hidden></small></div>
         <span class="more" aria-hidden="true">···</span>
-      </div>
+      </a>
     </div>
   </aside>
 
   <main class="main">
     <header class="topbar">
       <div class="breadcrumbs">Workspace <span>/</span> Overview</div>
-      <div class="top-actions"><span class="today" id="today"></span><span class="avatar mini" id="top-avatar" hidden aria-label="Signed-in user"></span></div>
+      <div class="top-actions"><span class="today" id="today"></span><a class="avatar mini" id="top-avatar" href="pages/account.html" hidden aria-label="Account and switch user"></a></div>
     </header>
     <div class="content">
       <section class="welcome-row">
@@ -41,7 +43,7 @@
           <h1 id="welcome-title">Make your next move<br>feel like <em>second nature.</em></h1>
           <p class="subhead" id="welcome-subtitle">A little progress today. A lot more confidence in the room.</p>
         </div>
-        <a class="primary-btn" id="focus-link" href="pages/practice.html"><span>＋</span> Start a focus session <b>↗</b></a>
+        <a class="primary-btn" id="focus-link" href="pages/practice.html?tab=warmup"><span>＋</span> Start a focus session <b>↗</b></a>
       </section>
 
       <section class="panel" id="setup-state" hidden>
@@ -89,8 +91,9 @@
         <section class="lower-grid">
           <div class="week-card">
             <div class="card-top"><div><div class="eyebrow muted">THIS WEEK</div><h2>Your prep rhythm</h2></div><span class="select-pill" id="week-label">This week</span></div>
-            <div class="week-meta"><span><b id="week-hours">—</b> focused</span><span><b id="week-sessions">—</b> sessions</span><span><b id="week-streak">—</b> day streak</span></div>
-            <div class="chart"><div class="y-labels"><span>2h</span><span>1h</span><span>0</span></div><div class="chart-area" id="weekly-chart" role="img" aria-label="Focused hours by day"></div><div class="x-labels" id="weekly-labels"></div></div>
+            <div class="week-meta"><span><b id="week-hours">—</b> focused</span><span><b id="week-answers">—</b> quiz answers</span><span><b id="week-streak">—</b> day streak</span></div>
+            <div class="chart-legend"><span><i></i> Focus hours</span><span><i class="answers-legend"></i> Quiz answers</span></div>
+            <div class="chart"><div class="y-labels"><span>2h</span><span>1h</span><span>0</span></div><div class="chart-area" id="weekly-chart" role="img" aria-label="Daily focus hours and quiz answers"></div><div class="x-labels" id="weekly-labels"></div></div>
           </div>
           <div class="today-card">
             <div class="card-top"><div><div class="eyebrow muted">UP NEXT</div><h2>Today's game plan</h2></div><span class="date-badge" id="date-badge"></span></div>
@@ -149,7 +152,7 @@
           readiness: { score: 0, change: 0, period: 'this month', description: 'Your readiness score will update as you complete preparation activities.', trend: [0, 0, 0, 0], labels: ['W1', 'W2', 'W3', 'W4'] },
           recommendation: { topic: 'No focus selected', score: 0, sessions: 0, minutes: 0, readinessLift: 0 },
           stats: { sessions: 0, sessionsChange: 0, sessionsCaption: 'this month', accuracy: 0, accuracyChange: 0, accuracyCaption: 'no quizzes completed', focusedHours: 0, hoursChange: 0, hoursCaption: 'this week', planCompleted: 0, planTotal: 0, planCaption: 'sessions complete', sessionTrend: [0, 0, 0, 0, 0, 0, 0], accuracyTrend: [0, 0, 0, 0, 0, 0, 0], hoursTrend: [0, 0, 0, 0, 0, 0, 0] },
-          week: { focusedHours: 0, sessions: 0, streak: 0, days: dayLabels.map(label => ({ label, focusedHours: 0, sessions: 0 })) },
+          week: { focusedHours: 0, sessions: 0, answers: 0, streak: 0, days: dayLabels.map(label => ({ label, focusedHours: 0, sessions: 0, answers: 0 })) },
           tasks: []
         };
       }
@@ -214,7 +217,7 @@
 
       const week = data.week || {};
       setText('week-hours', `${safeNumber(week.focusedHours).toFixed(1)}h`);
-      setText('week-sessions', safeNumber(week.sessions));
+      setText('week-answers', safeNumber(week.answers));
       setText('week-streak', safeNumber(week.streak));
       const days = Array.isArray(week.days) ? week.days.slice(-7) : [];
       const chart = byId('weekly-chart');
@@ -225,10 +228,11 @@
         const focused = document.createElement('i');
         focused.style.height = `${Math.min(100, safeNumber(day.focusedHours) / 2 * 100)}%`;
         focused.title = `${day.label}: ${safeNumber(day.focusedHours)} focused hours`;
-        const sessions = document.createElement('i');
-        sessions.className = 'soft';
-        sessions.style.height = `${Math.min(100, safeNumber(day.sessions) / 5 * 100)}%`;
-        group.append(focused, sessions);
+        const answers = document.createElement('i');
+        answers.className = 'soft';
+        answers.style.height = `${Math.min(100, safeNumber(day.answers) / 5 * 100)}%`;
+        answers.title = `${day.label}: ${safeNumber(day.answers)} quiz answers`;
+        group.append(focused, answers);
         chart.append(group);
       });
       byId('weekly-labels').replaceChildren(...days.map(day => {

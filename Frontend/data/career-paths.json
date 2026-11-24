@@ -1,0 +1,2285 @@
+{
+  "degrees": [
+    {
+      "id": "computer-science",
+      "label": "Computer Science",
+      "specializations": [
+        {
+          "id": "software",
+          "label": "Software Engineering",
+          "skillIds": [
+            "python",
+            "data-structures",
+            "problem-solving",
+            "testing",
+            "system-design",
+            "communication"
+          ]
+        },
+        {
+          "id": "data-science",
+          "label": "Data Science",
+          "skillIds": [
+            "python",
+            "sql",
+            "analytics",
+            "problem-solving",
+            "communication",
+            "statistics"
+          ]
+        },
+        {
+          "id": "ai-ml",
+          "label": "AI and Machine Learning",
+          "skillIds": [
+            "python",
+            "analytics",
+            "problem-solving",
+            "data-structures",
+            "statistics",
+            "communication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "information-technology",
+      "label": "Information Technology",
+      "specializations": [
+        {
+          "id": "web-development",
+          "label": "Web Development",
+          "skillIds": [
+            "javascript",
+            "html-css",
+            "ux-design",
+            "accessibility",
+            "testing",
+            "communication"
+          ]
+        },
+        {
+          "id": "cybersecurity",
+          "label": "Cybersecurity",
+          "skillIds": [
+            "cybersecurity",
+            "networking",
+            "python",
+            "problem-solving",
+            "technical-writing",
+            "communication"
+          ]
+        },
+        {
+          "id": "cloud",
+          "label": "Cloud Computing",
+          "skillIds": [
+            "cloud-computing",
+            "system-design",
+            "networking",
+            "testing",
+            "python",
+            "problem-solving"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "label": "Business",
+      "specializations": [
+        {
+          "id": "product-management",
+          "label": "Product Management",
+          "skillIds": [
+            "product-thinking",
+            "analytics",
+            "communication",
+            "project-management",
+            "teamwork"
+          ]
+        },
+        {
+          "id": "business-analytics",
+          "label": "Business Analytics",
+          "skillIds": [
+            "sql",
+            "analytics",
+            "statistics",
+            "communication",
+            "problem-solving",
+            "spreadsheets"
+          ]
+        },
+        {
+          "id": "operations",
+          "label": "Operations",
+          "skillIds": [
+            "analytics",
+            "project-management",
+            "communication",
+            "teamwork",
+            "problem-solving",
+            "spreadsheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "label": "Design",
+      "specializations": [
+        {
+          "id": "ux-design",
+          "label": "UX Design",
+          "skillIds": [
+            "ux-design",
+            "accessibility",
+            "product-thinking",
+            "communication",
+            "visual-design",
+            "research"
+          ]
+        },
+        {
+          "id": "product-design",
+          "label": "Product Design",
+          "skillIds": [
+            "ux-design",
+            "accessibility",
+            "product-thinking",
+            "communication",
+            "visual-design",
+            "prototyping"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "specializations": [
+        {
+          "id": "devops",
+          "label": "DevOps Engineering",
+          "skillIds": [
+            "cloud-computing",
+            "system-design",
+            "networking",
+            "testing",
+            "python",
+            "security-practices"
+          ]
+        },
+        {
+          "id": "robotics",
+          "label": "Robotics",
+          "skillIds": [
+            "python",
+            "problem-solving",
+            "system-design",
+            "testing",
+            "mathematics",
+            "embedded-systems"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "specializations": [
+        {
+          "id": "quantitative-analysis",
+          "label": "Quantitative Analysis",
+          "skillIds": [
+            "python",
+            "sql",
+            "analytics",
+            "statistics",
+            "mathematics",
+            "communication"
+          ]
+        },
+        {
+          "id": "data-science-math",
+          "label": "Data Science",
+          "skillIds": [
+            "python",
+            "sql",
+            "analytics",
+            "statistics",
+            "mathematics",
+            "problem-solving"
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "python",
+      "label": "Python"
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript"
+    },
+    {
+      "id": "sql",
+      "label": "SQL"
+    },
+    {
+      "id": "communication",
+      "label": "Communication"
+    },
+    {
+      "id": "problem-solving",
+      "label": "Problem Solving"
+    },
+    {
+      "id": "system-design",
+      "label": "System Design"
+    },
+    {
+      "id": "data-structures",
+      "label": "Data Structures and Algorithms"
+    },
+    {
+      "id": "cloud-computing",
+      "label": "Cloud Computing"
+    },
+    {
+      "id": "cybersecurity",
+      "label": "Cybersecurity"
+    },
+    {
+      "id": "ux-design",
+      "label": "UX Design"
+    },
+    {
+      "id": "product-thinking",
+      "label": "Product Thinking"
+    },
+    {
+      "id": "analytics",
+      "label": "Data Analytics"
+    },
+    {
+      "id": "teamwork",
+      "label": "Teamwork"
+    },
+    {
+      "id": "testing",
+      "label": "Testing and Quality"
+    },
+    {
+      "id": "technical-writing",
+      "label": "Technical Writing"
+    },
+    {
+      "id": "project-management",
+      "label": "Project Management"
+    },
+    {
+      "id": "statistics",
+      "label": "Statistics"
+    },
+    {
+      "id": "html-css",
+      "label": "HTML and CSS"
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility"
+    },
+    {
+      "id": "networking",
+      "label": "Networking"
+    },
+    {
+      "id": "spreadsheets",
+      "label": "Spreadsheets"
+    },
+    {
+      "id": "visual-design",
+      "label": "Visual Design"
+    },
+    {
+      "id": "research",
+      "label": "User Research"
+    },
+    {
+      "id": "prototyping",
+      "label": "Prototyping"
+    },
+    {
+      "id": "security-practices",
+      "label": "Security Practices"
+    },
+    {
+      "id": "mathematics",
+      "label": "Mathematics"
+    },
+    {
+      "id": "embedded-systems",
+      "label": "Embedded Systems"
+    }
+  ],
+  "paths": [
+    {
+      "id": "software-engineer",
+      "title": "Software Engineer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Build and maintain reliable software products.",
+      "studyTasks": [
+        "Build a small application",
+        "Practice data structures and algorithms",
+        "Add automated tests"
+      ]
+    },
+    {
+      "id": "data-analyst",
+      "title": "Data Analyst",
+      "specializations": [
+        "data-science",
+        "business-analytics",
+        "quantitative-analysis",
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "sql",
+        "python",
+        "analytics",
+        "communication"
+      ],
+      "description": "Turn data into clear findings that support decisions.",
+      "studyTasks": [
+        "Analyze a public dataset",
+        "Write SQL queries",
+        "Present findings with a chart"
+      ]
+    },
+    {
+      "id": "ml-engineer",
+      "title": "Machine Learning Engineer",
+      "specializations": [
+        "ai-ml",
+        "data-science",
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "analytics",
+        "data-structures"
+      ],
+      "description": "Develop and evaluate data-driven models and services.",
+      "studyTasks": [
+        "Review model evaluation methods",
+        "Build a small prediction project",
+        "Document model limitations"
+      ]
+    },
+    {
+      "id": "frontend-developer",
+      "title": "Frontend Developer",
+      "specializations": [
+        "web-development",
+        "software",
+        "product-design"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "ux-design",
+        "testing",
+        "communication"
+      ],
+      "description": "Create accessible, responsive interfaces for web applications.",
+      "studyTasks": [
+        "Build a responsive page",
+        "Practice accessible HTML",
+        "Add browser-based tests"
+      ]
+    },
+    {
+      "id": "cybersecurity-analyst",
+      "title": "Cybersecurity Analyst",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "problem-solving",
+        "technical-writing",
+        "communication"
+      ],
+      "description": "Identify risks and help protect systems and information.",
+      "studyTasks": [
+        "Learn common web vulnerabilities",
+        "Practice reviewing security logs",
+        "Write a short incident report"
+      ]
+    },
+    {
+      "id": "cloud-engineer",
+      "title": "Cloud Engineer",
+      "specializations": [
+        "cloud",
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "testing",
+        "problem-solving"
+      ],
+      "description": "Deploy and operate dependable services in cloud environments.",
+      "studyTasks": [
+        "Deploy a small service",
+        "Practice monitoring and alerting",
+        "Document a recovery plan"
+      ]
+    },
+    {
+      "id": "product-manager",
+      "title": "Product Manager",
+      "specializations": [
+        "product-management",
+        "operations"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "communication",
+        "analytics",
+        "project-management"
+      ],
+      "description": "Connect customer needs, business goals, and product delivery.",
+      "studyTasks": [
+        "Write a product brief",
+        "Prioritize a sample backlog",
+        "Define measurable success criteria"
+      ]
+    },
+    {
+      "id": "ux-designer",
+      "title": "UX Designer",
+      "specializations": [
+        "ux-design",
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "communication",
+        "problem-solving",
+        "product-thinking"
+      ],
+      "description": "Research user needs and design usable product experiences.",
+      "studyTasks": [
+        "Interview a potential user",
+        "Create a simple prototype",
+        "Run a usability review"
+      ]
+    },
+    {
+      "id": "qa-engineer",
+      "title": "QA Engineer",
+      "specializations": [
+        "software",
+        "web-development",
+        "devops"
+      ],
+      "requiredSkills": [
+        "testing",
+        "problem-solving",
+        "technical-writing",
+        "javascript"
+      ],
+      "description": "Help teams release software that behaves reliably.",
+      "studyTasks": [
+        "Write test cases",
+        "Automate a simple browser flow",
+        "Report and reproduce a defect"
+      ]
+    },
+    {
+      "id": "business-operations-analyst",
+      "title": "Business Operations Analyst",
+      "specializations": [
+        "business-analytics",
+        "operations",
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "sql",
+        "communication",
+        "project-management"
+      ],
+      "description": "Use data and process analysis to improve business operations.",
+      "studyTasks": [
+        "Map a business process",
+        "Measure a sample workflow",
+        "Summarize improvement options"
+      ]
+    },
+    {
+      "id": "technical-writer",
+      "title": "Technical Writer",
+      "specializations": [
+        "software",
+        "cloud",
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "technical-writing",
+        "communication",
+        "problem-solving",
+        "teamwork"
+      ],
+      "description": "Make technical information clear and useful to its audience.",
+      "studyTasks": [
+        "Rewrite a setup guide",
+        "Create an API example",
+        "Review documentation with a user"
+      ]
+    },
+    {
+      "id": "robotics-engineer",
+      "title": "Robotics Engineer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Develop software and systems that control robotic devices.",
+      "studyTasks": [
+        "Practice sensor data handling",
+        "Build a small simulation",
+        "Test edge cases"
+      ]
+    },
+    {
+      "id": "software-backend-developer",
+      "title": "Backend Developer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "software-application-developer",
+      "title": "Application Developer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "software-mobile-app-developer",
+      "title": "Mobile App Developer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "software-game-developer",
+      "title": "Game Developer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "software-embedded-software-developer",
+      "title": "Embedded Software Developer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "software-platform-engineer",
+      "title": "Platform Engineer",
+      "specializations": [
+        "software"
+      ],
+      "requiredSkills": [
+        "python",
+        "data-structures",
+        "problem-solving",
+        "testing"
+      ],
+      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-data-engineer",
+      "title": "Data Engineer",
+      "specializations": [
+        "data-science"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "problem-solving"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-business-intelligence-developer",
+      "title": "Business Intelligence Developer",
+      "specializations": [
+        "data-science"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "problem-solving"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-research-data-analyst",
+      "title": "Research Data Analyst",
+      "specializations": [
+        "data-science"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "problem-solving"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-analytics-engineer",
+      "title": "Analytics Engineer",
+      "specializations": [
+        "data-science"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "problem-solving"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-data-visualization-specialist",
+      "title": "Data Visualization Specialist",
+      "specializations": [
+        "data-science"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "problem-solving"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-database-developer",
+      "title": "Database Developer",
+      "specializations": [
+        "data-science"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "problem-solving"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ai-ml-ai-research-assistant",
+      "title": "AI Research Assistant",
+      "specializations": [
+        "ai-ml"
+      ],
+      "requiredSkills": [
+        "python",
+        "analytics",
+        "problem-solving",
+        "data-structures"
+      ],
+      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ai-ml-applied-machine-learning-scientist",
+      "title": "Applied Machine Learning Scientist",
+      "specializations": [
+        "ai-ml"
+      ],
+      "requiredSkills": [
+        "python",
+        "analytics",
+        "problem-solving",
+        "data-structures"
+      ],
+      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ai-ml-computer-vision-engineer",
+      "title": "Computer Vision Engineer",
+      "specializations": [
+        "ai-ml"
+      ],
+      "requiredSkills": [
+        "python",
+        "analytics",
+        "problem-solving",
+        "data-structures"
+      ],
+      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ai-ml-nlp-engineer",
+      "title": "NLP Engineer",
+      "specializations": [
+        "ai-ml"
+      ],
+      "requiredSkills": [
+        "python",
+        "analytics",
+        "problem-solving",
+        "data-structures"
+      ],
+      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ai-ml-mlops-engineer",
+      "title": "MLOps Engineer",
+      "specializations": [
+        "ai-ml"
+      ],
+      "requiredSkills": [
+        "python",
+        "analytics",
+        "problem-solving",
+        "data-structures"
+      ],
+      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ai-ml-ai-product-analyst",
+      "title": "AI Product Analyst",
+      "specializations": [
+        "ai-ml"
+      ],
+      "requiredSkills": [
+        "python",
+        "analytics",
+        "problem-solving",
+        "data-structures"
+      ],
+      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "web-development-full-stack-developer",
+      "title": "Full Stack Developer",
+      "specializations": [
+        "web-development"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "html-css",
+        "ux-design",
+        "accessibility"
+      ],
+      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "web-development-web-accessibility-developer",
+      "title": "Web Accessibility Developer",
+      "specializations": [
+        "web-development"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "html-css",
+        "ux-design",
+        "accessibility"
+      ],
+      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "web-development-ui-engineer",
+      "title": "UI Engineer",
+      "specializations": [
+        "web-development"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "html-css",
+        "ux-design",
+        "accessibility"
+      ],
+      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "web-development-web-applications-developer",
+      "title": "Web Applications Developer",
+      "specializations": [
+        "web-development"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "html-css",
+        "ux-design",
+        "accessibility"
+      ],
+      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "web-development-design-systems-developer",
+      "title": "Design Systems Developer",
+      "specializations": [
+        "web-development"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "html-css",
+        "ux-design",
+        "accessibility"
+      ],
+      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "web-development-web-performance-engineer",
+      "title": "Web Performance Engineer",
+      "specializations": [
+        "web-development"
+      ],
+      "requiredSkills": [
+        "javascript",
+        "html-css",
+        "ux-design",
+        "accessibility"
+      ],
+      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cybersecurity-security-operations-analyst",
+      "title": "Security Operations Analyst",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "networking",
+        "python",
+        "problem-solving"
+      ],
+      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cybersecurity-penetration-tester",
+      "title": "Penetration Tester",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "networking",
+        "python",
+        "problem-solving"
+      ],
+      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cybersecurity-information-security-specialist",
+      "title": "Information Security Specialist",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "networking",
+        "python",
+        "problem-solving"
+      ],
+      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cybersecurity-incident-response-analyst",
+      "title": "Incident Response Analyst",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "networking",
+        "python",
+        "problem-solving"
+      ],
+      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cybersecurity-application-security-analyst",
+      "title": "Application Security Analyst",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "networking",
+        "python",
+        "problem-solving"
+      ],
+      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cybersecurity-governance-risk-and-compliance-analyst",
+      "title": "Governance Risk and Compliance Analyst",
+      "specializations": [
+        "cybersecurity"
+      ],
+      "requiredSkills": [
+        "cybersecurity",
+        "networking",
+        "python",
+        "problem-solving"
+      ],
+      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cloud-cloud-solutions-architect",
+      "title": "Cloud Solutions Architect",
+      "specializations": [
+        "cloud"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cloud-site-reliability-engineer",
+      "title": "Site Reliability Engineer",
+      "specializations": [
+        "cloud"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cloud-cloud-security-engineer",
+      "title": "Cloud Security Engineer",
+      "specializations": [
+        "cloud"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cloud-cloud-operations-analyst",
+      "title": "Cloud Operations Analyst",
+      "specializations": [
+        "cloud"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cloud-infrastructure-automation-engineer",
+      "title": "Infrastructure Automation Engineer",
+      "specializations": [
+        "cloud"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "cloud-platform-operations-engineer",
+      "title": "Platform Operations Engineer",
+      "specializations": [
+        "cloud"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-management-associate-product-manager",
+      "title": "Associate Product Manager",
+      "specializations": [
+        "product-management"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "analytics",
+        "communication",
+        "project-management"
+      ],
+      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-management-product-operations-analyst",
+      "title": "Product Operations Analyst",
+      "specializations": [
+        "product-management"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "analytics",
+        "communication",
+        "project-management"
+      ],
+      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-management-product-growth-analyst",
+      "title": "Product Growth Analyst",
+      "specializations": [
+        "product-management"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "analytics",
+        "communication",
+        "project-management"
+      ],
+      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-management-technical-product-manager",
+      "title": "Technical Product Manager",
+      "specializations": [
+        "product-management"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "analytics",
+        "communication",
+        "project-management"
+      ],
+      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-management-product-owner",
+      "title": "Product Owner",
+      "specializations": [
+        "product-management"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "analytics",
+        "communication",
+        "project-management"
+      ],
+      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-management-customer-experience-product-analyst",
+      "title": "Customer Experience Product Analyst",
+      "specializations": [
+        "product-management"
+      ],
+      "requiredSkills": [
+        "product-thinking",
+        "analytics",
+        "communication",
+        "project-management"
+      ],
+      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "business-analytics-business-intelligence-analyst",
+      "title": "Business Intelligence Analyst",
+      "specializations": [
+        "business-analytics"
+      ],
+      "requiredSkills": [
+        "sql",
+        "analytics",
+        "statistics",
+        "communication"
+      ],
+      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "business-analytics-financial-data-analyst",
+      "title": "Financial Data Analyst",
+      "specializations": [
+        "business-analytics"
+      ],
+      "requiredSkills": [
+        "sql",
+        "analytics",
+        "statistics",
+        "communication"
+      ],
+      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "business-analytics-marketing-analytics-specialist",
+      "title": "Marketing Analytics Specialist",
+      "specializations": [
+        "business-analytics"
+      ],
+      "requiredSkills": [
+        "sql",
+        "analytics",
+        "statistics",
+        "communication"
+      ],
+      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "business-analytics-operations-research-analyst",
+      "title": "Operations Research Analyst",
+      "specializations": [
+        "business-analytics"
+      ],
+      "requiredSkills": [
+        "sql",
+        "analytics",
+        "statistics",
+        "communication"
+      ],
+      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "business-analytics-reporting-analyst",
+      "title": "Reporting Analyst",
+      "specializations": [
+        "business-analytics"
+      ],
+      "requiredSkills": [
+        "sql",
+        "analytics",
+        "statistics",
+        "communication"
+      ],
+      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "business-analytics-customer-insights-analyst",
+      "title": "Customer Insights Analyst",
+      "specializations": [
+        "business-analytics"
+      ],
+      "requiredSkills": [
+        "sql",
+        "analytics",
+        "statistics",
+        "communication"
+      ],
+      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "operations-process-improvement-analyst",
+      "title": "Process Improvement Analyst",
+      "specializations": [
+        "operations"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "project-management",
+        "communication",
+        "teamwork"
+      ],
+      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "operations-supply-chain-analyst",
+      "title": "Supply Chain Analyst",
+      "specializations": [
+        "operations"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "project-management",
+        "communication",
+        "teamwork"
+      ],
+      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "operations-program-coordinator",
+      "title": "Program Coordinator",
+      "specializations": [
+        "operations"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "project-management",
+        "communication",
+        "teamwork"
+      ],
+      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "operations-operations-research-associate",
+      "title": "Operations Research Associate",
+      "specializations": [
+        "operations"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "project-management",
+        "communication",
+        "teamwork"
+      ],
+      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "operations-business-process-consultant",
+      "title": "Business Process Consultant",
+      "specializations": [
+        "operations"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "project-management",
+        "communication",
+        "teamwork"
+      ],
+      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "operations-workforce-planning-analyst",
+      "title": "Workforce Planning Analyst",
+      "specializations": [
+        "operations"
+      ],
+      "requiredSkills": [
+        "analytics",
+        "project-management",
+        "communication",
+        "teamwork"
+      ],
+      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ux-design-interaction-designer",
+      "title": "Interaction Designer",
+      "specializations": [
+        "ux-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ux-design-ux-researcher",
+      "title": "UX Researcher",
+      "specializations": [
+        "ux-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ux-design-accessibility-specialist",
+      "title": "Accessibility Specialist",
+      "specializations": [
+        "ux-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ux-design-service-designer",
+      "title": "Service Designer",
+      "specializations": [
+        "ux-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ux-design-content-designer",
+      "title": "Content Designer",
+      "specializations": [
+        "ux-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "ux-design-usability-analyst",
+      "title": "Usability Analyst",
+      "specializations": [
+        "ux-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-design-product-designer",
+      "title": "Product Designer",
+      "specializations": [
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-design-interaction-designer",
+      "title": "Interaction Designer",
+      "specializations": [
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-design-design-systems-designer",
+      "title": "Design Systems Designer",
+      "specializations": [
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-design-prototype-designer",
+      "title": "Prototype Designer",
+      "specializations": [
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-design-digital-experience-designer",
+      "title": "Digital Experience Designer",
+      "specializations": [
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "product-design-visual-product-designer",
+      "title": "Visual Product Designer",
+      "specializations": [
+        "product-design"
+      ],
+      "requiredSkills": [
+        "ux-design",
+        "accessibility",
+        "product-thinking",
+        "communication"
+      ],
+      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "devops-build-and-release-engineer",
+      "title": "Build and Release Engineer",
+      "specializations": [
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "devops-infrastructure-engineer",
+      "title": "Infrastructure Engineer",
+      "specializations": [
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "devops-automation-engineer",
+      "title": "Automation Engineer",
+      "specializations": [
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "devops-container-platform-engineer",
+      "title": "Container Platform Engineer",
+      "specializations": [
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "devops-reliability-engineer",
+      "title": "Reliability Engineer",
+      "specializations": [
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "devops-cloud-devops-specialist",
+      "title": "Cloud DevOps Specialist",
+      "specializations": [
+        "devops"
+      ],
+      "requiredSkills": [
+        "cloud-computing",
+        "system-design",
+        "networking",
+        "testing"
+      ],
+      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "robotics-automation-robotics-engineer",
+      "title": "Automation Robotics Engineer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "robotics-embedded-systems-engineer",
+      "title": "Embedded Systems Engineer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "robotics-robotics-software-developer",
+      "title": "Robotics Software Developer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "robotics-controls-engineer",
+      "title": "Controls Engineer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "robotics-mechatronics-engineer",
+      "title": "Mechatronics Engineer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "robotics-robotics-test-engineer",
+      "title": "Robotics Test Engineer",
+      "specializations": [
+        "robotics"
+      ],
+      "requiredSkills": [
+        "python",
+        "problem-solving",
+        "system-design",
+        "testing"
+      ],
+      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "quantitative-analysis-quantitative-research-analyst",
+      "title": "Quantitative Research Analyst",
+      "specializations": [
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "quantitative-analysis-risk-analyst",
+      "title": "Risk Analyst",
+      "specializations": [
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "quantitative-analysis-financial-modeler",
+      "title": "Financial Modeler",
+      "specializations": [
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "quantitative-analysis-market-data-analyst",
+      "title": "Market Data Analyst",
+      "specializations": [
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "quantitative-analysis-statistical-consultant",
+      "title": "Statistical Consultant",
+      "specializations": [
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "quantitative-analysis-operations-research-analyst",
+      "title": "Operations Research Analyst",
+      "specializations": [
+        "quantitative-analysis"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-math-statistical-data-scientist",
+      "title": "Statistical Data Scientist",
+      "specializations": [
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-math-quantitative-data-analyst",
+      "title": "Quantitative Data Analyst",
+      "specializations": [
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-math-research-scientist",
+      "title": "Research Scientist",
+      "specializations": [
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-math-forecasting-analyst",
+      "title": "Forecasting Analyst",
+      "specializations": [
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-math-data-modeler",
+      "title": "Data Modeler",
+      "specializations": [
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    },
+    {
+      "id": "data-science-math-machine-learning-analyst",
+      "title": "Machine Learning Analyst",
+      "specializations": [
+        "data-science-math"
+      ],
+      "requiredSkills": [
+        "python",
+        "sql",
+        "analytics",
+        "statistics"
+      ],
+      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "studyTasks": [
+        "Build a small portfolio project",
+        "Analyze a realistic case study",
+        "Explain your approach and trade-offs"
+      ]
+    }
+  ]
+}

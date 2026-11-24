@@ -14,6 +14,22 @@
     .prompt-actions { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
     #warmup-prompt { margin: 18px 0; }
     .review-button { margin-left: auto; }
+    .quiz-set-controls { display:flex; align-items:center; gap:9px; margin:12px 0 18px; color:var(--muted); font-size:12px; }
+    .quiz-set-controls input,.custom-duration input { width:82px; padding:9px 10px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+    .custom-duration { display:flex; align-items:center; gap:6px; }
+    #timer-stop:disabled { opacity:.5; cursor:not-allowed; }
+    .analog-clock { position:relative; width:min(290px,68vw); aspect-ratio:1; margin:20px auto 24px; border-radius:50%; border:10px solid #222b25; background:radial-gradient(circle at center,#fff 0 68%,#eef1e9 68.5% 100%); box-shadow:inset 0 0 0 2px #dce3d8,0 10px 26px rgba(26,38,30,.12); }
+    .analog-clock::before { content:""; position:absolute; inset:8%; border-radius:50%; background:repeating-conic-gradient(from -1deg,#35413a 0deg 1deg,transparent 1deg 6deg); mask:radial-gradient(transparent 0 86%,#000 86.5%); }
+    .clock-number { position:absolute; left:50%; top:50%; width:30px; height:30px; margin:-15px; display:grid; place-items:center; color:#202820; font-size:19px; font-weight:650; transform:rotate(var(--angle)) translateY(calc(-1 * var(--radius))) rotate(calc(-1 * var(--angle))); }
+    .clock-hand { position:absolute; left:50%; bottom:50%; border-radius:99px; transform-origin:50% 100%; transform:translateX(-50%) rotate(0deg); }
+    .clock-hour { width:7px; height:26%; background:#222b25; }
+    .clock-minute { width:5px; height:36%; background:#222b25; }
+    .clock-second { width:2px; height:41%; background:#9bca60; }
+    .analog-clock.running .clock-second { animation: second-hand-sweep 60s linear infinite; }
+    @keyframes second-hand-sweep { from { transform:translateX(-50%) rotate(0deg); } to { transform:translateX(-50%) rotate(360deg); } }
+    .clock-pin { position:absolute; width:15px; height:15px; left:50%; top:50%; z-index:2; border-radius:50%; background:#222b25; transform:translate(-50%,-50%); box-shadow:0 0 0 4px #c6a56b; }
+    .timer-readout { position:absolute; left:50%; bottom:15%; transform:translateX(-50%); padding:3px 8px; border-radius:5px; color:#27342b; background:rgba(255,255,255,.88); font:600 13px/1.3 ui-monospace,monospace; }
+    .sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
   </style>
 </head>
 <body>
@@ -26,13 +42,15 @@
       <a class="nav-item" href="plan.html"><span>▦</span> Prep plan</a>
       <a class="nav-item active" href="practice.html"><span>⌁</span> Practice arena</a>
       <a class="nav-item" href="reports.html"><span>↗</span> Progress reports</a>
-    </nav>
+          <a class="nav-item" href="linkedin-jobs.html"><span>⌕</span> LinkedIn Jobs</a>
+      <a class="nav-item" href="account.html"><span>◎</span> Account / Switch user</a>
+</nav>
   </aside>
 
   <main class="main">
     <header class="topbar">
       <div class="breadcrumbs"><a href="../index.html">Workspace</a> <span>/</span> Practice arena</div>
-      <div class="top-actions"><span class="today" id="today"></span><button class="avatar mini" type="button" aria-label="User profile">U</button></div>
+      <div class="top-actions"><span class="today" id="today"></span><a class="avatar mini" href="account.html" aria-label="Account and switch user">U</a></div>
     </header>
 
     <div class="content">
@@ -49,7 +67,12 @@
       </div>
 
       <section data-tab-content="quiz" class="panel" role="tabpanel">
-        <div class="eyebrow muted" id="quiz-count">Loading questions…</div>
+        <div class="eyebrow muted" id="quiz-count">Choose a set size to begin.</div>
+        <div class="quiz-set-controls" aria-label="Quiz set settings">
+          <label for="quiz-set-size">Questions this set</label>
+          <input id="quiz-set-size" type="number" min="1" max="10" step="1" value="5" inputmode="numeric">
+          <button id="quiz-start-set" class="choice" type="button">Start question set</button>
+        </div>
         <div class="progress-line" style="margin:12px 0"><i id="quiz-progress" style="width:0"></i></div>
         <h2 id="quiz-question" class="question"></h2>
         <div id="quiz-options" class="option-row"></div>
@@ -65,13 +88,35 @@
         <h2>One calm, focused rep.</h2>
         <p style="color:#81897f;font-size:12px">Choose a short timer. Pick a prompt and talk through the first step out loud.</p>
         <div class="timer-wrap">
-          <div class="timer" id="timer" role="timer" aria-live="off">05:00</div>
+          <div class="analog-clock" id="timer" role="timer" aria-label="Timer set for 05:00">
+            <span class="clock-number" style="--angle:0deg;--radius:112px">12</span>
+            <span class="clock-number" style="--angle:30deg;--radius:112px">1</span>
+            <span class="clock-number" style="--angle:60deg;--radius:112px">2</span>
+            <span class="clock-number" style="--angle:90deg;--radius:112px">3</span>
+            <span class="clock-number" style="--angle:120deg;--radius:112px">4</span>
+            <span class="clock-number" style="--angle:150deg;--radius:112px">5</span>
+            <span class="clock-number" style="--angle:180deg;--radius:112px">6</span>
+            <span class="clock-number" style="--angle:210deg;--radius:112px">7</span>
+            <span class="clock-number" style="--angle:240deg;--radius:112px">8</span>
+            <span class="clock-number" style="--angle:270deg;--radius:112px">9</span>
+            <span class="clock-number" style="--angle:300deg;--radius:112px">10</span>
+            <span class="clock-number" style="--angle:330deg;--radius:112px">11</span>
+            <span class="clock-hand clock-hour" id="hour-hand"></span>
+            <span class="clock-hand clock-minute" id="minute-hand"></span>
+            <span class="clock-hand clock-second" id="second-hand"></span>
+            <span class="clock-pin" aria-hidden="true"></span>
+            <span class="timer-readout" id="timer-readout">05:00</span>
+            <span class="sr-only" id="timer-accessible">Timer 05:00</span>
+          </div>
           <div class="timer-controls" aria-label="Focus timer controls">
             <button type="button" class="duration-choice" data-seconds="300" aria-pressed="true">5 min</button>
             <button type="button" class="duration-choice" data-seconds="600" aria-pressed="false">10 min</button>
             <button type="button" class="duration-choice" data-seconds="900" aria-pressed="false">15 min</button>
-            <button type="button" id="timer-start" class="action">Start focus</button>
-            <button type="button" id="timer-reset">Reset</button>
+            <label class="custom-duration" for="custom-minutes"><input id="custom-minutes" type="number" min="1" max="120" step="1" value="5" inputmode="numeric" aria-label="Custom timer length in minutes"> min</label>
+            <button type="button" id="apply-custom-duration" class="choice">Set time</button>
+            <button type="button" id="timer-start" class="action">Start</button>
+            <button type="button" id="timer-stop" class="choice" disabled>Stop</button>
+            <button type="button" id="timer-reset" class="choice">Reset</button>
           </div>
           <div class="prompt-actions"><button type="button" class="choice" id="next-prompt">Another prompt</button></div>
           <p class="question" id="warmup-prompt">Loading a warm-up prompt…</p>

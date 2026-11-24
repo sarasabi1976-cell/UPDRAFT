@@ -166,6 +166,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .avatar {
@@ -1399,3 +1402,174 @@ footer {
     display: none;
   }
 }
+.avatar.mini[href] { text-decoration: none; cursor: pointer; }
+
+#account-picker { width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:8px; background:white; font:inherit; }
+
+
+/* Compact desktop overview: keep its main cards visible together on a typical laptop. */
+@media (min-width: 1001px) and (min-height: 820px) {
+  .dashboard-page { height:100vh; overflow:hidden; }
+  .dashboard-page .main { height:100vh; min-height:0; overflow:hidden; }
+  .dashboard-page .content { height:calc(100vh - 64px); padding:14px 30px 7px; display:flex; flex-direction:column; gap:8px; overflow:hidden; }
+  .dashboard-page .welcome-row { margin:0; min-height:87px; align-items:center; }
+  .dashboard-page .welcome-row h1 { font-size:30px; line-height:1.08; margin:8px 0 5px; }
+  .dashboard-page .welcome-row .subhead { margin:4px 0; font-size:12px; }
+  .dashboard-page .primary-btn { padding:12px 14px; }
+  .dashboard-page #dashboard:not([hidden]) { display:grid; flex:1; min-height:0; grid-template-rows:auto auto auto minmax(0,1fr); gap:9px; }
+  .dashboard-page .hero-grid { gap:10px; }
+  .dashboard-page .readiness-card { min-height:0; padding:13px 16px 10px; }
+  .dashboard-page .readiness-body { gap:16px; margin:8px 0 6px; }
+  .dashboard-page .ring { width:82px; height:82px; }
+  .dashboard-page .ring-inner strong { font-size:22px; }
+  .dashboard-page .readiness-copy p { margin:5px 0; line-height:1.35; }
+  .dashboard-page .readiness-foot { padding-top:7px; gap:8px; }
+  .dashboard-page .sparkline,.dashboard-page .ticks { height:27px; }
+  .dashboard-page .focus-card { padding:14px 16px; }
+  .dashboard-page .focus-topic { margin:9px 0; padding:8px; }
+  .dashboard-page .focus-hint { margin:8px 0; font-size:12px; }
+  .dashboard-page .section-heading { margin:0; }
+  .dashboard-page .section-heading h2 { margin-top:3px; }
+  .dashboard-page .stat-grid { gap:9px; }
+  .dashboard-page .stat-card { min-height:88px; padding:9px 11px 7px; }
+  .dashboard-page .stat-value { margin:5px 0; }
+  .dashboard-page .lower-grid { margin:0; min-height:0; grid-template-columns:1.15fr .85fr; gap:10px; }
+  .dashboard-page .week-card,.dashboard-page .today-card { min-height:0; padding:11px 14px; overflow:hidden; }
+  .dashboard-page .week-meta { margin:7px 0 4px; }
+  .dashboard-page .chart-legend { display:flex; gap:12px; margin:-1px 0 0 26px; font-size:8px; }
+  .dashboard-page .chart { height:76px; }
+  .dashboard-page .task { padding:7px 0; }
+  .dashboard-page .task-link { margin-top:4px; }
+  .dashboard-page footer { padding-top:3px; }
+}
+
+.chart-legend { display:flex; gap:12px; margin:2px 0 0 26px; color:#8d958b; font-size:8px; }
+.chart-legend span { display:inline-flex; align-items:center; gap:4px; }
+.chart-legend i { width:7px; height:7px; border-radius:2px; background:#a8c982; }
+.chart-legend i.answers-legend { background:#e0e9d7; }
+
+
+.theme-toggle {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-height:30px;
+  padding:5px 9px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--white);
+  color:var(--ink);
+  font:600 10px 'DM Sans',sans-serif;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.theme-toggle:hover { border-color:#9fc377; }
+.theme-toggle:focus-visible { outline:2px solid #9fc377; outline-offset:2px; }
+
+:root[data-theme="dark"] {
+  color-scheme:dark;
+  --ink:#e6ede7;
+  --muted:#a3afa5;
+  --line:#35433a;
+  --paper:#151c18;
+  --white:#202923;
+  --green:#a7cc7d;
+  --dark:#26342b;
+  --purple:#393148;
+  --coral:#49352f;
+  --blue:#2e3c4c;
+}
+:root[data-theme="dark"] body { background:var(--paper); color:var(--ink); }
+:root[data-theme="dark"] .sidebar,
+:root[data-theme="dark"] .topbar,
+:root[data-theme="dark"] .panel,
+:root[data-theme="dark"] .readiness-card,
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .week-card,
+:root[data-theme="dark"] .today-card,
+:root[data-theme="dark"] .job-card { background:var(--white); border-color:var(--line); color:var(--ink); }
+:root[data-theme="dark"] .topbar { background:rgba(24,32,27,.94); }
+:root[data-theme="dark"] .focus-card,
+:root[data-theme="dark"] .streak-card,
+:root[data-theme="dark"] .feedback,
+:root[data-theme="dark"] .plan-recommendation { background:#29372d; border-color:#3c4b3e; color:#d6e4d3; }
+:root[data-theme="dark"] .focus-topic,
+:root[data-theme="dark"] .select-pill,
+:root[data-theme="dark"] .date-badge,
+:root[data-theme="dark"] .mini-tags span,
+:root[data-theme="dark"] .task { background:#26312a; border-color:var(--line); color:var(--ink); }
+:root[data-theme="dark"] .nav-item { color:#b2bdb3; }
+:root[data-theme="dark"] .nav-item.active,
+:root[data-theme="dark"] .chip.selected { background:#354432; color:#d6e7c1; }
+:root[data-theme="dark"] .nav-item i,
+:root[data-theme="dark"] .chip { background:#2c382f; color:#b8c6b8; border-color:var(--line); }
+:root[data-theme="dark"] .brand,
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] .question,
+:root[data-theme="dark"] .stat-value,
+:root[data-theme="dark"] .plan-row b,
+:root[data-theme="dark"] .job-card h2 { color:var(--ink); }
+:root[data-theme="dark"] .brandmark { background:#d9edc1; color:#26342b; }
+:root[data-theme="dark"] .choice,
+:root[data-theme="dark"] .theme-toggle,
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] #account-picker { background:#1a221d; color:var(--ink); border-color:var(--line); }
+:root[data-theme="dark"] .choice:hover,
+:root[data-theme="dark"] .choice.selected { background:#354432; border-color:#8eaf6d; color:#e4efdf; }
+:root[data-theme="dark"] .action,
+:root[data-theme="dark"] .primary-btn,
+:root[data-theme="dark"] .dark-btn { background:#8eb966; color:#172019; }
+:root[data-theme="dark"] .dark-btn span,
+:root[data-theme="dark"] .primary-btn b { color:#172019; }
+:root[data-theme="dark"] .progress-line,
+:root[data-theme="dark"] .focus-progress,
+:root[data-theme="dark"] .tiny-progress { background:#354239; }
+:root[data-theme="dark"] .plan-row,
+:root[data-theme="dark"] .activity-row,
+:root[data-theme="dark"] .user-row { border-color:var(--line); }
+:root[data-theme="dark"] .account-field input,
+:root[data-theme="dark"] .job-search input,
+:root[data-theme="dark"] .job-search select { background:#1a221d; color:var(--ink); border-color:var(--line); }
+:root[data-theme="dark"] .job-description,
+:root[data-theme="dark"] .job-meta,
+:root[data-theme="dark"] .account-note,
+:root[data-theme="dark"] .account-status,
+:root[data-theme="dark"] .practice-status,
+:root[data-theme="dark"] .plan-status,
+:root[data-theme="dark"] .report-status { color:#a7b4a8; }
+:root[data-theme="dark"] .analog-clock { background:radial-gradient(circle at center,#202923 0 68%,#344138 68.5% 100%); border-color:#111713; }
+:root[data-theme="dark"] .analog-clock::before { background:repeating-conic-gradient(from -1deg,#c1cec2 0deg 1deg,transparent 1deg 6deg); }
+:root[data-theme="dark"] .clock-number { color:#e4ece4; }
+:root[data-theme="dark"] .clock-hour,
+:root[data-theme="dark"] .clock-minute { background-color:#d8e5d8; }
+:root[data-theme="dark"] .clock-pin { background:#d8e5d8; }
+:root[data-theme="dark"] .ring::before { background:var(--white); }
+:root[data-theme="dark"] .text-link,
+:root[data-theme="dark"] .job-card a,
+:root[data-theme="dark"] .provider-credit a,
+:root[data-theme="dark"] .week-pill,
+:root[data-theme="dark"] .positive,
+:root[data-theme="dark"] .focus-hint { color:#b9d99a; }
+:root[data-theme="dark"] .timer-readout { color:#e4ece4; background:rgba(22,29,24,.9); }
+:root[data-theme="dark"] .footer-right,
+:root[data-theme="dark"] footer,
+:root[data-theme="dark"] .muted,
+:root[data-theme="dark"] .eyebrow.muted { color:#9aa79b; }
+:root[data-theme="dark"] .linkedin-link { color:#fff; }
+
+
+:root[data-theme="dark"] .career-fieldset select {
+  background:#1a221d;
+  color:var(--ink);
+  border-color:var(--line);
+}
+:root[data-theme="dark"] .career-fieldset select:disabled {
+  background:#222c25;
+  color:var(--muted);
+}
+:root[data-theme="dark"] .welcome-row h1 em { color:#b9d99a; }

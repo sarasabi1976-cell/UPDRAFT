@@ -122,3 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (today) today.textContent = new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric' }).format(new Date());
   loadReport();
 });
+
+document.getElementById('export-pdf')?.addEventListener('click', () => {
+  document.title = 'Updraft Progress Report';
+  window.print();
+});

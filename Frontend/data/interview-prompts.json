@@ -27,5 +27,455 @@
       "How did you handle the challenge?",
       "What did you learn?"
     ]
+  },
+  {
+    "id": 4,
+    "category": "Behavioral",
+    "prompt": "Tell me about a time you received difficult feedback.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Behavioral",
+    "prompt": "Describe a situation where you had to learn something quickly.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Behavioral",
+    "prompt": "Tell me about a time you took initiative without being asked.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Behavioral",
+    "prompt": "Describe a mistake you made and how you handled it.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Behavioral",
+    "prompt": "Tell me about a time you had to meet a tight deadline.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Behavioral",
+    "prompt": "Describe a time you helped a teammate succeed.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Behavioral",
+    "prompt": "Tell me about a goal you set and how you reached it.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "Behavioral",
+    "prompt": "Describe a time priorities changed while you were working.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Behavioral",
+    "prompt": "Tell me about a time you explained a complex idea simply.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "Behavioral",
+    "prompt": "Describe a time you had to make a decision with incomplete information.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "Behavioral",
+    "prompt": "Tell me about a time you improved a process.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "Behavioral",
+    "prompt": "Describe a time you disagreed with a manager or teammate.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "Behavioral",
+    "prompt": "Tell me about a project you are especially proud of.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "Behavioral",
+    "prompt": "Describe a time you had to balance quality and speed.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "Behavioral",
+    "prompt": "Tell me about a time you adapted to an unexpected change.",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "Technical",
+    "prompt": "How would you investigate a bug that only happens sometimes?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "Technical",
+    "prompt": "How would you explain a technical trade-off to a non-technical partner?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "Technical",
+    "prompt": "What steps would you take before changing an unfamiliar codebase?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "Technical",
+    "prompt": "How do you decide what to test when time is limited?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 23,
+    "category": "Technical",
+    "prompt": "How would you investigate a service that has become slower?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "Technical",
+    "prompt": "What makes an API easy for other developers to use?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "Technical",
+    "prompt": "How would you make a web page more accessible?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Technical",
+    "prompt": "How do you decide whether to refactor existing code?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "Technical",
+    "prompt": "What would you monitor after deploying a change?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "Technical",
+    "prompt": "How would you protect sensitive data in an application?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "Technical",
+    "prompt": "How do you approach a problem you have never solved before?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "Situational",
+    "prompt": "How would you prioritize several urgent requests?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "Situational",
+    "prompt": "What would you do if a project were likely to miss its deadline?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "Situational",
+    "prompt": "How would you handle unclear requirements from a stakeholder?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "Situational",
+    "prompt": "What would you do if you noticed a security concern near release?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "Situational",
+    "prompt": "How would you respond if a teammate repeatedly missed handoffs?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "Situational",
+    "prompt": "How would you choose between two competing product improvements?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "Situational",
+    "prompt": "What would you do if your first solution failed in production?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "Situational",
+    "prompt": "How would you onboard yourself to a new team's project?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "Situational",
+    "prompt": "How would you make a decision when performance and cost conflict?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "Situational",
+    "prompt": "What would you do if you found an error in your own recent work?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "Situational",
+    "prompt": "How would you make sure a team is aligned on a shared goal?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "Situational",
+    "prompt": "How would you approach a task whose success criteria are unclear?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "Situational",
+    "prompt": "What would you do if you finished your work earlier than expected?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "Situational",
+    "prompt": "How would you respond to a user report you cannot reproduce?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "Situational",
+    "prompt": "How would you decide what belongs in a first version of a feature?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "Situational",
+    "prompt": "What would you do if two important tasks had the same deadline?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "Situational",
+    "prompt": "How would you help a teammate who is blocked on a technical problem?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "Situational",
+    "prompt": "How would you evaluate whether a recent change helped users?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "Situational",
+    "prompt": "What would you do if project assumptions changed halfway through?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "Situational",
+    "prompt": "How would you handle a request that conflicts with an accessibility need?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "Communication",
+    "prompt": "How would you prepare a concise update for a project review?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 51,
+    "category": "Reflection",
+    "prompt": "How would you describe your strongest working habit?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 52,
+    "category": "Reflection",
+    "prompt": "Which skill are you currently working to improve, and how?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
+  },
+  {
+    "id": 53,
+    "category": "Reflection",
+    "prompt": "What kind of team environment helps you do your best work?",
+    "followUps": [
+      "What was your approach?",
+      "What did you learn from it?"
+    ]
   }
 ]

@@ -7,7 +7,8 @@
       "focus": "Arrays, hash maps, and binary search",
       "activities": [
         "Review core patterns",
-        "Complete four practice problems"
+        "Complete four practice problems",
+        "Review one missed quiz question"
       ]
     },
     {
@@ -15,7 +16,8 @@
       "focus": "Trees, graphs, and system design foundations",
       "activities": [
         "Practice traversal problems",
-        "Estimate capacity for a simple service"
+        "Estimate capacity for a simple service",
+        "Write down one system design trade-off"
       ]
     },
     {
@@ -23,7 +25,8 @@
       "focus": "Behavioral stories and communication",
       "activities": [
         "Draft five STAR stories",
-        "Practice explaining solutions aloud"
+        "Practice explaining solutions aloud",
+        "Record and review a STAR answer"
       ]
     },
     {
@@ -31,7 +34,8 @@
       "focus": "Mock interviews and targeted review",
       "activities": [
         "Complete two mock interviews",
-        "Review your weakest topics"
+        "Review your weakest topics",
+        "Complete a timed practice set"
       ]
     }
   ]

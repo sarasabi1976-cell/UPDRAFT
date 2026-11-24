@@ -26,6 +26,7 @@ Open `http://127.0.0.1:8000/`. The root URL serves `Frontend/index.html`; existi
 | Method | Route | Purpose |
 | --- | --- | --- |
 | GET | `/api/health` | Check the server |
+| GET, POST | `/api/auth/me`, `/api/auth/register`, `/api/auth/login`, `/api/auth/logout`, `/api/auth/activity` | Accounts, switching users, and activity history |
 | GET, POST | `/api/assessment/options`, `/api/assessment/start` | Load and save skill assessment |
 | GET, POST | `/api/career/options`, `/api/career/assessment` | Load and save career profile |
 | GET | `/api/career/recommendations` | Get career matches |
@@ -35,9 +36,23 @@ Open `http://127.0.0.1:8000/`. The root URL serves `Frontend/index.html`; existi
 | GET, POST | `/api/practice/warmups`, `/api/practice/focus-sessions` | Interview prompts and focus sessions |
 | GET, POST | `/api/practice/reviews`, `/api/practice/reviews/{id}/start` | Review queue |
 | GET | `/api/reports` | Progress summary |
+| GET | `/api/jobs/search` | Latest vacancies and personalized LinkedIn search URL |
 
-Each browser gets a persistent anonymous ID cookie; stored progress is scoped to that browser. No account or sign-in screen is present in the supplied frontend, so this backend does not implement account management.
+Guest progress is stored per browser. Users can create an account from the Account / Switch user page; registration upgrades the current guest profile so its progress is retained. Passwords are PBKDF2-HMAC-SHA256 hashes with unique salts, and signed-in sessions use HttpOnly cookies that expire after 30 days. API activity and successful login/logout events are stored per user. Reports can be printed or saved as PDF using the browser's print dialog.
 
 ## Integration notes
 
-The backend reads `Frontend/data/questions.json`, `learning-plan.json`, and `interview-prompts.json` directly. Keep those file names and fields intact or update `Backend/data.py` to match. The career page endpoints are available, but the screenshot's `career-results.html` and `career-results.js` must send `GET /api/career/options`, `POST /api/career/assessment`, and `GET /api/career/recommendations` using the field names shown in `api.py`.
+The backend reads `Frontend/data/questions.json`, `learning-plan.json`, `interview-prompts.json`, and `career-paths.json`. Add quiz records with `id`, `question`, `options`, and the correct option text in `answer`; add plan items under each week's `activities`. Career choices and rule-based recommendation paths come from `career-paths.json`. This is a defined supported catalog, not arbitrary unvalidated input. Answers, focus sessions, and readiness snapshots are stored in SQLite; weekly charts use dated records.
+
+
+## Latest jobs
+
+The LinkedIn Jobs page opens LinkedIn's own search results for live LinkedIn vacancies. LinkedIn's public Job Posting API is restricted to approved partners and is for submitting/managing postings, not a general job-search feed. The page also supports in-page listings through Adzuna's documented search API. Register for an Adzuna API app ID and key, then set them in the same PowerShell terminal before starting the backend:
+
+```powershell
+$env:ADZUNA_APP_ID = "your-app-id"
+$env:ADZUNA_APP_KEY = "your-app-key"
+python -m Backend
+```
+
+Without credentials, the page still generates a live LinkedIn search link and explains how to enable the in-page feed. Adzuna listings are credited on the page.

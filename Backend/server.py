@@ -12,7 +12,7 @@ from .database import initialize
 class Handler(BaseHTTPRequestHandler):
     server_version = "PythonProject/1.0"
 
-    def respond(self, data, status=200, cookie=None):
+    def respond(self, data, status=200, cookie=None, cookies=None):
         body = json.dumps(data, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
@@ -20,6 +20,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         if cookie:
             self.send_header("Set-Cookie", f"updraft_uid={cookie}; Path=/; HttpOnly; SameSite=Lax; Max-Age=31536000")
+        for value in cookies or []:
+            self.send_header("Set-Cookie", value)
         self.end_headers()
         self.wfile.write(body)
 

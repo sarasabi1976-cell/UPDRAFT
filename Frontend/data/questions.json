@@ -2,22 +2,751 @@
   {
     "id": 1,
     "question": "Which data structure provides average O(1) lookup by key?",
-    "options": ["Array", "Hash map", "Linked list", "Stack"],
+    "options": [
+      "Array",
+      "Hash map",
+      "Linked list",
+      "Stack"
+    ],
     "answer": "Hash map",
-    "topic": "Data structures"
+    "topic": "Data structures",
+    "skills": [
+      "data-structures",
+      "problem-solving"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "web-development",
+      "cybersecurity",
+      "cloud",
+      "devops",
+      "robotics",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
   },
   {
     "id": 2,
     "question": "What is the time complexity of binary search on a sorted array?",
-    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
     "answer": "O(log n)",
-    "topic": "Algorithms"
+    "topic": "Algorithms",
+    "skills": [
+      "data-structures",
+      "problem-solving",
+      "mathematics"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "web-development",
+      "robotics",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
   },
   {
     "id": 3,
     "question": "Which data structure follows the First In, First Out (FIFO) principle?",
-    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
     "answer": "Queue",
-    "topic": "Data structures"
+    "topic": "Data structures",
+    "skills": [
+      "data-structures",
+      "problem-solving"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "web-development",
+      "robotics"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "In Python, which keyword defines a function?",
+    "options": [
+      "func",
+      "def",
+      "function",
+      "lambda"
+    ],
+    "answer": "def",
+    "topic": "Python",
+    "explanation": "Python function definitions begin with the def keyword.",
+    "skills": [
+      "python"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "cybersecurity",
+      "cloud",
+      "devops",
+      "robotics",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Which Python collection stores unique values?",
+    "options": [
+      "list",
+      "tuple",
+      "set",
+      "dict"
+    ],
+    "answer": "set",
+    "topic": "Python",
+    "explanation": "A set contains unique hashable values.",
+    "skills": [
+      "python"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "cybersecurity",
+      "cloud",
+      "devops",
+      "robotics",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Which SQL clause filters rows before grouping?",
+    "options": [
+      "ORDER BY",
+      "WHERE",
+      "HAVING",
+      "LIMIT"
+    ],
+    "answer": "WHERE",
+    "topic": "SQL",
+    "explanation": "WHERE filters source rows before grouping and aggregation.",
+    "skills": [
+      "sql",
+      "analytics"
+    ],
+    "specializations": [
+      "data-science",
+      "business-analytics",
+      "operations",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Which SQL command retrieves rows from a table?",
+    "options": [
+      "FETCH",
+      "SELECT",
+      "OPEN",
+      "READ"
+    ],
+    "answer": "SELECT",
+    "topic": "SQL",
+    "explanation": "SELECT retrieves columns and rows from one or more tables.",
+    "skills": [
+      "sql",
+      "analytics"
+    ],
+    "specializations": [
+      "data-science",
+      "business-analytics",
+      "operations",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Which JavaScript keyword declares a block-scoped variable that can be reassigned?",
+    "options": [
+      "var",
+      "let",
+      "const",
+      "static"
+    ],
+    "answer": "let",
+    "topic": "JavaScript",
+    "explanation": "let declares a block-scoped binding that can be reassigned.",
+    "skills": [
+      "javascript"
+    ],
+    "specializations": [
+      "web-development",
+      "software",
+      "product-design"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What does JSON stand for?",
+    "options": [
+      "Java Standard Object Notation",
+      "JavaScript Object Notation",
+      "Joined String Object Network",
+      "Java Source Open Notation"
+    ],
+    "answer": "JavaScript Object Notation",
+    "topic": "Web fundamentals",
+    "explanation": "JSON is a text format for representing structured data.",
+    "skills": [
+      "html-css",
+      "javascript"
+    ],
+    "specializations": [
+      "web-development",
+      "software",
+      "product-design"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Which HTTP method is commonly used to retrieve a resource?",
+    "options": [
+      "POST",
+      "GET",
+      "PATCH",
+      "DELETE"
+    ],
+    "answer": "GET",
+    "topic": "APIs",
+    "explanation": "GET requests retrieve a representation of a resource.",
+    "skills": [
+      "system-design",
+      "cloud-computing",
+      "networking"
+    ],
+    "specializations": [
+      "software",
+      "cloud",
+      "devops",
+      "cybersecurity"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Which HTTP status code means a resource was not found?",
+    "options": [
+      "200",
+      "301",
+      "404",
+      "500"
+    ],
+    "answer": "404",
+    "topic": "APIs",
+    "explanation": "404 indicates that the requested resource was not found.",
+    "skills": [
+      "system-design",
+      "cloud-computing",
+      "networking"
+    ],
+    "specializations": [
+      "software",
+      "cloud",
+      "devops",
+      "cybersecurity"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Why should passwords be stored using a password hashing function?",
+    "options": [
+      "To make them shorter",
+      "To avoid storing the original password",
+      "To make login optional",
+      "To share passwords across users"
+    ],
+    "answer": "To avoid storing the original password",
+    "topic": "Security",
+    "explanation": "A password hash lets the system verify a password without storing its original text.",
+    "skills": [
+      "cybersecurity",
+      "security-practices"
+    ],
+    "specializations": [
+      "cybersecurity",
+      "cloud",
+      "devops"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What is the main purpose of a unit test?",
+    "options": [
+      "Test one small unit of behavior",
+      "Deploy the whole application",
+      "Replace code review",
+      "Measure network speed"
+    ],
+    "answer": "Test one small unit of behavior",
+    "topic": "Testing",
+    "explanation": "A unit test checks a small, isolated piece of program behavior.",
+    "skills": [
+      "testing"
+    ],
+    "specializations": [
+      "software",
+      "web-development",
+      "cloud",
+      "devops",
+      "robotics"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Which data structure is best suited for first-in, first-out processing?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Set",
+      "Tree"
+    ],
+    "answer": "Queue",
+    "topic": "Data structures",
+    "explanation": "A queue removes items in the order they were added.",
+    "skills": [
+      "data-structures",
+      "problem-solving"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "web-development",
+      "robotics"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What does a database index primarily improve?",
+    "options": [
+      "Query lookup speed",
+      "Password strength",
+      "Screen resolution",
+      "Data compression only"
+    ],
+    "answer": "Query lookup speed",
+    "topic": "Databases",
+    "explanation": "An index can help the database locate matching rows without scanning every row.",
+    "skills": [
+      "sql",
+      "analytics"
+    ],
+    "specializations": [
+      "data-science",
+      "business-analytics",
+      "operations",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Which Git command creates a new branch and switches to it?",
+    "options": [
+      "git merge",
+      "git switch -c",
+      "git status",
+      "git stash"
+    ],
+    "answer": "git switch -c",
+    "topic": "Developer tools",
+    "explanation": "git switch -c creates a branch and checks it out.",
+    "skills": [
+      "teamwork",
+      "project-management",
+      "technical-writing"
+    ],
+    "specializations": [
+      "software",
+      "web-development",
+      "cloud",
+      "devops",
+      "product-management"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "What does responsive web design aim to support?",
+    "options": [
+      "Only desktop screens",
+      "Different screen sizes and devices",
+      "Only printed pages",
+      "Faster database writes"
+    ],
+    "answer": "Different screen sizes and devices",
+    "topic": "Frontend",
+    "explanation": "Responsive layouts adapt to different viewport sizes and devices.",
+    "skills": [
+      "html-css",
+      "accessibility",
+      "ux-design"
+    ],
+    "specializations": [
+      "web-development",
+      "ux-design",
+      "product-design"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "In object-oriented programming, what is inheritance?",
+    "options": [
+      "A class reusing or extending another class's behavior",
+      "Encrypting a database",
+      "Sorting a list",
+      "Sending an HTTP request"
+    ],
+    "answer": "A class reusing or extending another class's behavior",
+    "topic": "Programming concepts",
+    "explanation": "Inheritance allows a class to reuse or specialize behavior from another class.",
+    "skills": [
+      "python",
+      "problem-solving",
+      "data-structures"
+    ],
+    "specializations": [
+      "software",
+      "data-science",
+      "ai-ml",
+      "robotics"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "Product Management",
+    "question": "A team has limited time and several feature requests. What is the best first step?",
+    "options": [
+      "Build the loudest request immediately",
+      "Compare user value, effort, and product goals",
+      "Add every request to the release",
+      "Wait until all users agree"
+    ],
+    "answer": "Compare user value, effort, and product goals",
+    "explanation": "Prioritization weighs evidence, expected value, effort, and strategic fit.",
+    "skills": [
+      "product-thinking",
+      "project-management",
+      "communication"
+    ],
+    "specializations": [
+      "product-management",
+      "operations"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "Product Management",
+    "question": "Which is the strongest product success measure for a new onboarding flow?",
+    "options": [
+      "Number of buttons on the page",
+      "Share of new users who finish onboarding",
+      "Lines of code written",
+      "Number of meetings held"
+    ],
+    "answer": "Share of new users who finish onboarding",
+    "explanation": "A measure should reflect whether users complete the intended outcome.",
+    "skills": [
+      "product-thinking",
+      "analytics"
+    ],
+    "specializations": [
+      "product-management",
+      "business-analytics"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "Product Management",
+    "question": "What is a useful outcome of a user interview?",
+    "options": [
+      "A list of assumptions to preserve",
+      "Evidence about user needs and current behaviors",
+      "A guarantee every suggestion will be built",
+      "A replacement for product metrics"
+    ],
+    "answer": "Evidence about user needs and current behaviors",
+    "explanation": "Interviews help uncover needs, context, and existing behaviors.",
+    "skills": [
+      "product-thinking",
+      "communication",
+      "research"
+    ],
+    "specializations": [
+      "product-management",
+      "ux-design",
+      "product-design"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "Business Analytics",
+    "question": "A measure rises from 40 to 50. What is the percentage increase?",
+    "options": [
+      "10%",
+      "20%",
+      "25%",
+      "50%"
+    ],
+    "answer": "25%",
+    "explanation": "The increase is 10; 10 divided by the starting value 40 is 25%.",
+    "skills": [
+      "analytics",
+      "statistics",
+      "spreadsheets",
+      "mathematics"
+    ],
+    "specializations": [
+      "business-analytics",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "Business Analytics",
+    "question": "Which summary is least affected by one extremely large outlier?",
+    "options": [
+      "Mean",
+      "Median",
+      "Range",
+      "Total"
+    ],
+    "answer": "Median",
+    "explanation": "The median depends on the middle rank and is more resistant to extreme values.",
+    "skills": [
+      "analytics",
+      "statistics",
+      "mathematics"
+    ],
+    "specializations": [
+      "business-analytics",
+      "data-science",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "Business Operations",
+    "question": "A process has a step that consistently takes much longer than the others. What should you investigate first?",
+    "options": [
+      "The bottleneck step and its causes",
+      "The color of the process chart",
+      "Adding more steps",
+      "Removing all measurements"
+    ],
+    "answer": "The bottleneck step and its causes",
+    "explanation": "Finding the constraint helps focus improvement where it can increase total throughput.",
+    "skills": [
+      "analytics",
+      "problem-solving",
+      "project-management"
+    ],
+    "specializations": [
+      "operations",
+      "business-analytics"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "UX Design",
+    "question": "What is the main goal of a usability test?",
+    "options": [
+      "Prove the design team is right",
+      "Observe users completing representative tasks",
+      "Collect only aesthetic preferences",
+      "Replace accessibility checks"
+    ],
+    "answer": "Observe users completing representative tasks",
+    "explanation": "Usability testing reveals where people succeed or struggle with real tasks.",
+    "skills": [
+      "ux-design",
+      "research",
+      "problem-solving"
+    ],
+    "specializations": [
+      "ux-design",
+      "product-design"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "UX Design",
+    "question": "Which change best improves keyboard accessibility for a form?",
+    "options": [
+      "Remove visible focus styles",
+      "Ensure controls can be reached and operated with a keyboard",
+      "Use color as the only error signal",
+      "Disable labels"
+    ],
+    "answer": "Ensure controls can be reached and operated with a keyboard",
+    "explanation": "Keyboard access and visible focus allow people to navigate without a mouse.",
+    "skills": [
+      "accessibility",
+      "ux-design",
+      "html-css"
+    ],
+    "specializations": [
+      "ux-design",
+      "product-design",
+      "web-development"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "Cybersecurity",
+    "question": "What does the principle of least privilege mean?",
+    "options": [
+      "Give every account administrator access",
+      "Grant only the access needed for a task",
+      "Share one account across a team",
+      "Never review permissions"
+    ],
+    "answer": "Grant only the access needed for a task",
+    "explanation": "Least privilege limits access to reduce the impact of mistakes or compromise.",
+    "skills": [
+      "cybersecurity",
+      "security-practices"
+    ],
+    "specializations": [
+      "cybersecurity",
+      "cloud",
+      "devops"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "Cybersecurity",
+    "question": "Which practice helps prevent SQL injection?",
+    "options": [
+      "Build SQL by joining raw user input",
+      "Use parameterized queries",
+      "Hide the submit button",
+      "Store queries in a text file"
+    ],
+    "answer": "Use parameterized queries",
+    "explanation": "Parameters keep user-supplied values separate from executable SQL syntax.",
+    "skills": [
+      "cybersecurity",
+      "security-practices",
+      "sql"
+    ],
+    "specializations": [
+      "cybersecurity",
+      "software",
+      "web-development"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "Cloud Computing",
+    "question": "What does horizontal scaling usually mean?",
+    "options": [
+      "Adding more service instances",
+      "Increasing one server's memory only",
+      "Deleting monitoring",
+      "Reducing all replicas to one"
+    ],
+    "answer": "Adding more service instances",
+    "explanation": "Horizontal scaling increases capacity by adding instances or machines.",
+    "skills": [
+      "cloud-computing",
+      "system-design"
+    ],
+    "specializations": [
+      "cloud",
+      "devops"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "DevOps",
+    "question": "What is a key purpose of continuous integration?",
+    "options": [
+      "Merge and validate small code changes frequently",
+      "Avoid running automated checks",
+      "Deploy without version control",
+      "Replace all testing with manual review"
+    ],
+    "answer": "Merge and validate small code changes frequently",
+    "explanation": "Continuous integration runs repeatable checks on frequently integrated changes.",
+    "skills": [
+      "testing",
+      "cloud-computing",
+      "teamwork"
+    ],
+    "specializations": [
+      "devops",
+      "software"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "Robotics",
+    "question": "Why might a robot use feedback from a sensor while moving?",
+    "options": [
+      "To compare actual motion with the target and correct error",
+      "To avoid measuring motion",
+      "To increase battery size",
+      "To remove all control logic"
+    ],
+    "answer": "To compare actual motion with the target and correct error",
+    "explanation": "Feedback lets a controller adjust behavior based on measured results.",
+    "skills": [
+      "embedded-systems",
+      "mathematics",
+      "problem-solving"
+    ],
+    "specializations": [
+      "robotics"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "Statistics",
+    "question": "If two variables are correlated, what can you conclude from that alone?",
+    "options": [
+      "One definitely causes the other",
+      "They vary together, but causation is not established",
+      "The data contains no uncertainty",
+      "The relationship is always linear"
+    ],
+    "answer": "They vary together, but causation is not established",
+    "explanation": "Correlation describes association; additional evidence is needed to infer causation.",
+    "skills": [
+      "statistics",
+      "analytics",
+      "mathematics"
+    ],
+    "specializations": [
+      "data-science",
+      "ai-ml",
+      "business-analytics",
+      "quantitative-analysis",
+      "data-science-math"
+    ]
   }
 ]
