@@ -154,7 +154,26 @@ class API:
                     if not cur.rowcount: return self.fail("Plan item not found.", 404)
                     save_readiness_snapshot(db, uid)
                     return self.respond({"id": match.group(1), "completed": payload["completed"]}, cookie=set_cookie)
-                if path == "/api/plan/schedule" and method == "POST": return self.respond({"editUrl": "/pages/plan.html?edit=1"}, cookie=set_cookie)
+                if path == "/api/plan/schedule" and method == "POST": return self.respond({"editable": True}, cookie=set_cookie)
+                if path == "/api/plan/schedule" and method == "PATCH":
+                    items = payload.get("items")
+                    if not isinstance(items, list) or not items or len(items) > 100:
+                        return self.fail("Provide between 1 and 100 schedule activities.")
+                    submitted_ids = [str(item.get("id", "")) for item in items if isinstance(item, dict)]
+                    if len(submitted_ids) != len(items) or len(set(submitted_ids)) != len(items):
+                        return self.fail("Each schedule activity must have a unique id.")
+                    for item in items:
+                        title, description, week = item.get("title"), item.get("description", ""), item.get("week")
+                        owned = db.execute("SELECT 1 FROM plan_items WHERE id=? AND user_id=?", (str(item["id"]), uid)).fetchone()
+                        if not owned:
+                            return self.fail("A schedule activity was not found for this account.", 404)
+                        if (not isinstance(title, str) or not title.strip() or len(title.strip()) > 120
+                                or not isinstance(description, str) or len(description) > 240
+                                or not isinstance(week, int) or isinstance(week, bool) or not 1 <= week <= 52):
+                            return self.fail("Each activity needs a name, a description of up to 240 characters, and a week from 1 to 52.")
+                    db.executemany("UPDATE plan_items SET title=?,description=?,week=? WHERE id=? AND user_id=?", [(item["title"].strip(), item.get("description", "").strip(), item["week"], str(item["id"]), uid) for item in items])
+                    save_readiness_snapshot(db, uid)
+                    return self.respond({"saved": True, "items": len(items)}, cookie=set_cookie)
                 if path == "/api/practice/questions" and method == "GET":
                     relevant = self.practice_questions(user_profile(db, uid))
                     params = parse_qs(urlsplit(self.h.path).query)

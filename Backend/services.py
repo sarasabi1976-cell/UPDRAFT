@@ -65,7 +65,8 @@ def build_plan(db, uid):
             db.execute("INSERT OR IGNORE INTO plan_items(id,user_id,title,description,week) VALUES(?,?,?,?,?)", (item_id, uid, title, description, week))
         items = [item for item in plan_items(db, uid) if item["id"].startswith(prefix)]
         done = sum(bool(item["completed"]) for item in items)
-        return {"title": f"{spec_name} Preparation Plan", "durationLabel": "4 weeks", "items": [{**item, "completed": bool(item["completed"])} for item in items], "recommendation": f"Start with {next((i['title'] for i in items if not i['completed']), 'your next review')}; activities are based on your selected skills.", "completed": done, "total": len(items)}
+        duration_weeks = max([4, *(int(item["week"] or 1) for item in items)])
+        return {"title": f"{spec_name} Preparation Plan", "durationLabel": f"{duration_weeks} weeks", "items": [{**item, "completed": bool(item["completed"])} for item in items], "recommendation": f"Start with {next((i['title'] for i in items if not i['completed']), 'your next review')}; activities are based on your selected skills.", "completed": done, "total": len(items)}
 
     # General interview plan for users who completed the role/level assessment.
     if isinstance(data.get("weeks"), list):
@@ -84,7 +85,8 @@ def build_plan(db, uid):
                 db.execute("INSERT OR IGNORE INTO plan_items(id,user_id,title,description,week) VALUES(?,?,?,?,?)", (item_id, uid, session, topic.get("name", "Preparation"), topic.get("week", 1)))
         items = plan_items(db, uid)
     done = sum(bool(item["completed"]) for item in items)
-    return {"title": data.get("title", "Your prep plan"), "durationLabel": f"{data.get('durationWeeks', 4)} weeks", "items": [{**item, "completed": bool(item["completed"])} for item in items], "recommendation": "Focus on your next incomplete plan item.", "completed": done, "total": len(items)}
+    duration_weeks = max([int(data.get("durationWeeks", 4) or 4), *(int(item["week"] or 1) for item in items)])
+    return {"title": data.get("title", "Your prep plan"), "durationLabel": f"{duration_weeks} weeks", "items": [{**item, "completed": bool(item["completed"])} for item in items], "recommendation": "Focus on your next incomplete plan item.", "completed": done, "total": len(items)}
 
 def aggregate(db, uid):
     answers = db.execute("SELECT correct,created_at FROM answers WHERE user_id=? ORDER BY id", (uid,)).fetchall()
