@@ -17,3 +17,11 @@ CAREER_DATA_PATH = DATA_ROOT / "career-paths.json"
 import os
 ADZUNA_APP_ID = os.environ.get("ADZUNA_APP_ID", "").strip()
 ADZUNA_APP_KEY = os.environ.get("ADZUNA_APP_KEY", "").strip()
+from pathlib import Path
+
+DB_PATH = Path(
+    os.environ.get(
+        "DB_PATH",
+        Path(__file__).resolve().parent / "app.sqlite3",
+    )
+)
