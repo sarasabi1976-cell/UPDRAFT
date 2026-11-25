@@ -52,7 +52,6 @@ def _linkedin_url(query, location, country=None):
     params = {
         "keywords": query,
         "sortBy": "DD",
-        "f_TPR": "r604800",
         "refresh": "true",
         "origin": "JOB_SEARCH_PAGE_JOB_FILTER",
     }
