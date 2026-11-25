@@ -253,11 +253,20 @@ class API:
         candidates = [path for path in CAREER_PATHS if specialization in path.get("specializations", [])]
         matches = []
         for path in candidates:
-            required = path.get("requiredSkills", [])
-            values = [ratings.get(skill, 1) for skill in required]
-            gaps = [labels.get(skill, skill) for skill in required if ratings.get(skill, 1) < 4]
-            tasks = list(path.get("studyTasks", [])) + [f"Strengthen {gap}" for gap in gaps]
-            matches.append({"title": path["title"], "matchPercent": clamp(round(sum(values) / max(len(values), 1) * 20)), "description": path.get("description", "Career option based on your selected specialization."), "requiredSkills": [labels.get(skill, skill) for skill in required], "skillGaps": gaps, "studyTasks": tasks[:6], "links": path.get("links", [])})
+            required = path.get("requirementsBySpecialization", {}).get(specialization, path.get("requiredSkills", []))
+            skill_ratings = {}
+            for skill in required:
+                try:
+                    skill_ratings[skill] = max(1, min(5, int(ratings.get(skill, 1))))
+                except (TypeError, ValueError):
+                    skill_ratings[skill] = 1
+            score = round(sum(skill_ratings.values()) / max(len(required), 1) * 20)
+            gaps = [skill for skill in required if skill_ratings[skill] < 4]
+            gaps.sort(key=lambda skill: (skill_ratings[skill], required.index(skill)))
+            tasks = list(path.get("studyTasksBySpecialization", {}).get(specialization, path.get("studyTasks", [])))
+            tasks.extend(f"Strengthen {labels.get(skill, skill)} with a focused practice exercise" for skill in gaps)
+            description = path.get("descriptionsBySpecialization", {}).get(specialization, path.get("description", "Career option based on your selected specialization."))
+            matches.append({"title": path["title"], "matchPercent": clamp(score), "description": description, "requiredSkills": [labels.get(skill, skill) for skill in required], "skillGaps": [labels.get(skill, skill) for skill in gaps], "studyTasks": tasks[:6], "links": path.get("links", [])})
         matches.sort(key=lambda item: item["matchPercent"], reverse=True)
         return {"matches": matches[:6]}
 

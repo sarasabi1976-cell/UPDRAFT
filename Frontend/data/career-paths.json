@@ -339,12 +339,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Build and maintain reliable software products.",
+      "description": "Apply Python, Data Structures and Algorithms, Problem Solving to the day-to-day challenges of a Software Engineer.",
       "studyTasks": [
         "Build a small application",
         "Practice data structures and algorithms",
         "Add automated tests"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "python",
+          "data-structures",
+          "problem-solving",
+          "testing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Software Engineer case study focused on Python.",
+          "Build a small Software Engineer portfolio exercise using Data Structures and Algorithms.",
+          "Practice explaining your approach to a Software Engineer scenario involving Problem Solving.",
+          "Strengthen your Testing and Quality with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Python, Data Structures and Algorithms, Problem Solving to the day-to-day challenges of a Software Engineer."
+      }
     },
     {
       "id": "data-analyst",
@@ -361,12 +380,70 @@
         "analytics",
         "communication"
       ],
-      "description": "Turn data into clear findings that support decisions.",
+      "description": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Data Analyst.",
       "studyTasks": [
         "Analyze a public dataset",
         "Write SQL queries",
         "Present findings with a chart"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "sql",
+          "analytics",
+          "communication"
+        ],
+        "business-analytics": [
+          "sql",
+          "analytics",
+          "communication",
+          "statistics"
+        ],
+        "quantitative-analysis": [
+          "python",
+          "sql",
+          "analytics",
+          "communication"
+        ],
+        "data-science-math": [
+          "python",
+          "sql",
+          "analytics",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Data Analyst case study focused on Python.",
+          "Build a small Data Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Data Analyst scenario involving Data Analytics.",
+          "Strengthen your Communication with a role-specific practice task."
+        ],
+        "business-analytics": [
+          "Review a Data Analyst case study focused on SQL.",
+          "Build a small Data Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Data Analyst scenario involving Communication.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ],
+        "quantitative-analysis": [
+          "Review a Data Analyst case study focused on Python.",
+          "Build a small Data Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Data Analyst scenario involving Data Analytics.",
+          "Strengthen your Communication with a role-specific practice task."
+        ],
+        "data-science-math": [
+          "Review a Data Analyst case study focused on Python.",
+          "Build a small Data Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Data Analyst scenario involving Data Analytics.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Data Analyst.",
+        "business-analytics": "Apply SQL, Data Analytics, Communication to the day-to-day challenges of a Data Analyst.",
+        "quantitative-analysis": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Data Analyst.",
+        "data-science-math": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Data Analyst."
+      }
     },
     {
       "id": "ml-engineer",
@@ -382,12 +459,57 @@
         "analytics",
         "data-structures"
       ],
-      "description": "Develop and evaluate data-driven models and services.",
+      "description": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Machine Learning Engineer.",
       "studyTasks": [
         "Review model evaluation methods",
         "Build a small prediction project",
         "Document model limitations"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "sql"
+        ],
+        "ai-ml": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "data-structures"
+        ],
+        "data-science-math": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "sql"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Machine Learning Engineer case study focused on Python.",
+          "Build a small Machine Learning Engineer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Machine Learning Engineer scenario involving Problem Solving.",
+          "Strengthen your SQL with a role-specific practice task."
+        ],
+        "ai-ml": [
+          "Review a Machine Learning Engineer case study focused on Python.",
+          "Build a small Machine Learning Engineer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Machine Learning Engineer scenario involving Problem Solving.",
+          "Strengthen your Data Structures and Algorithms with a role-specific practice task."
+        ],
+        "data-science-math": [
+          "Review a Machine Learning Engineer case study focused on Python.",
+          "Build a small Machine Learning Engineer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Machine Learning Engineer scenario involving Problem Solving.",
+          "Strengthen your SQL with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Machine Learning Engineer.",
+        "ai-ml": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Machine Learning Engineer.",
+        "data-science-math": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Machine Learning Engineer."
+      }
     },
     {
       "id": "frontend-developer",
@@ -403,12 +525,57 @@
         "testing",
         "communication"
       ],
-      "description": "Create accessible, responsive interfaces for web applications.",
+      "description": "Apply UX Design, Communication, Accessibility to the day-to-day challenges of a Frontend Developer.",
       "studyTasks": [
         "Build a responsive page",
         "Practice accessible HTML",
         "Add browser-based tests"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "testing",
+          "communication",
+          "python",
+          "data-structures"
+        ],
+        "web-development": [
+          "javascript",
+          "ux-design",
+          "testing",
+          "communication"
+        ],
+        "product-design": [
+          "ux-design",
+          "communication",
+          "accessibility",
+          "product-thinking"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Frontend Developer case study focused on Testing and Quality.",
+          "Build a small Frontend Developer portfolio exercise using Communication.",
+          "Practice explaining your approach to a Frontend Developer scenario involving Python.",
+          "Strengthen your Data Structures and Algorithms with a role-specific practice task."
+        ],
+        "web-development": [
+          "Review a Frontend Developer case study focused on JavaScript.",
+          "Build a small Frontend Developer portfolio exercise using UX Design.",
+          "Practice explaining your approach to a Frontend Developer scenario involving Testing and Quality.",
+          "Strengthen your Communication with a role-specific practice task."
+        ],
+        "product-design": [
+          "Review a Frontend Developer case study focused on UX Design.",
+          "Build a small Frontend Developer portfolio exercise using Communication.",
+          "Practice explaining your approach to a Frontend Developer scenario involving Accessibility.",
+          "Strengthen your Product Thinking with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Testing and Quality, Communication, Python to the day-to-day challenges of a Frontend Developer.",
+        "web-development": "Apply JavaScript, UX Design, Testing and Quality to the day-to-day challenges of a Frontend Developer.",
+        "product-design": "Apply UX Design, Communication, Accessibility to the day-to-day challenges of a Frontend Developer."
+      }
     },
     {
       "id": "cybersecurity-analyst",
@@ -422,12 +589,31 @@
         "technical-writing",
         "communication"
       ],
-      "description": "Identify risks and help protect systems and information.",
+      "description": "Apply Cybersecurity, Problem Solving, Technical Writing to the day-to-day challenges of a Cybersecurity Analyst.",
       "studyTasks": [
         "Learn common web vulnerabilities",
         "Practice reviewing security logs",
         "Write a short incident report"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "problem-solving",
+          "technical-writing",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Cybersecurity Analyst case study focused on Cybersecurity.",
+          "Build a small Cybersecurity Analyst portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Cybersecurity Analyst scenario involving Technical Writing.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Problem Solving, Technical Writing to the day-to-day challenges of a Cybersecurity Analyst."
+      }
     },
     {
       "id": "cloud-engineer",
@@ -442,12 +628,44 @@
         "testing",
         "problem-solving"
       ],
-      "description": "Deploy and operate dependable services in cloud environments.",
+      "description": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Cloud Engineer.",
       "studyTasks": [
         "Deploy a small service",
         "Practice monitoring and alerting",
         "Document a recovery plan"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "cloud-computing",
+          "system-design",
+          "testing",
+          "problem-solving"
+        ],
+        "devops": [
+          "cloud-computing",
+          "system-design",
+          "testing",
+          "networking"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Cloud Engineer case study focused on Cloud Computing.",
+          "Build a small Cloud Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Cloud Engineer scenario involving Testing and Quality.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ],
+        "devops": [
+          "Review a Cloud Engineer case study focused on Cloud Computing.",
+          "Build a small Cloud Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Cloud Engineer scenario involving Testing and Quality.",
+          "Strengthen your Networking with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Cloud Engineer.",
+        "devops": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Cloud Engineer."
+      }
     },
     {
       "id": "product-manager",
@@ -462,12 +680,44 @@
         "analytics",
         "project-management"
       ],
-      "description": "Connect customer needs, business goals, and product delivery.",
+      "description": "Apply Data Analytics, Project Management, Communication to the day-to-day challenges of a Product Manager.",
       "studyTasks": [
         "Write a product brief",
         "Prioritize a sample backlog",
         "Define measurable success criteria"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "product-thinking",
+          "analytics",
+          "communication",
+          "project-management"
+        ],
+        "operations": [
+          "analytics",
+          "project-management",
+          "communication",
+          "teamwork"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Product Manager case study focused on Product Thinking.",
+          "Build a small Product Manager portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Product Manager scenario involving Communication.",
+          "Strengthen your Project Management with a role-specific practice task."
+        ],
+        "operations": [
+          "Review a Product Manager case study focused on Data Analytics.",
+          "Build a small Product Manager portfolio exercise using Project Management.",
+          "Practice explaining your approach to a Product Manager scenario involving Communication.",
+          "Strengthen your Teamwork with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Product Manager.",
+        "operations": "Apply Data Analytics, Project Management, Communication to the day-to-day challenges of a Product Manager."
+      }
     },
     {
       "id": "ux-designer",
@@ -482,12 +732,44 @@
         "problem-solving",
         "product-thinking"
       ],
-      "description": "Research user needs and design usable product experiences.",
+      "description": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a UX Designer.",
       "studyTasks": [
         "Interview a potential user",
         "Create a simple prototype",
         "Run a usability review"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "product-thinking",
+          "communication",
+          "accessibility"
+        ],
+        "product-design": [
+          "ux-design",
+          "product-thinking",
+          "communication",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a UX Designer case study focused on UX Design.",
+          "Build a small UX Designer portfolio exercise using Product Thinking.",
+          "Practice explaining your approach to a UX Designer scenario involving Communication.",
+          "Strengthen your Accessibility with a role-specific practice task."
+        ],
+        "product-design": [
+          "Review a UX Designer case study focused on UX Design.",
+          "Build a small UX Designer portfolio exercise using Product Thinking.",
+          "Practice explaining your approach to a UX Designer scenario involving Communication.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a UX Designer.",
+        "product-design": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a UX Designer."
+      }
     },
     {
       "id": "qa-engineer",
@@ -503,12 +785,57 @@
         "technical-writing",
         "javascript"
       ],
-      "description": "Help teams release software that behaves reliably.",
+      "description": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a QA Engineer.",
       "studyTasks": [
         "Write test cases",
         "Automate a simple browser flow",
         "Report and reproduce a defect"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "python",
+          "problem-solving",
+          "testing",
+          "system-design"
+        ],
+        "web-development": [
+          "javascript",
+          "testing",
+          "html-css",
+          "ux-design"
+        ],
+        "devops": [
+          "cloud-computing",
+          "system-design",
+          "testing",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a QA Engineer case study focused on Python.",
+          "Build a small QA Engineer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a QA Engineer scenario involving Testing and Quality.",
+          "Strengthen your System Design with a role-specific practice task."
+        ],
+        "web-development": [
+          "Review a QA Engineer case study focused on JavaScript.",
+          "Build a small QA Engineer portfolio exercise using Testing and Quality.",
+          "Practice explaining your approach to a QA Engineer scenario involving HTML and CSS.",
+          "Strengthen your UX Design with a role-specific practice task."
+        ],
+        "devops": [
+          "Review a QA Engineer case study focused on Cloud Computing.",
+          "Build a small QA Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a QA Engineer scenario involving Testing and Quality.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a QA Engineer.",
+        "web-development": "Apply JavaScript, Testing and Quality, HTML and CSS to the day-to-day challenges of a QA Engineer.",
+        "devops": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a QA Engineer."
+      }
     },
     {
       "id": "business-operations-analyst",
@@ -524,12 +851,57 @@
         "communication",
         "project-management"
       ],
-      "description": "Use data and process analysis to improve business operations.",
+      "description": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Business Operations Analyst.",
       "studyTasks": [
         "Map a business process",
         "Measure a sample workflow",
         "Summarize improvement options"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "sql",
+          "analytics",
+          "communication",
+          "problem-solving"
+        ],
+        "operations": [
+          "analytics",
+          "project-management",
+          "communication",
+          "problem-solving"
+        ],
+        "quantitative-analysis": [
+          "sql",
+          "analytics",
+          "statistics",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Business Operations Analyst case study focused on SQL.",
+          "Build a small Business Operations Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Business Operations Analyst scenario involving Communication.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ],
+        "operations": [
+          "Review a Business Operations Analyst case study focused on Data Analytics.",
+          "Build a small Business Operations Analyst portfolio exercise using Project Management.",
+          "Practice explaining your approach to a Business Operations Analyst scenario involving Communication.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ],
+        "quantitative-analysis": [
+          "Review a Business Operations Analyst case study focused on SQL.",
+          "Build a small Business Operations Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Business Operations Analyst scenario involving Statistics.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply SQL, Data Analytics, Communication to the day-to-day challenges of a Business Operations Analyst.",
+        "operations": "Apply Data Analytics, Project Management, Communication to the day-to-day challenges of a Business Operations Analyst.",
+        "quantitative-analysis": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Business Operations Analyst."
+      }
     },
     {
       "id": "technical-writer",
@@ -545,12 +917,57 @@
         "problem-solving",
         "teamwork"
       ],
-      "description": "Make technical information clear and useful to its audience.",
+      "description": "Apply Problem Solving, Cloud Computing, System Design to the day-to-day challenges of a Technical Writer.",
       "studyTasks": [
         "Rewrite a setup guide",
         "Create an API example",
         "Review documentation with a user"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "problem-solving",
+          "communication",
+          "python",
+          "data-structures"
+        ],
+        "cybersecurity": [
+          "networking",
+          "problem-solving",
+          "technical-writing",
+          "communication"
+        ],
+        "cloud": [
+          "problem-solving",
+          "cloud-computing",
+          "system-design",
+          "networking"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Technical Writer case study focused on Problem Solving.",
+          "Build a small Technical Writer portfolio exercise using Communication.",
+          "Practice explaining your approach to a Technical Writer scenario involving Python.",
+          "Strengthen your Data Structures and Algorithms with a role-specific practice task."
+        ],
+        "cybersecurity": [
+          "Review a Technical Writer case study focused on Networking.",
+          "Build a small Technical Writer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Technical Writer scenario involving Technical Writing.",
+          "Strengthen your Communication with a role-specific practice task."
+        ],
+        "cloud": [
+          "Review a Technical Writer case study focused on Problem Solving.",
+          "Build a small Technical Writer portfolio exercise using Cloud Computing.",
+          "Practice explaining your approach to a Technical Writer scenario involving System Design.",
+          "Strengthen your Networking with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Problem Solving, Communication, Python to the day-to-day challenges of a Technical Writer.",
+        "cybersecurity": "Apply Networking, Problem Solving, Technical Writing to the day-to-day challenges of a Technical Writer.",
+        "cloud": "Apply Problem Solving, Cloud Computing, System Design to the day-to-day challenges of a Technical Writer."
+      }
     },
     {
       "id": "robotics-engineer",
@@ -564,12 +981,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Develop software and systems that control robotic devices.",
+      "description": "Apply Python, Problem Solving, System Design to the day-to-day challenges of a Robotics Engineer.",
       "studyTasks": [
         "Practice sensor data handling",
         "Build a small simulation",
         "Test edge cases"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "problem-solving",
+          "system-design",
+          "testing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Robotics Engineer case study focused on Python.",
+          "Build a small Robotics Engineer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Robotics Engineer scenario involving System Design.",
+          "Strengthen your Testing and Quality with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, Problem Solving, System Design to the day-to-day challenges of a Robotics Engineer."
+      }
     },
     {
       "id": "software-backend-developer",
@@ -583,12 +1019,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Structures and Algorithms, Problem Solving to the day-to-day challenges of a Backend Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "python",
+          "data-structures",
+          "problem-solving",
+          "system-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Backend Developer case study focused on Python.",
+          "Build a small Backend Developer portfolio exercise using Data Structures and Algorithms.",
+          "Practice explaining your approach to a Backend Developer scenario involving Problem Solving.",
+          "Strengthen your System Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Python, Data Structures and Algorithms, Problem Solving to the day-to-day challenges of a Backend Developer."
+      }
     },
     {
       "id": "software-application-developer",
@@ -602,12 +1057,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Structures and Algorithms, Testing and Quality to the day-to-day challenges of a Application Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "python",
+          "data-structures",
+          "testing",
+          "system-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Application Developer case study focused on Python.",
+          "Build a small Application Developer portfolio exercise using Data Structures and Algorithms.",
+          "Practice explaining your approach to a Application Developer scenario involving Testing and Quality.",
+          "Strengthen your System Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Python, Data Structures and Algorithms, Testing and Quality to the day-to-day challenges of a Application Developer."
+      }
     },
     {
       "id": "software-mobile-app-developer",
@@ -621,12 +1095,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a Mobile App Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "python",
+          "problem-solving",
+          "testing",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Mobile App Developer case study focused on Python.",
+          "Build a small Mobile App Developer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Mobile App Developer scenario involving Testing and Quality.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a Mobile App Developer."
+      }
     },
     {
       "id": "software-game-developer",
@@ -640,12 +1133,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Structures and Algorithms, Problem Solving, Testing and Quality to the day-to-day challenges of a Game Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "data-structures",
+          "problem-solving",
+          "testing",
+          "system-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Game Developer case study focused on Data Structures and Algorithms.",
+          "Build a small Game Developer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Game Developer scenario involving Testing and Quality.",
+          "Strengthen your System Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Data Structures and Algorithms, Problem Solving, Testing and Quality to the day-to-day challenges of a Game Developer."
+      }
     },
     {
       "id": "software-embedded-software-developer",
@@ -659,12 +1171,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Structures and Algorithms, Problem Solving, Testing and Quality to the day-to-day challenges of a Embedded Software Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "data-structures",
+          "problem-solving",
+          "testing",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Embedded Software Developer case study focused on Data Structures and Algorithms.",
+          "Build a small Embedded Software Developer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Embedded Software Developer scenario involving Testing and Quality.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Data Structures and Algorithms, Problem Solving, Testing and Quality to the day-to-day challenges of a Embedded Software Developer."
+      }
     },
     {
       "id": "software-platform-engineer",
@@ -678,12 +1209,31 @@
         "problem-solving",
         "testing"
       ],
-      "description": "Apply python, data structures, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Structures and Algorithms, System Design to the day-to-day challenges of a Platform Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "software": [
+          "python",
+          "data-structures",
+          "system-design",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "software": [
+          "Review a Platform Engineer case study focused on Python.",
+          "Build a small Platform Engineer portfolio exercise using Data Structures and Algorithms.",
+          "Practice explaining your approach to a Platform Engineer scenario involving System Design.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "software": "Apply Python, Data Structures and Algorithms, System Design to the day-to-day challenges of a Platform Engineer."
+      }
     },
     {
       "id": "data-science-data-engineer",
@@ -697,12 +1247,31 @@
         "analytics",
         "problem-solving"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Data Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "sql",
+          "analytics",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Data Engineer case study focused on Python.",
+          "Build a small Data Engineer portfolio exercise using SQL.",
+          "Practice explaining your approach to a Data Engineer scenario involving Data Analytics.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Data Engineer."
+      }
     },
     {
       "id": "data-science-business-intelligence-developer",
@@ -716,12 +1285,31 @@
         "analytics",
         "problem-solving"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Problem Solving to the day-to-day challenges of a Business Intelligence Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "sql",
+          "problem-solving",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Business Intelligence Developer case study focused on Python.",
+          "Build a small Business Intelligence Developer portfolio exercise using SQL.",
+          "Practice explaining your approach to a Business Intelligence Developer scenario involving Problem Solving.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, SQL, Problem Solving to the day-to-day challenges of a Business Intelligence Developer."
+      }
     },
     {
       "id": "data-science-research-data-analyst",
@@ -735,12 +1323,31 @@
         "analytics",
         "problem-solving"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Problem Solving to the day-to-day challenges of a Research Data Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "sql",
+          "problem-solving",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Research Data Analyst case study focused on Python.",
+          "Build a small Research Data Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Research Data Analyst scenario involving Problem Solving.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, SQL, Problem Solving to the day-to-day challenges of a Research Data Analyst."
+      }
     },
     {
       "id": "data-science-analytics-engineer",
@@ -754,12 +1361,31 @@
         "analytics",
         "problem-solving"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Analytics Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Analytics Engineer case study focused on Python.",
+          "Build a small Analytics Engineer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Analytics Engineer scenario involving Problem Solving.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Analytics Engineer."
+      }
     },
     {
       "id": "data-science-data-visualization-specialist",
@@ -773,12 +1399,31 @@
         "analytics",
         "problem-solving"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Data Visualization Specialist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Data Visualization Specialist case study focused on Python.",
+          "Build a small Data Visualization Specialist portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Data Visualization Specialist scenario involving Problem Solving.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Data Visualization Specialist."
+      }
     },
     {
       "id": "data-science-database-developer",
@@ -792,12 +1437,31 @@
         "analytics",
         "problem-solving"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Data Analytics, Problem Solving to the day-to-day challenges of a Database Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science": [
+          "sql",
+          "analytics",
+          "problem-solving",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science": [
+          "Review a Database Developer case study focused on SQL.",
+          "Build a small Database Developer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Database Developer scenario involving Problem Solving.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science": "Apply SQL, Data Analytics, Problem Solving to the day-to-day challenges of a Database Developer."
+      }
     },
     {
       "id": "ai-ml-ai-research-assistant",
@@ -811,12 +1475,31 @@
         "problem-solving",
         "data-structures"
       ],
-      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a AI Research Assistant.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ai-ml": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ai-ml": [
+          "Review a AI Research Assistant case study focused on Python.",
+          "Build a small AI Research Assistant portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a AI Research Assistant scenario involving Problem Solving.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ai-ml": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a AI Research Assistant."
+      }
     },
     {
       "id": "ai-ml-applied-machine-learning-scientist",
@@ -830,12 +1513,31 @@
         "problem-solving",
         "data-structures"
       ],
-      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Applied Machine Learning Scientist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ai-ml": [
+          "python",
+          "analytics",
+          "problem-solving",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ai-ml": [
+          "Review a Applied Machine Learning Scientist case study focused on Python.",
+          "Build a small Applied Machine Learning Scientist portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Applied Machine Learning Scientist scenario involving Problem Solving.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ai-ml": "Apply Python, Data Analytics, Problem Solving to the day-to-day challenges of a Applied Machine Learning Scientist."
+      }
     },
     {
       "id": "ai-ml-computer-vision-engineer",
@@ -849,12 +1551,31 @@
         "problem-solving",
         "data-structures"
       ],
-      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Data Structures and Algorithms to the day-to-day challenges of a Computer Vision Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ai-ml": [
+          "python",
+          "analytics",
+          "data-structures",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ai-ml": [
+          "Review a Computer Vision Engineer case study focused on Python.",
+          "Build a small Computer Vision Engineer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Computer Vision Engineer scenario involving Data Structures and Algorithms.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ai-ml": "Apply Python, Data Analytics, Data Structures and Algorithms to the day-to-day challenges of a Computer Vision Engineer."
+      }
     },
     {
       "id": "ai-ml-nlp-engineer",
@@ -868,12 +1589,31 @@
         "problem-solving",
         "data-structures"
       ],
-      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Data Structures and Algorithms to the day-to-day challenges of a NLP Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ai-ml": [
+          "python",
+          "analytics",
+          "data-structures",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ai-ml": [
+          "Review a NLP Engineer case study focused on Python.",
+          "Build a small NLP Engineer portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a NLP Engineer scenario involving Data Structures and Algorithms.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ai-ml": "Apply Python, Data Analytics, Data Structures and Algorithms to the day-to-day challenges of a NLP Engineer."
+      }
     },
     {
       "id": "ai-ml-mlops-engineer",
@@ -887,12 +1627,31 @@
         "problem-solving",
         "data-structures"
       ],
-      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, Data Structures and Algorithms to the day-to-day challenges of a MLOps Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ai-ml": [
+          "python",
+          "problem-solving",
+          "data-structures",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ai-ml": [
+          "Review a MLOps Engineer case study focused on Python.",
+          "Build a small MLOps Engineer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a MLOps Engineer scenario involving Data Structures and Algorithms.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ai-ml": "Apply Python, Problem Solving, Data Structures and Algorithms to the day-to-day challenges of a MLOps Engineer."
+      }
     },
     {
       "id": "ai-ml-ai-product-analyst",
@@ -906,12 +1665,31 @@
         "problem-solving",
         "data-structures"
       ],
-      "description": "Apply python, analytics, problem solving to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, Data Structures and Algorithms to the day-to-day challenges of a AI Product Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ai-ml": [
+          "python",
+          "problem-solving",
+          "data-structures",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ai-ml": [
+          "Review a AI Product Analyst case study focused on Python.",
+          "Build a small AI Product Analyst portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a AI Product Analyst scenario involving Data Structures and Algorithms.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ai-ml": "Apply Python, Problem Solving, Data Structures and Algorithms to the day-to-day challenges of a AI Product Analyst."
+      }
     },
     {
       "id": "web-development-full-stack-developer",
@@ -925,12 +1703,31 @@
         "ux-design",
         "accessibility"
       ],
-      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply JavaScript, HTML and CSS, UX Design to the day-to-day challenges of a Full Stack Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "web-development": [
+          "javascript",
+          "html-css",
+          "ux-design",
+          "accessibility"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "web-development": [
+          "Review a Full Stack Developer case study focused on JavaScript.",
+          "Build a small Full Stack Developer portfolio exercise using HTML and CSS.",
+          "Practice explaining your approach to a Full Stack Developer scenario involving UX Design.",
+          "Strengthen your Accessibility with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "web-development": "Apply JavaScript, HTML and CSS, UX Design to the day-to-day challenges of a Full Stack Developer."
+      }
     },
     {
       "id": "web-development-web-accessibility-developer",
@@ -944,12 +1741,31 @@
         "ux-design",
         "accessibility"
       ],
-      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply JavaScript, HTML and CSS, UX Design to the day-to-day challenges of a Web Accessibility Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "web-development": [
+          "javascript",
+          "html-css",
+          "ux-design",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "web-development": [
+          "Review a Web Accessibility Developer case study focused on JavaScript.",
+          "Build a small Web Accessibility Developer portfolio exercise using HTML and CSS.",
+          "Practice explaining your approach to a Web Accessibility Developer scenario involving UX Design.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "web-development": "Apply JavaScript, HTML and CSS, UX Design to the day-to-day challenges of a Web Accessibility Developer."
+      }
     },
     {
       "id": "web-development-ui-engineer",
@@ -963,12 +1779,31 @@
         "ux-design",
         "accessibility"
       ],
-      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply JavaScript, HTML and CSS, Accessibility to the day-to-day challenges of a UI Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "web-development": [
+          "javascript",
+          "html-css",
+          "accessibility",
+          "testing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "web-development": [
+          "Review a UI Engineer case study focused on JavaScript.",
+          "Build a small UI Engineer portfolio exercise using HTML and CSS.",
+          "Practice explaining your approach to a UI Engineer scenario involving Accessibility.",
+          "Strengthen your Testing and Quality with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "web-development": "Apply JavaScript, HTML and CSS, Accessibility to the day-to-day challenges of a UI Engineer."
+      }
     },
     {
       "id": "web-development-web-applications-developer",
@@ -982,12 +1817,31 @@
         "ux-design",
         "accessibility"
       ],
-      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply JavaScript, HTML and CSS, Accessibility to the day-to-day challenges of a Web Applications Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "web-development": [
+          "javascript",
+          "html-css",
+          "accessibility",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "web-development": [
+          "Review a Web Applications Developer case study focused on JavaScript.",
+          "Build a small Web Applications Developer portfolio exercise using HTML and CSS.",
+          "Practice explaining your approach to a Web Applications Developer scenario involving Accessibility.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "web-development": "Apply JavaScript, HTML and CSS, Accessibility to the day-to-day challenges of a Web Applications Developer."
+      }
     },
     {
       "id": "web-development-design-systems-developer",
@@ -1001,12 +1855,31 @@
         "ux-design",
         "accessibility"
       ],
-      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply JavaScript, UX Design, Accessibility to the day-to-day challenges of a Design Systems Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "web-development": [
+          "javascript",
+          "ux-design",
+          "accessibility",
+          "testing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "web-development": [
+          "Review a Design Systems Developer case study focused on JavaScript.",
+          "Build a small Design Systems Developer portfolio exercise using UX Design.",
+          "Practice explaining your approach to a Design Systems Developer scenario involving Accessibility.",
+          "Strengthen your Testing and Quality with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "web-development": "Apply JavaScript, UX Design, Accessibility to the day-to-day challenges of a Design Systems Developer."
+      }
     },
     {
       "id": "web-development-web-performance-engineer",
@@ -1020,12 +1893,31 @@
         "ux-design",
         "accessibility"
       ],
-      "description": "Apply javascript, html css, ux design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply JavaScript, UX Design, Accessibility to the day-to-day challenges of a Web Performance Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "web-development": [
+          "javascript",
+          "ux-design",
+          "accessibility",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "web-development": [
+          "Review a Web Performance Engineer case study focused on JavaScript.",
+          "Build a small Web Performance Engineer portfolio exercise using UX Design.",
+          "Practice explaining your approach to a Web Performance Engineer scenario involving Accessibility.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "web-development": "Apply JavaScript, UX Design, Accessibility to the day-to-day challenges of a Web Performance Engineer."
+      }
     },
     {
       "id": "cybersecurity-security-operations-analyst",
@@ -1039,12 +1931,31 @@
         "python",
         "problem-solving"
       ],
-      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cybersecurity, Networking, Python to the day-to-day challenges of a Security Operations Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "networking",
+          "python",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Security Operations Analyst case study focused on Cybersecurity.",
+          "Build a small Security Operations Analyst portfolio exercise using Networking.",
+          "Practice explaining your approach to a Security Operations Analyst scenario involving Python.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Networking, Python to the day-to-day challenges of a Security Operations Analyst."
+      }
     },
     {
       "id": "cybersecurity-penetration-tester",
@@ -1058,12 +1969,31 @@
         "python",
         "problem-solving"
       ],
-      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cybersecurity, Networking, Python to the day-to-day challenges of a Penetration Tester.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "networking",
+          "python",
+          "technical-writing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Penetration Tester case study focused on Cybersecurity.",
+          "Build a small Penetration Tester portfolio exercise using Networking.",
+          "Practice explaining your approach to a Penetration Tester scenario involving Python.",
+          "Strengthen your Technical Writing with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Networking, Python to the day-to-day challenges of a Penetration Tester."
+      }
     },
     {
       "id": "cybersecurity-information-security-specialist",
@@ -1077,12 +2007,31 @@
         "python",
         "problem-solving"
       ],
-      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cybersecurity, Networking, Python to the day-to-day challenges of a Information Security Specialist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "networking",
+          "python",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Information Security Specialist case study focused on Cybersecurity.",
+          "Build a small Information Security Specialist portfolio exercise using Networking.",
+          "Practice explaining your approach to a Information Security Specialist scenario involving Python.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Networking, Python to the day-to-day challenges of a Information Security Specialist."
+      }
     },
     {
       "id": "cybersecurity-incident-response-analyst",
@@ -1096,12 +2045,31 @@
         "python",
         "problem-solving"
       ],
-      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cybersecurity, Networking, Problem Solving to the day-to-day challenges of a Incident Response Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "networking",
+          "problem-solving",
+          "technical-writing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Incident Response Analyst case study focused on Cybersecurity.",
+          "Build a small Incident Response Analyst portfolio exercise using Networking.",
+          "Practice explaining your approach to a Incident Response Analyst scenario involving Problem Solving.",
+          "Strengthen your Technical Writing with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Networking, Problem Solving to the day-to-day challenges of a Incident Response Analyst."
+      }
     },
     {
       "id": "cybersecurity-application-security-analyst",
@@ -1115,12 +2083,31 @@
         "python",
         "problem-solving"
       ],
-      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cybersecurity, Networking, Problem Solving to the day-to-day challenges of a Application Security Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "networking",
+          "problem-solving",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Application Security Analyst case study focused on Cybersecurity.",
+          "Build a small Application Security Analyst portfolio exercise using Networking.",
+          "Practice explaining your approach to a Application Security Analyst scenario involving Problem Solving.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Networking, Problem Solving to the day-to-day challenges of a Application Security Analyst."
+      }
     },
     {
       "id": "cybersecurity-governance-risk-and-compliance-analyst",
@@ -1134,12 +2121,31 @@
         "python",
         "problem-solving"
       ],
-      "description": "Apply cybersecurity, networking, python to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cybersecurity, Python, Problem Solving to the day-to-day challenges of a Governance Risk and Compliance Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cybersecurity": [
+          "cybersecurity",
+          "python",
+          "problem-solving",
+          "technical-writing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cybersecurity": [
+          "Review a Governance Risk and Compliance Analyst case study focused on Cybersecurity.",
+          "Build a small Governance Risk and Compliance Analyst portfolio exercise using Python.",
+          "Practice explaining your approach to a Governance Risk and Compliance Analyst scenario involving Problem Solving.",
+          "Strengthen your Technical Writing with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cybersecurity": "Apply Cybersecurity, Python, Problem Solving to the day-to-day challenges of a Governance Risk and Compliance Analyst."
+      }
     },
     {
       "id": "cloud-cloud-solutions-architect",
@@ -1153,12 +2159,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Cloud Solutions Architect.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "cloud-computing",
+          "system-design",
+          "networking",
+          "testing"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Cloud Solutions Architect case study focused on Cloud Computing.",
+          "Build a small Cloud Solutions Architect portfolio exercise using System Design.",
+          "Practice explaining your approach to a Cloud Solutions Architect scenario involving Networking.",
+          "Strengthen your Testing and Quality with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Cloud Solutions Architect."
+      }
     },
     {
       "id": "cloud-site-reliability-engineer",
@@ -1172,12 +2197,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Site Reliability Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "cloud-computing",
+          "system-design",
+          "networking",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Site Reliability Engineer case study focused on Cloud Computing.",
+          "Build a small Site Reliability Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Site Reliability Engineer scenario involving Networking.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Site Reliability Engineer."
+      }
     },
     {
       "id": "cloud-cloud-security-engineer",
@@ -1191,12 +2235,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Cloud Security Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "cloud-computing",
+          "system-design",
+          "testing",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Cloud Security Engineer case study focused on Cloud Computing.",
+          "Build a small Cloud Security Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Cloud Security Engineer scenario involving Testing and Quality.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Cloud Security Engineer."
+      }
     },
     {
       "id": "cloud-cloud-operations-analyst",
@@ -1210,12 +2273,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Cloud Operations Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "cloud-computing",
+          "networking",
+          "testing",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Cloud Operations Analyst case study focused on Cloud Computing.",
+          "Build a small Cloud Operations Analyst portfolio exercise using Networking.",
+          "Practice explaining your approach to a Cloud Operations Analyst scenario involving Testing and Quality.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Cloud Operations Analyst."
+      }
     },
     {
       "id": "cloud-infrastructure-automation-engineer",
@@ -1229,12 +2311,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Infrastructure Automation Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "cloud-computing",
+          "networking",
+          "testing",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Infrastructure Automation Engineer case study focused on Cloud Computing.",
+          "Build a small Infrastructure Automation Engineer portfolio exercise using Networking.",
+          "Practice explaining your approach to a Infrastructure Automation Engineer scenario involving Testing and Quality.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Infrastructure Automation Engineer."
+      }
     },
     {
       "id": "cloud-platform-operations-engineer",
@@ -1248,12 +2349,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply System Design, Networking, Testing and Quality to the day-to-day challenges of a Platform Operations Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "cloud": [
+          "system-design",
+          "networking",
+          "testing",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "cloud": [
+          "Review a Platform Operations Engineer case study focused on System Design.",
+          "Build a small Platform Operations Engineer portfolio exercise using Networking.",
+          "Practice explaining your approach to a Platform Operations Engineer scenario involving Testing and Quality.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "cloud": "Apply System Design, Networking, Testing and Quality to the day-to-day challenges of a Platform Operations Engineer."
+      }
     },
     {
       "id": "product-management-associate-product-manager",
@@ -1267,12 +2387,31 @@
         "communication",
         "project-management"
       ],
-      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Associate Product Manager.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "product-thinking",
+          "analytics",
+          "communication",
+          "teamwork"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Associate Product Manager case study focused on Product Thinking.",
+          "Build a small Associate Product Manager portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Associate Product Manager scenario involving Communication.",
+          "Strengthen your Teamwork with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Associate Product Manager."
+      }
     },
     {
       "id": "product-management-product-operations-analyst",
@@ -1286,12 +2425,31 @@
         "communication",
         "project-management"
       ],
-      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Product Thinking, Data Analytics, Project Management to the day-to-day challenges of a Product Operations Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "product-thinking",
+          "analytics",
+          "project-management",
+          "teamwork"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Product Operations Analyst case study focused on Product Thinking.",
+          "Build a small Product Operations Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Product Operations Analyst scenario involving Project Management.",
+          "Strengthen your Teamwork with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Product Thinking, Data Analytics, Project Management to the day-to-day challenges of a Product Operations Analyst."
+      }
     },
     {
       "id": "product-management-product-growth-analyst",
@@ -1305,12 +2463,31 @@
         "communication",
         "project-management"
       ],
-      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Product Thinking, Communication, Project Management to the day-to-day challenges of a Product Growth Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "product-thinking",
+          "communication",
+          "project-management",
+          "teamwork"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Product Growth Analyst case study focused on Product Thinking.",
+          "Build a small Product Growth Analyst portfolio exercise using Communication.",
+          "Practice explaining your approach to a Product Growth Analyst scenario involving Project Management.",
+          "Strengthen your Teamwork with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Product Thinking, Communication, Project Management to the day-to-day challenges of a Product Growth Analyst."
+      }
     },
     {
       "id": "product-management-technical-product-manager",
@@ -1324,12 +2501,31 @@
         "communication",
         "project-management"
       ],
-      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Communication, Project Management to the day-to-day challenges of a Technical Product Manager.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "analytics",
+          "communication",
+          "project-management",
+          "teamwork"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Technical Product Manager case study focused on Data Analytics.",
+          "Build a small Technical Product Manager portfolio exercise using Communication.",
+          "Practice explaining your approach to a Technical Product Manager scenario involving Project Management.",
+          "Strengthen your Teamwork with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Data Analytics, Communication, Project Management to the day-to-day challenges of a Technical Product Manager."
+      }
     },
     {
       "id": "product-management-product-owner",
@@ -1343,12 +2539,31 @@
         "communication",
         "project-management"
       ],
-      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Product Owner.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "product-thinking",
+          "analytics",
+          "communication",
+          "project-management"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Product Owner case study focused on Product Thinking.",
+          "Build a small Product Owner portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Product Owner scenario involving Communication.",
+          "Strengthen your Project Management with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Product Owner."
+      }
     },
     {
       "id": "product-management-customer-experience-product-analyst",
@@ -1362,12 +2577,31 @@
         "communication",
         "project-management"
       ],
-      "description": "Apply product thinking, analytics, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Customer Experience Product Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-management": [
+          "product-thinking",
+          "analytics",
+          "communication",
+          "project-management"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-management": [
+          "Review a Customer Experience Product Analyst case study focused on Product Thinking.",
+          "Build a small Customer Experience Product Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Customer Experience Product Analyst scenario involving Communication.",
+          "Strengthen your Project Management with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-management": "Apply Product Thinking, Data Analytics, Communication to the day-to-day challenges of a Customer Experience Product Analyst."
+      }
     },
     {
       "id": "business-analytics-business-intelligence-analyst",
@@ -1381,12 +2615,31 @@
         "statistics",
         "communication"
       ],
-      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Business Intelligence Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "sql",
+          "analytics",
+          "statistics",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Business Intelligence Analyst case study focused on SQL.",
+          "Build a small Business Intelligence Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Business Intelligence Analyst scenario involving Statistics.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Business Intelligence Analyst."
+      }
     },
     {
       "id": "business-analytics-financial-data-analyst",
@@ -1400,12 +2653,31 @@
         "statistics",
         "communication"
       ],
-      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Financial Data Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "sql",
+          "analytics",
+          "statistics",
+          "spreadsheets"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Financial Data Analyst case study focused on SQL.",
+          "Build a small Financial Data Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Financial Data Analyst scenario involving Statistics.",
+          "Strengthen your Spreadsheets with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Financial Data Analyst."
+      }
     },
     {
       "id": "business-analytics-marketing-analytics-specialist",
@@ -1419,12 +2691,31 @@
         "statistics",
         "communication"
       ],
-      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Data Analytics, Communication to the day-to-day challenges of a Marketing Analytics Specialist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "sql",
+          "analytics",
+          "communication",
+          "spreadsheets"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Marketing Analytics Specialist case study focused on SQL.",
+          "Build a small Marketing Analytics Specialist portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Marketing Analytics Specialist scenario involving Communication.",
+          "Strengthen your Spreadsheets with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply SQL, Data Analytics, Communication to the day-to-day challenges of a Marketing Analytics Specialist."
+      }
     },
     {
       "id": "business-analytics-operations-research-analyst",
@@ -1438,12 +2729,31 @@
         "statistics",
         "communication"
       ],
-      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Statistics, Communication to the day-to-day challenges of a Operations Research Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "sql",
+          "statistics",
+          "communication",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Operations Research Analyst case study focused on SQL.",
+          "Build a small Operations Research Analyst portfolio exercise using Statistics.",
+          "Practice explaining your approach to a Operations Research Analyst scenario involving Communication.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply SQL, Statistics, Communication to the day-to-day challenges of a Operations Research Analyst."
+      }
     },
     {
       "id": "business-analytics-reporting-analyst",
@@ -1457,12 +2767,31 @@
         "statistics",
         "communication"
       ],
-      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Statistics, Communication to the day-to-day challenges of a Reporting Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "sql",
+          "statistics",
+          "communication",
+          "spreadsheets"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Reporting Analyst case study focused on SQL.",
+          "Build a small Reporting Analyst portfolio exercise using Statistics.",
+          "Practice explaining your approach to a Reporting Analyst scenario involving Communication.",
+          "Strengthen your Spreadsheets with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply SQL, Statistics, Communication to the day-to-day challenges of a Reporting Analyst."
+      }
     },
     {
       "id": "business-analytics-customer-insights-analyst",
@@ -1476,12 +2805,31 @@
         "statistics",
         "communication"
       ],
-      "description": "Apply sql, analytics, statistics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Statistics, Communication to the day-to-day challenges of a Customer Insights Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "business-analytics": [
+          "analytics",
+          "statistics",
+          "communication",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "business-analytics": [
+          "Review a Customer Insights Analyst case study focused on Data Analytics.",
+          "Build a small Customer Insights Analyst portfolio exercise using Statistics.",
+          "Practice explaining your approach to a Customer Insights Analyst scenario involving Communication.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "business-analytics": "Apply Data Analytics, Statistics, Communication to the day-to-day challenges of a Customer Insights Analyst."
+      }
     },
     {
       "id": "operations-process-improvement-analyst",
@@ -1495,12 +2843,31 @@
         "communication",
         "teamwork"
       ],
-      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Project Management, Communication to the day-to-day challenges of a Process Improvement Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "operations": [
+          "analytics",
+          "project-management",
+          "communication",
+          "spreadsheets"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "operations": [
+          "Review a Process Improvement Analyst case study focused on Data Analytics.",
+          "Build a small Process Improvement Analyst portfolio exercise using Project Management.",
+          "Practice explaining your approach to a Process Improvement Analyst scenario involving Communication.",
+          "Strengthen your Spreadsheets with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "operations": "Apply Data Analytics, Project Management, Communication to the day-to-day challenges of a Process Improvement Analyst."
+      }
     },
     {
       "id": "operations-supply-chain-analyst",
@@ -1514,12 +2881,31 @@
         "communication",
         "teamwork"
       ],
-      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Project Management, Teamwork to the day-to-day challenges of a Supply Chain Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "operations": [
+          "analytics",
+          "project-management",
+          "teamwork",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "operations": [
+          "Review a Supply Chain Analyst case study focused on Data Analytics.",
+          "Build a small Supply Chain Analyst portfolio exercise using Project Management.",
+          "Practice explaining your approach to a Supply Chain Analyst scenario involving Teamwork.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "operations": "Apply Data Analytics, Project Management, Teamwork to the day-to-day challenges of a Supply Chain Analyst."
+      }
     },
     {
       "id": "operations-program-coordinator",
@@ -1533,12 +2919,31 @@
         "communication",
         "teamwork"
       ],
-      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Project Management, Teamwork to the day-to-day challenges of a Program Coordinator.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "operations": [
+          "analytics",
+          "project-management",
+          "teamwork",
+          "spreadsheets"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "operations": [
+          "Review a Program Coordinator case study focused on Data Analytics.",
+          "Build a small Program Coordinator portfolio exercise using Project Management.",
+          "Practice explaining your approach to a Program Coordinator scenario involving Teamwork.",
+          "Strengthen your Spreadsheets with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "operations": "Apply Data Analytics, Project Management, Teamwork to the day-to-day challenges of a Program Coordinator."
+      }
     },
     {
       "id": "operations-operations-research-associate",
@@ -1552,12 +2957,31 @@
         "communication",
         "teamwork"
       ],
-      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Communication, Teamwork to the day-to-day challenges of a Operations Research Associate.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "operations": [
+          "analytics",
+          "communication",
+          "teamwork",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "operations": [
+          "Review a Operations Research Associate case study focused on Data Analytics.",
+          "Build a small Operations Research Associate portfolio exercise using Communication.",
+          "Practice explaining your approach to a Operations Research Associate scenario involving Teamwork.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "operations": "Apply Data Analytics, Communication, Teamwork to the day-to-day challenges of a Operations Research Associate."
+      }
     },
     {
       "id": "operations-business-process-consultant",
@@ -1571,12 +2995,31 @@
         "communication",
         "teamwork"
       ],
-      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Data Analytics, Communication, Teamwork to the day-to-day challenges of a Business Process Consultant.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "operations": [
+          "analytics",
+          "communication",
+          "teamwork",
+          "spreadsheets"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "operations": [
+          "Review a Business Process Consultant case study focused on Data Analytics.",
+          "Build a small Business Process Consultant portfolio exercise using Communication.",
+          "Practice explaining your approach to a Business Process Consultant scenario involving Teamwork.",
+          "Strengthen your Spreadsheets with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "operations": "Apply Data Analytics, Communication, Teamwork to the day-to-day challenges of a Business Process Consultant."
+      }
     },
     {
       "id": "operations-workforce-planning-analyst",
@@ -1590,12 +3033,31 @@
         "communication",
         "teamwork"
       ],
-      "description": "Apply analytics, project management, communication to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Project Management, Communication, Teamwork to the day-to-day challenges of a Workforce Planning Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "operations": [
+          "project-management",
+          "communication",
+          "teamwork",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "operations": [
+          "Review a Workforce Planning Analyst case study focused on Project Management.",
+          "Build a small Workforce Planning Analyst portfolio exercise using Communication.",
+          "Practice explaining your approach to a Workforce Planning Analyst scenario involving Teamwork.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "operations": "Apply Project Management, Communication, Teamwork to the day-to-day challenges of a Workforce Planning Analyst."
+      }
     },
     {
       "id": "ux-design-interaction-designer",
@@ -1609,12 +3071,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a Interaction Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "accessibility",
+          "product-thinking",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a Interaction Designer case study focused on UX Design.",
+          "Build a small Interaction Designer portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Interaction Designer scenario involving Product Thinking.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a Interaction Designer."
+      }
     },
     {
       "id": "ux-design-ux-researcher",
@@ -1628,12 +3109,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a UX Researcher.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "accessibility",
+          "product-thinking",
+          "research"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a UX Researcher case study focused on UX Design.",
+          "Build a small UX Researcher portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a UX Researcher scenario involving Product Thinking.",
+          "Strengthen your User Research with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a UX Researcher."
+      }
     },
     {
       "id": "ux-design-accessibility-specialist",
@@ -1647,12 +3147,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Accessibility Specialist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "accessibility",
+          "communication",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a Accessibility Specialist case study focused on UX Design.",
+          "Build a small Accessibility Specialist portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Accessibility Specialist scenario involving Communication.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Accessibility Specialist."
+      }
     },
     {
       "id": "ux-design-service-designer",
@@ -1666,12 +3185,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Service Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "accessibility",
+          "communication",
+          "research"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a Service Designer case study focused on UX Design.",
+          "Build a small Service Designer portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Service Designer scenario involving Communication.",
+          "Strengthen your User Research with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Service Designer."
+      }
     },
     {
       "id": "ux-design-content-designer",
@@ -1685,12 +3223,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a Content Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "product-thinking",
+          "communication",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a Content Designer case study focused on UX Design.",
+          "Build a small Content Designer portfolio exercise using Product Thinking.",
+          "Practice explaining your approach to a Content Designer scenario involving Communication.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a Content Designer."
+      }
     },
     {
       "id": "ux-design-usability-analyst",
@@ -1704,12 +3261,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a Usability Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "ux-design": [
+          "ux-design",
+          "product-thinking",
+          "communication",
+          "research"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "ux-design": [
+          "Review a Usability Analyst case study focused on UX Design.",
+          "Build a small Usability Analyst portfolio exercise using Product Thinking.",
+          "Practice explaining your approach to a Usability Analyst scenario involving Communication.",
+          "Strengthen your User Research with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "ux-design": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a Usability Analyst."
+      }
     },
     {
       "id": "product-design-product-designer",
@@ -1723,12 +3299,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a Product Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-design": [
+          "ux-design",
+          "accessibility",
+          "product-thinking",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-design": [
+          "Review a Product Designer case study focused on UX Design.",
+          "Build a small Product Designer portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Product Designer scenario involving Product Thinking.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-design": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a Product Designer."
+      }
     },
     {
       "id": "product-design-interaction-designer",
@@ -1742,12 +3337,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a Interaction Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-design": [
+          "ux-design",
+          "accessibility",
+          "product-thinking",
+          "prototyping"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-design": [
+          "Review a Interaction Designer case study focused on UX Design.",
+          "Build a small Interaction Designer portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Interaction Designer scenario involving Product Thinking.",
+          "Strengthen your Prototyping with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-design": "Apply UX Design, Accessibility, Product Thinking to the day-to-day challenges of a Interaction Designer."
+      }
     },
     {
       "id": "product-design-design-systems-designer",
@@ -1761,12 +3375,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Design Systems Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-design": [
+          "ux-design",
+          "accessibility",
+          "communication",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-design": [
+          "Review a Design Systems Designer case study focused on UX Design.",
+          "Build a small Design Systems Designer portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Design Systems Designer scenario involving Communication.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-design": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Design Systems Designer."
+      }
     },
     {
       "id": "product-design-prototype-designer",
@@ -1780,12 +3413,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Prototype Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-design": [
+          "ux-design",
+          "accessibility",
+          "communication",
+          "prototyping"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-design": [
+          "Review a Prototype Designer case study focused on UX Design.",
+          "Build a small Prototype Designer portfolio exercise using Accessibility.",
+          "Practice explaining your approach to a Prototype Designer scenario involving Communication.",
+          "Strengthen your Prototyping with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-design": "Apply UX Design, Accessibility, Communication to the day-to-day challenges of a Prototype Designer."
+      }
     },
     {
       "id": "product-design-digital-experience-designer",
@@ -1799,12 +3451,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a Digital Experience Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-design": [
+          "ux-design",
+          "product-thinking",
+          "communication",
+          "prototyping"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-design": [
+          "Review a Digital Experience Designer case study focused on UX Design.",
+          "Build a small Digital Experience Designer portfolio exercise using Product Thinking.",
+          "Practice explaining your approach to a Digital Experience Designer scenario involving Communication.",
+          "Strengthen your Prototyping with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-design": "Apply UX Design, Product Thinking, Communication to the day-to-day challenges of a Digital Experience Designer."
+      }
     },
     {
       "id": "product-design-visual-product-designer",
@@ -1818,12 +3489,31 @@
         "product-thinking",
         "communication"
       ],
-      "description": "Apply ux design, accessibility, product thinking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Accessibility, Product Thinking, Communication to the day-to-day challenges of a Visual Product Designer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "product-design": [
+          "accessibility",
+          "product-thinking",
+          "communication",
+          "visual-design"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "product-design": [
+          "Review a Visual Product Designer case study focused on Accessibility.",
+          "Build a small Visual Product Designer portfolio exercise using Product Thinking.",
+          "Practice explaining your approach to a Visual Product Designer scenario involving Communication.",
+          "Strengthen your Visual Design with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "product-design": "Apply Accessibility, Product Thinking, Communication to the day-to-day challenges of a Visual Product Designer."
+      }
     },
     {
       "id": "devops-build-and-release-engineer",
@@ -1837,12 +3527,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Build and Release Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "devops": [
+          "cloud-computing",
+          "system-design",
+          "networking",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "devops": [
+          "Review a Build and Release Engineer case study focused on Cloud Computing.",
+          "Build a small Build and Release Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Build and Release Engineer scenario involving Networking.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "devops": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Build and Release Engineer."
+      }
     },
     {
       "id": "devops-infrastructure-engineer",
@@ -1856,12 +3565,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Infrastructure Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "devops": [
+          "cloud-computing",
+          "system-design",
+          "networking",
+          "security-practices"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "devops": [
+          "Review a Infrastructure Engineer case study focused on Cloud Computing.",
+          "Build a small Infrastructure Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Infrastructure Engineer scenario involving Networking.",
+          "Strengthen your Security Practices with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "devops": "Apply Cloud Computing, System Design, Networking to the day-to-day challenges of a Infrastructure Engineer."
+      }
     },
     {
       "id": "devops-automation-engineer",
@@ -1875,12 +3603,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Automation Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "devops": [
+          "cloud-computing",
+          "system-design",
+          "testing",
+          "security-practices"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "devops": [
+          "Review a Automation Engineer case study focused on Cloud Computing.",
+          "Build a small Automation Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Automation Engineer scenario involving Testing and Quality.",
+          "Strengthen your Security Practices with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "devops": "Apply Cloud Computing, System Design, Testing and Quality to the day-to-day challenges of a Automation Engineer."
+      }
     },
     {
       "id": "devops-container-platform-engineer",
@@ -1894,12 +3641,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Container Platform Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "devops": [
+          "cloud-computing",
+          "networking",
+          "testing",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "devops": [
+          "Review a Container Platform Engineer case study focused on Cloud Computing.",
+          "Build a small Container Platform Engineer portfolio exercise using Networking.",
+          "Practice explaining your approach to a Container Platform Engineer scenario involving Testing and Quality.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "devops": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Container Platform Engineer."
+      }
     },
     {
       "id": "devops-reliability-engineer",
@@ -1913,12 +3679,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Reliability Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "devops": [
+          "cloud-computing",
+          "networking",
+          "testing",
+          "security-practices"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "devops": [
+          "Review a Reliability Engineer case study focused on Cloud Computing.",
+          "Build a small Reliability Engineer portfolio exercise using Networking.",
+          "Practice explaining your approach to a Reliability Engineer scenario involving Testing and Quality.",
+          "Strengthen your Security Practices with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "devops": "Apply Cloud Computing, Networking, Testing and Quality to the day-to-day challenges of a Reliability Engineer."
+      }
     },
     {
       "id": "devops-cloud-devops-specialist",
@@ -1932,12 +3717,31 @@
         "networking",
         "testing"
       ],
-      "description": "Apply cloud computing, system design, networking to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply System Design, Networking, Testing and Quality to the day-to-day challenges of a Cloud DevOps Specialist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "devops": [
+          "system-design",
+          "networking",
+          "testing",
+          "python"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "devops": [
+          "Review a Cloud DevOps Specialist case study focused on System Design.",
+          "Build a small Cloud DevOps Specialist portfolio exercise using Networking.",
+          "Practice explaining your approach to a Cloud DevOps Specialist scenario involving Testing and Quality.",
+          "Strengthen your Python with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "devops": "Apply System Design, Networking, Testing and Quality to the day-to-day challenges of a Cloud DevOps Specialist."
+      }
     },
     {
       "id": "robotics-automation-robotics-engineer",
@@ -1951,12 +3755,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, System Design to the day-to-day challenges of a Automation Robotics Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "problem-solving",
+          "system-design",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Automation Robotics Engineer case study focused on Python.",
+          "Build a small Automation Robotics Engineer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Automation Robotics Engineer scenario involving System Design.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, Problem Solving, System Design to the day-to-day challenges of a Automation Robotics Engineer."
+      }
     },
     {
       "id": "robotics-embedded-systems-engineer",
@@ -1970,12 +3793,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, System Design to the day-to-day challenges of a Embedded Systems Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "problem-solving",
+          "system-design",
+          "embedded-systems"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Embedded Systems Engineer case study focused on Python.",
+          "Build a small Embedded Systems Engineer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Embedded Systems Engineer scenario involving System Design.",
+          "Strengthen your Embedded Systems with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, Problem Solving, System Design to the day-to-day challenges of a Embedded Systems Engineer."
+      }
     },
     {
       "id": "robotics-robotics-software-developer",
@@ -1989,12 +3831,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a Robotics Software Developer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "problem-solving",
+          "testing",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Robotics Software Developer case study focused on Python.",
+          "Build a small Robotics Software Developer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Robotics Software Developer scenario involving Testing and Quality.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a Robotics Software Developer."
+      }
     },
     {
       "id": "robotics-controls-engineer",
@@ -2008,12 +3869,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a Controls Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "problem-solving",
+          "testing",
+          "embedded-systems"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Controls Engineer case study focused on Python.",
+          "Build a small Controls Engineer portfolio exercise using Problem Solving.",
+          "Practice explaining your approach to a Controls Engineer scenario involving Testing and Quality.",
+          "Strengthen your Embedded Systems with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, Problem Solving, Testing and Quality to the day-to-day challenges of a Controls Engineer."
+      }
     },
     {
       "id": "robotics-mechatronics-engineer",
@@ -2027,12 +3907,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, System Design, Testing and Quality to the day-to-day challenges of a Mechatronics Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "system-design",
+          "testing",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Mechatronics Engineer case study focused on Python.",
+          "Build a small Mechatronics Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Mechatronics Engineer scenario involving Testing and Quality.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, System Design, Testing and Quality to the day-to-day challenges of a Mechatronics Engineer."
+      }
     },
     {
       "id": "robotics-robotics-test-engineer",
@@ -2046,12 +3945,31 @@
         "system-design",
         "testing"
       ],
-      "description": "Apply python, problem solving, system design to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, System Design, Testing and Quality to the day-to-day challenges of a Robotics Test Engineer.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "robotics": [
+          "python",
+          "system-design",
+          "testing",
+          "embedded-systems"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "robotics": [
+          "Review a Robotics Test Engineer case study focused on Python.",
+          "Build a small Robotics Test Engineer portfolio exercise using System Design.",
+          "Practice explaining your approach to a Robotics Test Engineer scenario involving Testing and Quality.",
+          "Strengthen your Embedded Systems with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "robotics": "Apply Python, System Design, Testing and Quality to the day-to-day challenges of a Robotics Test Engineer."
+      }
     },
     {
       "id": "quantitative-analysis-quantitative-research-analyst",
@@ -2065,12 +3983,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Quantitative Research Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "quantitative-analysis": [
+          "python",
+          "sql",
+          "analytics",
+          "statistics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "quantitative-analysis": [
+          "Review a Quantitative Research Analyst case study focused on Python.",
+          "Build a small Quantitative Research Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Quantitative Research Analyst scenario involving Data Analytics.",
+          "Strengthen your Statistics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "quantitative-analysis": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Quantitative Research Analyst."
+      }
     },
     {
       "id": "quantitative-analysis-risk-analyst",
@@ -2084,12 +4021,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Risk Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "quantitative-analysis": [
+          "python",
+          "sql",
+          "analytics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "quantitative-analysis": [
+          "Review a Risk Analyst case study focused on Python.",
+          "Build a small Risk Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Risk Analyst scenario involving Data Analytics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "quantitative-analysis": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Risk Analyst."
+      }
     },
     {
       "id": "quantitative-analysis-financial-modeler",
@@ -2103,12 +4059,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Statistics to the day-to-day challenges of a Financial Modeler.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "quantitative-analysis": [
+          "python",
+          "sql",
+          "statistics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "quantitative-analysis": [
+          "Review a Financial Modeler case study focused on Python.",
+          "Build a small Financial Modeler portfolio exercise using SQL.",
+          "Practice explaining your approach to a Financial Modeler scenario involving Statistics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "quantitative-analysis": "Apply Python, SQL, Statistics to the day-to-day challenges of a Financial Modeler."
+      }
     },
     {
       "id": "quantitative-analysis-market-data-analyst",
@@ -2122,12 +4097,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Statistics to the day-to-day challenges of a Market Data Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "quantitative-analysis": [
+          "python",
+          "sql",
+          "statistics",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "quantitative-analysis": [
+          "Review a Market Data Analyst case study focused on Python.",
+          "Build a small Market Data Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Market Data Analyst scenario involving Statistics.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "quantitative-analysis": "Apply Python, SQL, Statistics to the day-to-day challenges of a Market Data Analyst."
+      }
     },
     {
       "id": "quantitative-analysis-statistical-consultant",
@@ -2141,12 +4135,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Statistical Consultant.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "quantitative-analysis": [
+          "python",
+          "analytics",
+          "statistics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "quantitative-analysis": [
+          "Review a Statistical Consultant case study focused on Python.",
+          "Build a small Statistical Consultant portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Statistical Consultant scenario involving Statistics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "quantitative-analysis": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Statistical Consultant."
+      }
     },
     {
       "id": "quantitative-analysis-operations-research-analyst",
@@ -2160,12 +4173,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Operations Research Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "quantitative-analysis": [
+          "python",
+          "analytics",
+          "statistics",
+          "communication"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "quantitative-analysis": [
+          "Review a Operations Research Analyst case study focused on Python.",
+          "Build a small Operations Research Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Operations Research Analyst scenario involving Statistics.",
+          "Strengthen your Communication with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "quantitative-analysis": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Operations Research Analyst."
+      }
     },
     {
       "id": "data-science-math-statistical-data-scientist",
@@ -2179,12 +4211,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Statistical Data Scientist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science-math": [
+          "python",
+          "sql",
+          "analytics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science-math": [
+          "Review a Statistical Data Scientist case study focused on Python.",
+          "Build a small Statistical Data Scientist portfolio exercise using SQL.",
+          "Practice explaining your approach to a Statistical Data Scientist scenario involving Data Analytics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science-math": "Apply Python, SQL, Data Analytics to the day-to-day challenges of a Statistical Data Scientist."
+      }
     },
     {
       "id": "data-science-math-quantitative-data-analyst",
@@ -2198,12 +4249,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Statistics to the day-to-day challenges of a Quantitative Data Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science-math": [
+          "python",
+          "sql",
+          "statistics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science-math": [
+          "Review a Quantitative Data Analyst case study focused on Python.",
+          "Build a small Quantitative Data Analyst portfolio exercise using SQL.",
+          "Practice explaining your approach to a Quantitative Data Analyst scenario involving Statistics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science-math": "Apply Python, SQL, Statistics to the day-to-day challenges of a Quantitative Data Analyst."
+      }
     },
     {
       "id": "data-science-math-research-scientist",
@@ -2217,12 +4287,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, SQL, Statistics to the day-to-day challenges of a Research Scientist.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science-math": [
+          "python",
+          "sql",
+          "statistics",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science-math": [
+          "Review a Research Scientist case study focused on Python.",
+          "Build a small Research Scientist portfolio exercise using SQL.",
+          "Practice explaining your approach to a Research Scientist scenario involving Statistics.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science-math": "Apply Python, SQL, Statistics to the day-to-day challenges of a Research Scientist."
+      }
     },
     {
       "id": "data-science-math-forecasting-analyst",
@@ -2236,12 +4325,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Forecasting Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science-math": [
+          "python",
+          "analytics",
+          "statistics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science-math": [
+          "Review a Forecasting Analyst case study focused on Python.",
+          "Build a small Forecasting Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Forecasting Analyst scenario involving Statistics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science-math": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Forecasting Analyst."
+      }
     },
     {
       "id": "data-science-math-data-modeler",
@@ -2255,12 +4363,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Data Modeler.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science-math": [
+          "python",
+          "analytics",
+          "statistics",
+          "problem-solving"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science-math": [
+          "Review a Data Modeler case study focused on Python.",
+          "Build a small Data Modeler portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Data Modeler scenario involving Statistics.",
+          "Strengthen your Problem Solving with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science-math": "Apply Python, Data Analytics, Statistics to the day-to-day challenges of a Data Modeler."
+      }
     },
     {
       "id": "data-science-math-machine-learning-analyst",
@@ -2274,12 +4401,31 @@
         "analytics",
         "statistics"
       ],
-      "description": "Apply python, sql, analytics to solve practical problems and deliver measurable outcomes.",
+      "description": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Machine Learning Analyst.",
       "studyTasks": [
         "Build a small portfolio project",
         "Analyze a realistic case study",
         "Explain your approach and trade-offs"
-      ]
+      ],
+      "requirementsBySpecialization": {
+        "data-science-math": [
+          "sql",
+          "analytics",
+          "statistics",
+          "mathematics"
+        ]
+      },
+      "studyTasksBySpecialization": {
+        "data-science-math": [
+          "Review a Machine Learning Analyst case study focused on SQL.",
+          "Build a small Machine Learning Analyst portfolio exercise using Data Analytics.",
+          "Practice explaining your approach to a Machine Learning Analyst scenario involving Statistics.",
+          "Strengthen your Mathematics with a role-specific practice task."
+        ]
+      },
+      "descriptionsBySpecialization": {
+        "data-science-math": "Apply SQL, Data Analytics, Statistics to the day-to-day challenges of a Machine Learning Analyst."
+      }
     }
   ]
 }
