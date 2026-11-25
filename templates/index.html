@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Updraft — Interview preparation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brandmark">u.</span><span>updraft<span class="brand-dot">.</span></span></a>
+    <div class="side-label">YOUR WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <a class="nav-item active" href="index.html"><span>◫</span> Overview</a>
+      <a class="nav-item" href="pages/assessment.html"><span>◉</span> Skill assessment</a>
+      <a class="nav-item" href="pages/plan.html"><span>▦</span> Prep plan</a>
+      <a class="nav-item" href="pages/practice.html"><span>⌁</span> Practice arena</a>
+      <a class="nav-item" href="pages/reports.html"><span>↗</span> Progress reports</a>
+    </nav>
+    <div class="side-bottom">
+      <div class="streak-card" id="streak-card" hidden><span class="streak-flame">✳</span><div><b id="streak-label">— day streak</b><small>You're building momentum</small></div><span class="streak-num" id="streak-count">—</span></div>
+      <div class="user-row" id="user-row" hidden>
+        <div class="avatar" id="user-avatar">U</div>
+        <div><b id="user-name">User</b><small id="user-role"></small><small id="user-id" hidden></small></div>
+        <span class="more" aria-hidden="true">···</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumbs">Workspace <span>/</span> Overview</div>
+      <div class="top-actions"><span class="today" id="today"></span><span class="avatar mini" id="top-avatar" hidden aria-label="Signed-in user"></span></div>
+    </header>
+    <div class="content">
+      <section class="welcome-row">
+        <div>
+          <div class="eyebrow"><span class="live-dot"></span> YOUR PREP, PERSONALIZED</div>
+          <h1 id="welcome-title">Make your next move<br>feel like <em>second nature.</em></h1>
+          <p class="subhead" id="welcome-subtitle">A little progress today. A lot more confidence in the room.</p>
+        </div>
+        <a class="primary-btn" id="focus-link" href="pages/practice.html"><span>＋</span> Start a focus session <b>↗</b></a>
+      </section>
+
+      <section class="panel" id="setup-state" hidden>
+        <div class="eyebrow muted">GET STARTED</div>
+        <h2 id="setup-title">Your preparation starts here</h2>
+        <p class="panel-copy" id="setup-message">Complete a skill assessment to create a starting point for your interview preparation.</p>
+        <a class="action" href="pages/assessment.html">Start a skill assessment →</a>
+      </section>
+
+      <div id="dashboard" hidden>
+        <section class="hero-grid">
+          <div class="readiness-card">
+            <div class="card-top"><div><div class="eyebrow muted">INTERVIEW READINESS</div><h2 id="readiness-heading">Your readiness</h2></div></div>
+            <div class="readiness-body">
+              <div class="ring" id="readiness-ring" style="--progress:0"><div class="ring-inner"><strong><span id="readiness-value">—</span><span>%</span></strong><small>READY</small></div></div>
+              <div class="readiness-copy"><div class="delta"><span id="readiness-delta">—</span> <span id="readiness-period"></span></div><p id="readiness-description"></p><div class="mini-tags"><span id="session-basis"></span><span id="updated-label"></span></div></div>
+            </div>
+            <div class="readiness-foot">
+              <span>Readiness trajectory</span>
+              <div class="sparkline"><svg viewBox="0 0 300 48" preserveAspectRatio="none" role="img" aria-label="Readiness trend">
+                <defs><linearGradient id="trend-fade" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b8ef67" stop-opacity=".22"/><stop offset="1" stop-color="#b8ef67" stop-opacity="0"/></linearGradient></defs>
+                <path id="trend-area" fill="url(#trend-fade)"></path>
+                <path id="trend-line" fill="none" stroke="#b8ef67" stroke-width="3"></path>
+              </svg></div>
+              <div class="ticks" id="trend-labels"></div>
+            </div>
+          </div>
+          <div class="focus-card">
+            <div class="card-top"><div><div class="eyebrow">YOUR NEXT BEST MOVE</div><h2 id="recommendation-heading">Recommended focus</h2></div><span class="spark-icon">✳</span></div>
+            <div class="focus-topic"><div class="topic-icon">⌘</div><div><b id="focus-topic">—</b><small id="focus-detail"></small></div><span class="topic-score" id="focus-score">—</span></div>
+            <div class="focus-progress"><span id="focus-progress"></span></div>
+            <div class="focus-hint"><span>✦</span> <span id="focus-hint"></span></div>
+            <a class="dark-btn" id="resume-link" href="pages/plan.html">Pick up where you left off <span>→</span></a>
+          </div>
+        </section>
+
+        <section class="section-heading"><div><div class="eyebrow muted">YOUR MOMENTUM</div><h2>Small reps. Real progress.</h2></div><a href="pages/reports.html" class="text-link">Full report <span>↗</span></a></section>
+        <section class="stat-grid" aria-label="Preparation statistics">
+          <article class="stat-card"><div class="stat-icon violet">⌁</div><span class="stat-label">PRACTICE SESSIONS</span><div class="stat-value"><span id="stat-sessions">—</span> <small>sessions</small></div><div class="stat-foot"><span class="positive" id="stat-sessions-change"></span><span id="stat-sessions-caption"></span><div class="bars" id="session-bars" aria-hidden="true"></div></div></article>
+          <article class="stat-card"><div class="stat-icon lime">✓</div><span class="stat-label">QUIZ ACCURACY</span><div class="stat-value"><span id="stat-accuracy">—</span><small>%</small></div><div class="stat-foot"><span class="positive" id="stat-accuracy-change"></span><span id="stat-accuracy-caption"></span><div class="micro-line" id="accuracy-spark" aria-hidden="true"></div></div></article>
+          <article class="stat-card"><div class="stat-icon coral">◷</div><span class="stat-label">FOCUSED TIME</span><div class="stat-value"><span id="stat-hours">—</span> <small>hrs</small></div><div class="stat-foot"><span class="positive" id="stat-hours-change"></span><span id="stat-hours-caption"></span><div class="micro-line coral-line" id="hours-spark" aria-hidden="true"></div></div></article>
+          <article class="stat-card"><div class="stat-icon blue">✧</div><span class="stat-label">PLAN COMPLETION</span><div class="stat-value"><span id="stat-plan">—</span><small id="stat-plan-total">/—</small></div><div class="stat-foot"><span class="positive" id="stat-plan-caption"></span><div class="tiny-progress"><i id="plan-progress"></i></div></div></article>
+        </section>
+
+        <section class="lower-grid">
+          <div class="week-card">
+            <div class="card-top"><div><div class="eyebrow muted">THIS WEEK</div><h2>Your prep rhythm</h2></div><span class="select-pill" id="week-label">This week</span></div>
+            <div class="week-meta"><span><b id="week-hours">—</b> focused</span><span><b id="week-sessions">—</b> sessions</span><span><b id="week-streak">—</b> day streak</span></div>
+            <div class="chart"><div class="y-labels"><span>2h</span><span>1h</span><span>0</span></div><div class="chart-area" id="weekly-chart" role="img" aria-label="Focused hours by day"></div><div class="x-labels" id="weekly-labels"></div></div>
+          </div>
+          <div class="today-card">
+            <div class="card-top"><div><div class="eyebrow muted">UP NEXT</div><h2>Today's game plan</h2></div><span class="date-badge" id="date-badge"></span></div>
+            <div class="task-list" id="task-list"></div>
+            <a class="text-link task-link" href="pages/plan.html">Open full plan <span>→</span></a>
+          </div>
+        </section>
+      </div>
+
+      <div class="panel" id="load-error" role="status" hidden>
+        <h2>Showing default values</h2>
+        <p class="panel-copy">Live dashboard data is unavailable. Metrics are set to zero until your account data loads.</p>
+        <button class="action" id="retry-load" type="button">Try again</button>
+      </div>
+      <footer>UPDRAFT <span>·</span> YOUR INTERVIEW JOURNEY, IN MOTION <span class="footer-right">Made for the work behind the win.</span></footer>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    const DASHBOARD_ENDPOINT = '/api/dashboard';
+    const byId = id => document.getElementById(id);
+    const setText = (id, value, fallback = '') => { byId(id).textContent = value ?? fallback; };
+    const safeNumber = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
+    const safeHref = value => typeof value === 'string' && /^(pages\/|\/)/.test(value) ? value : 'pages/plan.html';
+
+    function drawTrend(values) {
+      const points = (Array.isArray(values) ? values : []).map(Number).filter(Number.isFinite).slice(-12);
+      if (!points.length) return;
+      const min = Math.min(...points), max = Math.max(...points), span = max - min || 1;
+      const coords = points.map((v, i) => `${Math.round(i * 300 / Math.max(points.length - 1, 1))},${Math.round(42 - ((v - min) / span) * 34)}`);
+      byId('trend-line').setAttribute('d', `M${coords.join(' L')}`);
+      byId('trend-area').setAttribute('d', `M${coords.join(' L')} L300,48 L0,48 Z`);
+    }
+
+    function drawBars(container, values) {
+      const list = Array.isArray(values) ? values : [];
+      const max = Math.max(...list.map(v => safeNumber(v)), 1);
+      container.replaceChildren(...list.map(value => {
+        const bar = document.createElement('i');
+        bar.style.height = `${Math.max(4, safeNumber(value) / max * 100)}%`;
+        return bar;
+      }));
+    }
+
+    function render(data) {
+      const noPreparationData = !data || data.hasPreparation === false;
+      data = data || {};
+      if (noPreparationData) {
+        const dayLabels = Array.from({ length: 7 }, (_, index) =>
+          new Intl.DateTimeFormat(undefined, { weekday: 'short' }).format(new Date(Date.now() - (6 - index) * 86400000))
+        );
+        data = {
+          ...data,
+          user: data.user || {},
+          readiness: { score: 0, change: 0, period: 'this month', description: 'Your readiness score will update as you complete preparation activities.', trend: [0, 0, 0, 0], labels: ['W1', 'W2', 'W3', 'W4'] },
+          recommendation: { topic: 'No focus selected', score: 0, sessions: 0, minutes: 0, readinessLift: 0 },
+          stats: { sessions: 0, sessionsChange: 0, sessionsCaption: 'this month', accuracy: 0, accuracyChange: 0, accuracyCaption: 'no quizzes completed', focusedHours: 0, hoursChange: 0, hoursCaption: 'this week', planCompleted: 0, planTotal: 0, planCaption: 'sessions complete', sessionTrend: [0, 0, 0, 0, 0, 0, 0], accuracyTrend: [0, 0, 0, 0, 0, 0, 0], hoursTrend: [0, 0, 0, 0, 0, 0, 0] },
+          week: { focusedHours: 0, sessions: 0, streak: 0, days: dayLabels.map(label => ({ label, focusedHours: 0, sessions: 0 })) },
+          tasks: []
+        };
+      }
+
+      byId('setup-state').hidden = true;
+      byId('dashboard').hidden = false;
+
+      const user = data.user || {};
+      const initials = (user.name || 'User').trim().split(/\s+/).slice(0, 2).map(part => part[0]).join('').toUpperCase();
+      setText('user-name', user.name || 'Your account');
+      setText('user-role', user.role || '');
+      setText('user-id', user.id ? `ID: ${user.id}` : '');
+      byId('user-id').hidden = !user.id;
+      setText('user-avatar', initials || 'U');
+      setText('top-avatar', initials || 'U');
+      byId('user-row').hidden = false;
+      byId('top-avatar').hidden = false;
+      if (user.name) setText('welcome-subtitle', `Welcome back, ${user.name}. Keep building your interview confidence.`);
+
+      const readiness = data.readiness || {};
+      const score = Math.min(100, Math.max(0, safeNumber(readiness.score)));
+      setText('readiness-value', score);
+      byId('readiness-ring').style.setProperty('--progress', score);
+      setText('readiness-delta', readiness.change == null ? '' : `${safeNumber(readiness.change) >= 0 ? '↗ +' : '↘ '}${safeNumber(readiness.change)} pts`);
+      setText('readiness-period', readiness.period || '');
+      setText('readiness-description', readiness.description || 'Your progress will appear here as you complete preparation activities.');
+      setText('session-basis', `${safeNumber(data.stats?.sessions)} sessions`);
+      setText('updated-label', readiness.updatedAt ? `Updated ${readiness.updatedAt}` : '');
+      drawTrend(readiness.trend);
+      byId('trend-labels').replaceChildren(...(readiness.labels || []).slice(-4).map(label => {
+        const el = document.createElement('span');
+        el.textContent = label;
+        return el;
+      }));
+
+      const recommendation = data.recommendation || {};
+      setText('focus-topic', recommendation.topic || 'No recommendation yet');
+      setText('focus-detail', recommendation.sessions == null ? '' : `Recommended · ${recommendation.sessions} sessions`);
+      const focusScore = Math.min(100, Math.max(0, safeNumber(recommendation.score)));
+      setText('focus-score', recommendation.score == null ? '—' : `${focusScore}%`);
+      byId('focus-progress').style.width = `${focusScore}%`;
+      setText('focus-hint', recommendation.minutes == null ? 'Complete a few activities to get a personalized next step.' : `${recommendation.minutes} minutes here could lift your readiness by ${safeNumber(recommendation.readinessLift)} points`);
+      byId('resume-link').href = safeHref(recommendation.href);
+
+      const stats = data.stats || {};
+      setText('stat-sessions', safeNumber(stats.sessions));
+      setText('stat-sessions-change', stats.sessionsChange == null ? '' : `↑ ${stats.sessionsChange}`);
+      setText('stat-sessions-caption', stats.sessionsCaption || 'total sessions');
+      setText('stat-accuracy', stats.accuracy == null ? '—' : safeNumber(stats.accuracy));
+      setText('stat-accuracy-change', stats.accuracyChange == null ? '' : `↑ ${stats.accuracyChange}%`);
+      setText('stat-accuracy-caption', stats.accuracyCaption || 'quiz accuracy');
+      setText('stat-hours', safeNumber(stats.focusedHours).toFixed(1));
+      setText('stat-hours-change', stats.hoursChange == null ? '' : `↑ ${stats.hoursChange}`);
+      setText('stat-hours-caption', stats.hoursCaption || 'focused time');
+      setText('stat-plan', safeNumber(stats.planCompleted));
+      setText('stat-plan-total', `/${safeNumber(stats.planTotal)}`);
+      setText('stat-plan-caption', stats.planCaption || 'sessions complete');
+      byId('plan-progress').style.width = `${stats.planTotal ? Math.min(100, safeNumber(stats.planCompleted) / safeNumber(stats.planTotal) * 100) : 0}%`;
+      drawBars(byId('session-bars'), stats.sessionTrend);
+      setText('accuracy-spark', (stats.accuracyTrend || []).map(v => '▁▂▃▄▅▆▇'[Math.min(6, Math.max(0, Math.round(safeNumber(v) / 100 * 6)))]).join(''));
+      setText('hours-spark', (stats.hoursTrend || []).map(v => '▁▂▃▄▅▆▇'[Math.min(6, Math.max(0, Math.round(safeNumber(v) / 100 * 6)))]).join(''));
+
+      const week = data.week || {};
+      setText('week-hours', `${safeNumber(week.focusedHours).toFixed(1)}h`);
+      setText('week-sessions', safeNumber(week.sessions));
+      setText('week-streak', safeNumber(week.streak));
+      const days = Array.isArray(week.days) ? week.days.slice(-7) : [];
+      const chart = byId('weekly-chart');
+      chart.replaceChildren();
+      days.forEach(day => {
+        const group = document.createElement('div');
+        group.className = 'bar-group';
+        const focused = document.createElement('i');
+        focused.style.height = `${Math.min(100, safeNumber(day.focusedHours) / 2 * 100)}%`;
+        focused.title = `${day.label}: ${safeNumber(day.focusedHours)} focused hours`;
+        const sessions = document.createElement('i');
+        sessions.className = 'soft';
+        sessions.style.height = `${Math.min(100, safeNumber(day.sessions) / 5 * 100)}%`;
+        group.append(focused, sessions);
+        chart.append(group);
+      });
+      byId('weekly-labels').replaceChildren(...days.map(day => {
+        const el = document.createElement('span');
+        el.textContent = day.label || '';
+        return el;
+      }));
+
+      const streak = safeNumber(user.streak ?? week.streak);
+      byId('streak-card').hidden = false;
+      setText('streak-label', `${streak} day streak`);
+      setText('streak-count', String(streak).padStart(2, '0'));
+      const now = new Date();
+      setText('date-badge', `${now.toLocaleDateString(undefined, { weekday: 'short' }).toUpperCase()} ${now.getDate()}`);
+
+      const tasks = Array.isArray(data.tasks) ? data.tasks : [];
+      const list = byId('task-list');
+      list.replaceChildren();
+      tasks.slice(0, 5).forEach(task => {
+        const label = document.createElement('label');
+        label.className = `task${task.completed ? ' done' : ''}`;
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.checked = Boolean(task.completed);
+        input.addEventListener('change', async () => {
+          label.classList.toggle('done', input.checked);
+          try {
+            await fetch(`/api/plan/items/${encodeURIComponent(task.id)}`, {
+              method: 'PATCH',
+              credentials: 'same-origin',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ completed: input.checked })
+            });
+          } catch { /* UI remains usable if task syncing is unavailable. */ }
+        });
+        const mark = document.createElement('span');
+        mark.className = 'checkmark';
+        const content = document.createElement('span');
+        const title = document.createElement('b');
+        title.textContent = task.title || 'Preparation task';
+        const detail = document.createElement('small');
+        detail.textContent = `${task.category || 'Practice'}${task.minutes ? ` · ${task.minutes} min` : ''}`;
+        content.append(title, detail);
+        const tag = document.createElement('i');
+        tag.className = 'task-tag';
+        tag.textContent = task.category || 'TASK';
+        label.append(input, mark, content, tag);
+        list.append(label);
+      });
+      if (!tasks.length) {
+        const empty = document.createElement('p');
+        empty.className = 'panel-copy';
+        empty.textContent = 'No tasks scheduled for today.';
+        list.append(empty);
+      }
+    }
+
+    async function loadDashboard() {
+      byId('load-error').hidden = true;
+      try {
+        const response = await fetch(DASHBOARD_ENDPOINT, { credentials: 'same-origin', headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error(`Dashboard request failed (${response.status})`);
+        render(await response.json());
+      } catch (error) {
+        console.error('Unable to load dashboard:', error);
+        byId('setup-state').hidden = true;
+        render({ hasPreparation: false });
+        byId('load-error').hidden = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setText('today', new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric' }).format(new Date()));
+      byId('retry-load').addEventListener('click', loadDashboard);
+      loadDashboard();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+{
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "Which data structure follows the LIFO principle?",
+      "options": [
+        {"id": "a", "text": "Queue"},
+        {"id": "b", "text": "Stack"},
+        {"id": "c", "text": "Array"},
+        {"id": "d", "text": "Linked List"}
+      ],
+      "correct_option_id": "b",
+      "explanation": "A stack follows Last In, First Out (LIFO)."
+    },
+    {
+      "id": "q2",
+      "prompt": "Which language is commonly used for Machine Learning?",
+      "options": [
+        {"id": "a", "text": "HTML"},
+        {"id": "b", "text": "CSS"},
+        {"id": "c", "text": "Python"},
+        {"id": "d", "text": "XML"}
+      ],
+      "correct_option_id": "c",
+      "explanation": "Python is widely used for Machine Learning because of its libraries."
+    },
+    {
+      "id": "q3",
+      "prompt": "What does SQL stand for?",
+      "options": [
+        {"id": "a", "text": "Structured Query Language"},
+        {"id": "b", "text": "Simple Question Language"},
+        {"id": "c", "text": "System Query Logic"},
+        {"id": "d", "text": "Sequential Quick Language"}
+      ],
+      "correct_option_id": "a",
+      "explanation": "SQL stands for Structured Query Language."
+    },
+    {
+      "id": "q4",
+      "prompt": "Which of these is an example of a cybersecurity threat?",
+      "options": [
+        {"id": "a", "text": "Phishing"},
+        {"id": "b", "text": "Debugging"},
+        {"id": "c", "text": "Formatting"},
+        {"id": "d", "text": "Compiling"}
+      ],
+      "correct_option_id": "a",
+      "explanation": "Phishing is an attack that tricks users into revealing sensitive information."
+    },
+    {
+      "id": "q5",
+      "prompt": "Which algorithm is commonly used for sorting?",
+      "options": [
+        {"id": "a", "text": "Binary Search"},
+        {"id": "b", "text": "Bubble Sort"},
+        {"id": "c", "text": "Linear Search"},
+        {"id": "d", "text": "Hashing"}
+      ],
+      "correct_option_id": "b",
+      "explanation": "Bubble Sort repeatedly compares and swaps adjacent elements."
+    }
+  ],
+  "warmups": [
+    {
+      "id": "w1",
+      "text": "What is one programming concept you learned today?"
+    },
+    {
+      "id": "w2",
+      "text": "Can you explain the difference between a stack and a queue?"
+    },
+    {
+      "id": "w3",
+      "text": "What is one technical problem you would like to solve?"
+    },
+    {
+      "id": "w4",
+      "text": "What new technology would you like to explore?"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "title": "Python Programming Basics",
+      "lastPracticed": "Not practiced yet",
+      "dueLabel": "Ready to review"
+    },
+    {
+      "id": "r2",
+      "title": "Data Structures",
+      "lastPracticed": "Not practiced yet",
+      "dueLabel": "Ready to review"
+    },
+    {
+      "id": "r3",
+      "title": "Cybersecurity Fundamentals",
+      "lastPracticed": "Not practiced yet",
+      "dueLabel": "Ready to review"
+    }
+  ]
+}

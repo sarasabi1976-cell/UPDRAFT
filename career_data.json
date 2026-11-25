@@ -1,1 +1,118 @@
+{
+  "careers": [
+    {
+      "name": "Data Scientist",
+      "role": "Data Scientist",
+      "eligible_degrees": [
+        "B.Tech",
+        "B.E",
+        "B.Sc",
+        "BCA",
+        "MCA",
+        "M.Sc"
+      ],
+      "specializations": [
+        "Computer Science",
+        "Information Technology",
+        "Data Science",
+        "Artificial Intelligence",
+        "Mathematics",
+        "Statistics"
+      ],
+      "minimum_year": 2,
+      "skills": {
+        "programming": 4,
+        "math_statistics": 5,
+        "data_analysis": 5,
+        "problem_solving": 4,
+        "machine_learning": 4,
+        "cybersecurity_networking": 1,
+        "communication": 4
+      }
+    },
+    {
+      "name": "Software Developer",
+      "role": "Software Developer",
+      "eligible_degrees": [
+        "B.Tech",
+        "B.E",
+        "B.Sc",
+        "BCA",
+        "MCA"
+      ],
+      "specializations": [
+        "Computer Science",
+        "Information Technology",
+        "Software Engineering",
+        "Computer Applications"
+      ],
+      "minimum_year": 1,
+      "skills": {
+        "programming": 5,
+        "math_statistics": 3,
+        "data_analysis": 2,
+        "problem_solving": 5,
+        "machine_learning": 1,
+        "cybersecurity_networking": 2,
+        "communication": 4
+      }
+    },
+    {
+      "name": "Cybersecurity Analyst",
+      "role": "Cybersecurity Analyst",
+      "eligible_degrees": [
+        "B.Tech",
+        "B.E",
+        "B.Sc",
+        "BCA",
+        "MCA"
+      ],
+      "specializations": [
+        "Computer Science",
+        "Information Technology",
+        "Cybersecurity",
+        "Information Security",
+        "Computer Networks"
+      ],
+      "minimum_year": 2,
+      "skills": {
+        "programming": 3,
+        "math_statistics": 3,
+        "data_analysis": 3,
+        "problem_solving": 5,
+        "machine_learning": 1,
+        "cybersecurity_networking": 5,
+        "communication": 4
+      }
+    },
+    {
+      "name": "AI/ML Engineer",
+      "role": "AI/ML Engineer",
+      "eligible_degrees": [
+        "B.Tech",
+        "B.E",
+        "B.Sc",
+        "MCA",
+        "M.Sc"
+      ],
+      "specializations": [
+        "Computer Science",
+        "Information Technology",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Science"
+      ],
+      "minimum_year": 2,
+      "skills": {
+        "programming": 5,
+        "math_statistics": 5,
+        "data_analysis": 4,
+        "problem_solving": 5,
+        "machine_learning": 5,
+        "cybersecurity_networking": 2,
+        "communication": 3
+      }
+    }
+  ]
+}
 

@@ -1,0 +1,235 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Progress Reports — Updraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <style>
+    .report-status {
+      min-height: 18px;
+      color: #75806e;
+      font-size: 11px;
+    }
+
+    .report-status:empty {
+      display: none;
+    }
+
+    .report-metric {
+      display: inline;
+    }
+
+    .report-empty {
+      color: var(--muted);
+      font-size: 11px;
+      padding: 12px 0;
+    }
+
+    .skill-name {
+      width: 120px;
+      flex: none;
+    }
+
+    .skill-progress {
+      flex: 1;
+    }
+
+    .skill-score {
+      margin-left: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <a class="brand" href="/">
+      <span class="brandmark">u.</span>
+      <span>updraft<span class="brand-dot">.</span></span>
+    </a>
+
+    <div class="side-label">YOUR WORKSPACE</div>
+
+    <nav aria-label="Main navigation">
+
+      <a class="nav-item" href="/">◫ Overview</a>
+
+      <a class="nav-item" href="/pages/assessment">◉ Skill assessment</a>
+
+      <a class="nav-item" href="/pages/plan">▦ Prep plan</a>
+
+      <a class="nav-item" href="/pages/practice">⌁ Practice arena</a>
+
+      <a class="nav-item active" href="/pages/reports">↗ Progress reports</a>
+
+    </nav>
+
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+
+      <div class="breadcrumbs">
+        <a href="/">Workspace</a>
+        <span>/</span>
+        Progress reports
+      </div>
+
+      <div class="top-actions">
+        <span class="today" id="today"></span>
+        <button class="avatar mini" type="button" aria-label="User profile">U</button>
+      </div>
+
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+
+        <div class="eyebrow">PROGRESS YOU CAN USE</div>
+
+        <h1>The work is adding up.</h1>
+
+        <p id="report-intro">
+          Your report brings together your assessment choices and activity so far.
+        </p>
+
+      </div>
+
+      <p class="report-status" id="report-status"
+        role="status" aria-live="polite">
+        Loading your consolidated report…
+      </p>
+
+      <!-- OVERALL STATISTICS -->
+
+      <section class="stat-grid" aria-label="Overall statistics">
+
+        <article class="stat-card">
+          <div class="stat-icon lime">↗</div>
+          <span class="stat-label">READINESS SCORE</span>
+
+          <div class="stat-value">
+            <span id="readiness-score">0</span>
+            <small>%</small>
+          </div>
+
+          <div class="stat-foot">
+            <span class="positive" id="readiness-change">0</span>
+            <span id="readiness-period">points in 30 days</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon violet">⌁</div>
+          <span class="stat-label">PRACTICE SESSIONS</span>
+
+          <div class="stat-value" id="practice-sessions">0</div>
+
+          <div class="stat-foot">
+            <span class="positive" id="sessions-change">0</span>
+            <span id="sessions-period">this month</span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon coral">◷</div>
+          <span class="stat-label">FOCUSED TIME</span>
+
+          <div class="stat-value">
+            <span id="focused-hours">0.0</span>
+            <small>hrs</small>
+          </div>
+
+          <div class="stat-foot" id="focused-period">
+            0 days this week
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon blue">✧</div>
+          <span class="stat-label">STREAK BEST</span>
+
+          <div class="stat-value">
+            <span id="streak-best">0</span>
+            <small>days</small>
+          </div>
+
+          <div class="stat-foot" id="streak-caption">
+            Personal best
+          </div>
+        </article>
+
+      </section>
+
+      <!-- SKILL MAP AND RECENT WINS -->
+
+      <div class="page-grid" style="margin-top:15px">
+
+        <section class="panel">
+
+          <div class="eyebrow muted">SKILL MAP</div>
+
+          <h2>Your confidence by topic</h2>
+
+          <div id="skill-map" aria-live="polite">
+            <p class="report-empty">
+              Your selected skills will appear here when assessment data is available.
+            </p>
+          </div>
+
+          <div class="feedback" id="report-insight" hidden></div>
+
+        </section>
+
+        <section class="panel">
+
+          <div class="eyebrow muted">YOUR RECENT WINS</div>
+
+          <h2>Signals of progress</h2>
+
+          <div id="recent-wins" aria-live="polite">
+            <p class="report-empty">
+              Your progress signals will appear here as you practice.
+            </p>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- ERROR MESSAGE -->
+
+      <div class="panel" id="report-error" role="status" hidden>
+
+        <h2>Report data is unavailable</h2>
+
+        <p class="panel-copy">
+          The values above are zero until your backend report can be loaded.
+        </p>
+
+        <button class="action" id="retry-report" type="button">
+          Try again
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/reports.js') }}"></script>
+
+</body>
+</html>

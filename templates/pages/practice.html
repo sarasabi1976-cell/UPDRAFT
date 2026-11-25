@@ -1,0 +1,276 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Practice Arena — Updraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <style>
+    .practice-status {
+      min-height: 18px;
+      margin: 10px 0;
+      color: #75806e;
+      font-size: 11px;
+    }
+
+    .practice-status:empty {
+      display: none;
+    }
+
+    .timer {
+      margin: 16px 0;
+    }
+
+    .timer-controls {
+      flex-wrap: wrap;
+    }
+
+    .timer-controls button[aria-pressed="true"] {
+      border-color: #9fc377;
+      background: #f3f8eb;
+    }
+
+    .timer-controls button:disabled {
+      cursor: not-allowed;
+      opacity: .55;
+    }
+
+    .prompt-actions {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    #warmup-prompt {
+      margin: 18px 0;
+    }
+
+    .review-button {
+      margin-left: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <a class="brand" href="/">
+      <span class="brandmark">u.</span>
+      <span>updraft<span class="brand-dot">.</span></span>
+    </a>
+
+    <div class="side-label">YOUR WORKSPACE</div>
+
+    <nav aria-label="Main navigation">
+
+      <a class="nav-item" href="/">◫ Overview</a>
+
+      <a class="nav-item" href="/pages/assessment">◉ Skill assessment</a>
+
+      <a class="nav-item" href="/pages/plan">▦ Prep plan</a>
+
+      <a class="nav-item active" href="/pages/practice">⌁ Practice arena</a>
+
+      <a class="nav-item" href="/pages/reports">↗ Progress reports</a>
+
+    </nav>
+
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+
+      <div class="breadcrumbs">
+        <a href="/">Workspace</a>
+        <span>/</span>
+        Practice arena
+      </div>
+
+      <div class="top-actions">
+        <span class="today" id="today"></span>
+        <button class="avatar mini" type="button" aria-label="User profile">U</button>
+      </div>
+
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+
+        <div class="eyebrow">LEARN BY DOING</div>
+
+        <h1>Step into the arena.</h1>
+
+        <p>
+          Quick drills, guided practice, and spaced repetition
+          keep the ideas within reach.
+        </p>
+
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Practice activities">
+
+        <button class="tab active" type="button"
+          role="tab" aria-selected="true" data-tab="quiz">
+          Quick quiz
+        </button>
+
+        <button class="tab" type="button"
+          role="tab" aria-selected="false" data-tab="warmup">
+          Warm-up
+        </button>
+
+        <button class="tab" type="button"
+          role="tab" aria-selected="false" data-tab="review">
+          Review queue
+        </button>
+
+      </div>
+
+      <!-- QUICK QUIZ -->
+
+      <section data-tab-content="quiz" class="panel" role="tabpanel">
+
+        <div class="eyebrow muted" id="quiz-count">
+          Loading questions…
+        </div>
+
+        <div class="progress-line" style="margin:12px 0">
+          <i id="quiz-progress" style="width:0"></i>
+        </div>
+
+        <h2 id="quiz-question" class="question"></h2>
+
+        <div id="quiz-options" class="option-row"></div>
+
+        <div class="feedback" id="quiz-feedback" hidden aria-live="polite"></div>
+
+        <p class="practice-status" id="quiz-status"
+          role="status" aria-live="polite"></p>
+
+        <button id="quiz-submit" class="action" type="button" disabled>
+          Check answer
+        </button>
+
+        <button id="quiz-next" class="action"
+          type="button" style="margin-top:14px" hidden>
+          Next question →
+        </button>
+
+        <button id="quiz-retry" class="choice" type="button" hidden>
+          Retry loading questions
+        </button>
+
+      </section>
+
+      <!-- WARM-UP -->
+
+      <section data-tab-content="warmup" class="panel" role="tabpanel" hidden>
+
+        <div class="eyebrow muted">RESET YOUR FOCUS</div>
+
+        <h2>One calm, focused rep.</h2>
+
+        <p style="color:#81897f;font-size:12px">
+          Choose a short timer. Pick a prompt and talk through
+          the first step out loud.
+        </p>
+
+        <div class="timer-wrap">
+
+          <div class="timer" id="timer" role="timer" aria-live="off">
+            05:00
+          </div>
+
+          <div class="timer-controls" aria-label="Focus timer controls">
+
+            <button type="button" class="duration-choice"
+              data-seconds="300" aria-pressed="true">
+              5 min
+            </button>
+
+            <button type="button" class="duration-choice"
+              data-seconds="600" aria-pressed="false">
+              10 min
+            </button>
+
+            <button type="button" class="duration-choice"
+              data-seconds="900" aria-pressed="false">
+              15 min
+            </button>
+
+            <button type="button" id="timer-start" class="action">
+              Start focus
+            </button>
+
+            <button type="button" id="timer-reset">
+              Reset
+            </button>
+
+          </div>
+
+          <div class="prompt-actions">
+            <button type="button" class="choice" id="next-prompt">
+              Another prompt
+            </button>
+          </div>
+
+          <p class="question" id="warmup-prompt">
+            Loading a warm-up prompt…
+          </p>
+
+          <p class="practice-status" id="timer-status"
+            role="status" aria-live="polite"></p>
+
+          <p class="practice-status" id="warmup-status"
+            role="status" aria-live="polite"></p>
+
+          <button type="button" class="choice" id="warmup-retry" hidden>
+            Retry loading prompts
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- REVIEW QUEUE -->
+
+      <section data-tab-content="review" class="panel"
+        role="tabpanel" hidden>
+
+        <div class="eyebrow muted">SPACED REPETITION</div>
+
+        <h2>Ready for another look?</h2>
+
+        <div id="review-list" class="task-list" aria-live="polite">
+          <p class="practice-status">Loading your review queue…</p>
+        </div>
+
+        <p class="practice-status" id="review-status"
+          role="status" aria-live="polite"></p>
+
+        <button id="review-retry" class="choice" type="button" hidden>
+          Retry loading reviews
+        </button>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+
+</body>
+</html>

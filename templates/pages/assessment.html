@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill Assessment</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/">Updraft</a>
+
+    <div class="side-label">YOUR WORKSPACE</div>
+
+    <nav>
+      <a class="nav-item" href="/">Overview</a>
+      <a class="nav-item active" href="/pages/assessment">Skill assessment</a>
+      <a class="nav-item" href="/pages/plan">Prep plan</a>
+      <a class="nav-item" href="/pages/practice">Practice arena</a>
+      <a class="nav-item" href="/pages/reports">Progress reports</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumbs">Workspace / Skill assessment</div>
+      <div class="top-actions">
+        <span class="today" id="today"></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div class="eyebrow">START WITH WHAT YOU KNOW</div>
+        <h1>Find your edge.</h1>
+        <p>Tell us about your education and rate your current skills.</p>
+      </div>
+
+      <div class="page-grid">
+        <section class="panel">
+          <div class="eyebrow muted">01 / YOUR EDUCATION</div>
+
+          <form id="assessment-form" novalidate>
+
+            <div class="form-group">
+              <label for="degree">Your degree</label>
+              <select id="degree" name="degree" required>
+                <option value="">Loading degrees...</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="specialization">Your specialization</label>
+              <select id="specialization" name="specialization" required disabled>
+                <option value="">Choose a degree first</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="study-year">Current study year</label>
+              <select id="study-year" name="study-year" required>
+                <option value="">Choose your year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+                <option value="5">5th Year</option>
+              </select>
+            </div>
+
+            <div class="eyebrow muted">02 / RATE YOUR SKILLS</div>
+
+            <p class="panel-copy">
+              Rate each skill from 1 (Beginner) to 5 (Advanced).
+            </p>
+
+            <div id="skill-ratings">
+              <p class="panel-copy">Loading skill choices...</p>
+            </div>
+
+            <p class="form-status" id="assessment-status"></p>
+
+            <button class="action" id="submit-assessment" type="submit" disabled>
+              Find my career matches →
+            </button>
+
+          </form>
+        </section>
+
+        <aside class="panel">
+          <div class="eyebrow muted">HOW IT WORKS</div>
+          <h2>A clearer starting point</h2>
+
+          <div class="plan-row">
+            <span class="topic-icon">◉</span>
+            <div>
+              <b>Education matching</b>
+              <small>We consider your degree and specialization.</small>
+            </div>
+          </div>
+
+          <div class="plan-row">
+            <span class="topic-icon">⌁</span>
+            <div>
+              <b>Skill gap analysis</b>
+              <small>Your ratings are compared with career requirements.</small>
+            </div>
+          </div>
+
+          <div class="plan-row">
+            <span class="topic-icon">✦</span>
+            <div>
+              <b>Personalized recommendations</b>
+              <small>Discover careers and skills you can improve.</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/assessment.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prep Plan — Updraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <style>
+    .plan-item-check {
+      flex: none;
+    }
+
+    .plan-item-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .plan-item-copy b {
+      display: block;
+      font-size: 12px;
+    }
+
+    .plan-item-copy small {
+      display: block;
+      margin-top: 3px;
+      color: #949a92;
+      font-size: 10px;
+    }
+
+    .plan-status {
+      min-height: 18px;
+      color: #75806e;
+      font-size: 11px;
+    }
+
+    .plan-empty {
+      padding: 18px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .plan-recommendation:empty {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <a class="brand" href="/">
+      <span class="brandmark">u.</span>
+      <span>updraft<span class="brand-dot">.</span></span>
+    </a>
+
+    <div class="side-label">YOUR WORKSPACE</div>
+
+    <nav aria-label="Main navigation">
+      <a class="nav-item" href="/">◫ Overview</a>
+
+      <a class="nav-item" href="/pages/assessment">◉ Skill assessment</a>
+
+      <a class="nav-item active" href="/pages/plan">▦ Prep plan</a>
+
+      <a class="nav-item" href="/pages/practice">⌁ Practice arena</a>
+
+      <a class="nav-item" href="/pages/reports">↗ Progress reports</a>
+    </nav>
+
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+
+      <div class="breadcrumbs">
+        <a href="/">Workspace</a>
+        <span>/</span>
+        Prep plan
+      </div>
+
+      <div class="top-actions">
+        <span class="today" id="today"></span>
+        <button class="avatar mini" type="button" aria-label="User profile">U</button>
+      </div>
+
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+
+        <div class="eyebrow">BUILT AROUND YOUR GAPS</div>
+
+        <h1>Your route to ready.</h1>
+
+        <p>
+          A flexible, topic-wise plan with focused reps,
+          review days, and mock rounds.
+        </p>
+
+      </div>
+
+      <section class="panel" aria-labelledby="plan-title">
+
+        <div class="card-top">
+
+          <div>
+            <h2 id="plan-title">Your personalized prep plan</h2>
+
+            <span id="plan-count" style="font-size:10px;color:#859080">
+              0 of 0 sessions complete
+            </span>
+          </div>
+
+          <button class="choice" id="edit-schedule" type="button">
+            Edit schedule ✎
+          </button>
+
+        </div>
+
+        <div class="progress-line" style="margin:15px 0 6px">
+          <i id="plan-progress" style="width:0%"></i>
+        </div>
+
+        <p class="plan-status" id="plan-status" role="status" aria-live="polite">
+          Loading your plan…
+        </p>
+
+        <div id="plan-items" aria-live="polite"></div>
+
+        <div class="feedback plan-recommendation" id="plan-recommendation"></div>
+
+      </section>
+
+      <div class="panel" id="plan-error" role="status" hidden>
+
+        <h2>Plan data is unavailable</h2>
+
+        <p class="panel-copy">
+          Check your connection to the backend and try again.
+        </p>
+
+        <button class="action" id="retry-plan" type="button">
+          Try again
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/plan.js') }}"></script>
+
+</body>
+</html>
