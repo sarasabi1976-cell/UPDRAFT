@@ -1578,3 +1578,200 @@ footer {
   color:var(--muted);
 }
 :root[data-theme="dark"] .welcome-row h1 em { color:#b9d99a; }
+
+/* Shared visual polish for a calmer, more consistent workspace. */
+:root {
+  --surface-shadow: 0 8px 24px rgb(28 36 32 / 5%);
+  --surface-shadow-hover: 0 14px 34px rgb(28 36 32 / 9%);
+  --control-radius: 9px;
+  --card-radius: 14px;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.55;
+  letter-spacing: -.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.sidebar {
+  background: var(--white);
+  box-shadow: 4px 0 24px rgb(28 36 32 / 2%);
+}
+
+.brand {
+  font-size: 21px;
+}
+
+.nav-item {
+  min-height: 44px;
+  border: 1px solid transparent;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.nav-item:hover {
+  background: color-mix(in srgb, var(--green) 7%, transparent);
+  color: var(--ink);
+  transform: translateX(2px);
+}
+
+.nav-item.active {
+  border-color: color-mix(in srgb, var(--green) 12%, transparent);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(14px);
+}
+
+.content {
+  max-width: 1400px;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.page-head {
+  margin: 28px 0 30px;
+}
+
+.page-head h1 {
+  font-size: clamp(32px, 3vw, 40px);
+  letter-spacing: -1.6px;
+}
+
+.page-head p,
+.subhead {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.panel,
+.readiness-card,
+.focus-card,
+.stat-card,
+.week-card,
+.today-card,
+.job-card {
+  border-radius: var(--card-radius);
+  box-shadow: var(--surface-shadow);
+}
+
+.panel {
+  padding: 26px;
+}
+
+.panel h2,
+.card-top h2,
+.section-heading h2 {
+  line-height: 1.35;
+}
+
+.action,
+.primary-btn,
+.dark-btn,
+.theme-toggle,
+.choice,
+.select-pill,
+.timer-controls button,
+.bottom-banner button {
+  border-radius: var(--control-radius);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background-color .16s ease;
+}
+
+.action,
+.primary-btn,
+.dark-btn,
+.bottom-banner button {
+  min-height: 42px;
+  font-size: 13px;
+}
+
+.action:hover,
+.primary-btn:hover,
+.dark-btn:hover,
+.bottom-banner button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgb(28 36 32 / 14%);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid color-mix(in srgb, #8ab65c 58%, transparent);
+  outline-offset: 2px;
+}
+
+input,
+select,
+textarea {
+  border-radius: var(--control-radius);
+}
+
+.readiness-card,
+.focus-card,
+.stat-card,
+.week-card,
+.today-card,
+.panel {
+  border-color: var(--line);
+}
+
+.stat-card,
+.week-card,
+.today-card {
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+
+.stat-card:hover,
+.week-card:hover,
+.today-card:hover {
+  box-shadow: var(--surface-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.eyebrow,
+.side-label,
+.stat-label {
+  letter-spacing: 1.25px;
+}
+
+footer {
+  font-size: 9px;
+}
+
+:root[data-theme="dark"] {
+  --surface-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+  --surface-shadow-hover: 0 14px 34px rgb(0 0 0 / 24%);
+}
+
+@media (max-width: 1000px) {
+  .content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
+  .page-head {
+    margin: 18px 0 23px;
+  }
+
+  .page-head h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+
+  .panel {
+    padding: 19px;
+  }
+}
