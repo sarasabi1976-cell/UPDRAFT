@@ -15,6 +15,19 @@
     .plan-status { min-height: 18px; color: #75806e; font-size: 11px; }
     .plan-empty { padding: 18px 0; color: var(--muted); font-size: 12px; }
     .plan-recommendation:empty { display: none; }
+    .plan-editor { margin-top: 20px; padding: 18px; border: 1px solid var(--line); border-radius: 9px; background: var(--paper); }
+    .plan-editor[hidden] { display: none; }
+    .plan-editor-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .plan-editor-heading b,.plan-editor-heading small { display:block; }
+    .plan-editor-heading small { margin-top:4px; color:var(--muted); font-size:11px; }
+    .plan-edit-row { padding:12px 0; border-bottom:1px solid var(--line); }
+    .plan-edit-fields { display:grid; grid-template-columns:1fr 2fr auto 105px; gap:8px 10px; align-items:center; }
+    .plan-edit-fields label { font-size:11px; font-weight:600; }
+    .plan-edit-fields input { min-width:0; min-height:36px; padding:7px 9px; border:1px solid var(--line); border-radius:5px; background:var(--white); color:var(--ink); font:12px 'DM Sans'; }
+    .plan-editor-actions { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; }
+    .plan-editor-actions p { color:var(--muted); font-size:11px; }
+    :root[data-theme="dark"] .plan-editor { background:#18211b; }
+    @media(max-width:760px) { .plan-edit-fields { grid-template-columns:1fr 90px; } .plan-edit-fields label:nth-of-type(2),.plan-edit-fields input:nth-of-type(2) { grid-column:1; } .plan-edit-fields label:nth-of-type(3) { grid-column:2; grid-row:1; } .plan-edit-fields input:nth-of-type(3) { grid-column:2; grid-row:2; } .plan-editor-actions { align-items:flex-start; flex-direction:column; } }
   </style>
 </head>
 <body>
@@ -50,6 +63,11 @@
         <div class="progress-line" style="margin:15px 0 6px"><i id="plan-progress" style="width:0%"></i></div>
         <p class="plan-status" id="plan-status" role="status" aria-live="polite">Loading your plan…</p>
         <div id="plan-items" aria-live="polite"></div>
+        <section id="plan-editor" class="plan-editor" aria-label="Edit your plan" hidden>
+          <div class="plan-editor-heading"><div><b>Customize your schedule</b><small>Rename activities, update their descriptions, and move them to a week from 1 to 52.</small></div><button type="button" class="choice" id="cancel-plan-edit">Cancel</button></div>
+          <div id="plan-edit-items"></div>
+          <div class="plan-editor-actions"><p id="plan-edit-status" role="status" aria-live="polite"></p><button type="button" class="action" id="save-plan-edit">Save schedule</button></div>
+        </section>
         <div class="feedback plan-recommendation" id="plan-recommendation"></div>
       </section>
       <div class="panel" id="plan-error" role="status" hidden>
