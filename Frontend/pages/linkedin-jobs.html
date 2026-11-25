@@ -52,12 +52,12 @@
         <div class="eyebrow muted">PERSONALIZED JOB SEARCH</div>
         <form id="job-search" class="job-search">
           <label for="job-query">Role or keywords<input id="job-query" name="what" maxlength="120" placeholder="e.g. UX Designer" required></label>
-          <label for="job-location">Location<input id="job-location" name="where" maxlength="100" placeholder="e.g. Chennai, Tamil Nadu, India" autocomplete="address-level2"></label>
+          <label for="job-location">City or region<input id="job-location" name="where" maxlength="100" placeholder="e.g. Chennai or London" autocomplete="address-level2"></label>
           <label for="job-country">Country<select id="job-country" name="country"><option value="in">India</option><option value="us">United States</option><option value="gb">United Kingdom</option><option value="ca">Canada</option><option value="au">Australia</option><option value="de">Germany</option><option value="fr">France</option><option value="nl">Netherlands</option><option value="sg">Singapore</option><option value="pl">Poland</option><option value="za">South Africa</option><option value="br">Brazil</option></select></label>
           <button class="action" type="submit">Search vacancies</button>
         </form>
         <div class="job-actions"><a id="linkedin-search" class="linkedin-link" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">Open matching LinkedIn jobs <span aria-hidden="true">↗</span></a></div>
-        <p class="jobs-note">LinkedIn opens its live results in a new tab using your role and location. Matching vacancies can appear below when the configured job-listing provider is available; LinkedIn does not offer a public embeddable job feed without its API.</p>
+        <p class="jobs-note">LinkedIn opens live results in a new tab. Your selected country is added to the city or region you enter. LinkedIn may include nearby places in its results. On-page vacancy cards depend on the configured listing provider.</p>
         <p class="jobs-status" id="jobs-status" role="status" aria-live="polite">Loading recommendations…</p>
       </section>
       <section aria-label="Latest matching jobs"><div class="section-heading"><div><div class="eyebrow muted">LATEST VACANCIES</div><h2>Recent opportunities</h2></div></div><div id="jobs-list" class="jobs-grid"></div></section>

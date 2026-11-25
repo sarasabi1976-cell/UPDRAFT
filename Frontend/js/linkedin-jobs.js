@@ -15,13 +15,14 @@ function safeExternalUrl(value) {
 
 function linkedinSearchUrl(query, location, country) {
   const url = new URL("https://www.linkedin.com/jobs/search/");
-  url.searchParams.set("keywords", query.trim());
+  const exactQuery = String(query || "").trim();
+  const typedLocation = String(location || "").trim().replace(/\s*,\s*/g, ", ");
+  url.searchParams.set("keywords", exactQuery);
   url.searchParams.set("sortBy", "DD");
-  url.searchParams.set("f_TPR", "r604800");
   url.searchParams.set("refresh", "true");
   url.searchParams.set("origin", "JOB_SEARCH_PAGE_JOB_FILTER");
   const countryName = countryInput.selectedOptions[0]?.textContent.trim() || country;
-  let exactLocation = location.trim();
+  let exactLocation = typedLocation;
   const includesCountry = [...countryInput.options].some(option =>
     exactLocation.toLocaleLowerCase().includes(option.textContent.trim().toLocaleLowerCase())
   );
@@ -35,7 +36,7 @@ function linkedinSearchUrl(query, location, country) {
 function renderJobs(data) {
   list.replaceChildren();
   if (!queryInput.value && data.query) queryInput.value = data.query;
-  linkedInLink.href = safeExternalUrl(data.linkedinUrl) || "https://www.linkedin.com/jobs/";
+  linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
   if (!Array.isArray(data.jobs) || !data.jobs.length) {
     status.textContent = data.message || "No matching vacancies were returned. Try a broader search.";
     return;
@@ -94,6 +95,11 @@ locationInput.addEventListener("input", () => {
   linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
 });
 countryInput.addEventListener("change", () => {
+  linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
+});
+linkedInLink.addEventListener("click", () => {
+  // Build from the current controls at click time so an older search response
+  // cannot send the user to stale keywords or a stale location.
   linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
 });
 document.addEventListener("DOMContentLoaded", async () => {
