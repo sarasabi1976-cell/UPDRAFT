@@ -2,6 +2,9 @@ const form = document.getElementById("job-search");
 const list = document.getElementById("jobs-list");
 const status = document.getElementById("jobs-status");
 const linkedInLink = document.getElementById("linkedin-search");
+const queryInput = document.getElementById("job-query");
+const locationInput = document.getElementById("job-location");
+const countryInput = document.getElementById("job-country");
 
 function safeExternalUrl(value) {
   try {
@@ -10,9 +13,28 @@ function safeExternalUrl(value) {
   } catch { return ""; }
 }
 
+function linkedinSearchUrl(query, location, country) {
+  const url = new URL("https://www.linkedin.com/jobs/search/");
+  url.searchParams.set("keywords", query.trim());
+  url.searchParams.set("sortBy", "DD");
+  url.searchParams.set("f_TPR", "r604800");
+  url.searchParams.set("refresh", "true");
+  url.searchParams.set("origin", "JOB_SEARCH_PAGE_JOB_FILTER");
+  const countryName = countryInput.selectedOptions[0]?.textContent.trim() || country;
+  let exactLocation = location.trim();
+  const includesCountry = [...countryInput.options].some(option =>
+    exactLocation.toLocaleLowerCase().includes(option.textContent.trim().toLocaleLowerCase())
+  );
+  if (countryName && !includesCountry) {
+    exactLocation = [exactLocation, countryName].filter(Boolean).join(", ");
+  }
+  if (exactLocation) url.searchParams.set("location", exactLocation);
+  return url.href;
+}
+
 function renderJobs(data) {
   list.replaceChildren();
-  if (!document.getElementById("job-query").value && data.query) document.getElementById("job-query").value = data.query;
+  if (!queryInput.value && data.query) queryInput.value = data.query;
   linkedInLink.href = safeExternalUrl(data.linkedinUrl) || "https://www.linkedin.com/jobs/";
   if (!Array.isArray(data.jobs) || !data.jobs.length) {
     status.textContent = data.message || "No matching vacancies were returned. Try a broader search.";
@@ -53,7 +75,7 @@ async function searchJobs(event) {
     where: document.getElementById("job-location").value.trim(),
     country: document.getElementById("job-country").value
   });
-  linkedInLink.href = `https://www.linkedin.com/jobs/search/?${new URLSearchParams({keywords:query.get("what"),location:query.get("where"),sortBy:"DD",f_TPR:"r604800"})}`;
+  linkedInLink.href = linkedinSearchUrl(query.get("what"), query.get("where"), query.get("country"));
   try {
     const response = await fetch(`/api/jobs/search?${query}`, { credentials:"same-origin", headers:{Accept:"application/json"} });
     if (!response.ok) throw new Error(`Job search failed (${response.status})`);
@@ -65,6 +87,15 @@ async function searchJobs(event) {
 }
 
 form.addEventListener("submit", searchJobs);
+queryInput.addEventListener("input", () => {
+  linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
+});
+locationInput.addEventListener("input", () => {
+  linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
+});
+countryInput.addEventListener("change", () => {
+  linkedInLink.href = linkedinSearchUrl(queryInput.value, locationInput.value, countryInput.value);
+});
 document.addEventListener("DOMContentLoaded", async () => {
   const today = document.getElementById("today");
   if (today) today.textContent = new Intl.DateTimeFormat(undefined,{weekday:"short",month:"short",day:"numeric"}).format(new Date());
