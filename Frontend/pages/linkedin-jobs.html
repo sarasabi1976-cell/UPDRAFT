@@ -8,19 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <style>
-    .job-search { display:grid; grid-template-columns:minmax(190px,1.4fr) minmax(150px,1fr) 130px auto; gap:10px; align-items:end; }
-    .job-search label { display:grid; gap:6px; color:var(--ink); font-size:11px; font-weight:600; }
+    .job-search { display:grid; grid-template-columns:minmax(190px,1.4fr) minmax(180px,1fr) 145px auto; gap:12px; align-items:end; }
+    .job-search label { display:grid; gap:7px; color:var(--ink); font-size:13px; font-weight:700; }
     .job-search input,.job-search select { width:100%; min-height:40px; border:1px solid var(--line); border-radius:8px; padding:9px 11px; background:#fff; color:var(--ink); font:inherit; }
-    .job-actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:14px; }
-    .linkedin-link { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:0 14px; border-radius:8px; background:#0a66c2; color:white; font-size:11px; font-weight:700; text-decoration:none; }
-    .jobs-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:14px; }
-    .job-card { border:1px solid var(--line); border-radius:11px; background:white; padding:16px; min-width:0; }
-    .job-card h2 { margin:6px 0; font-size:16px; }
-    .job-meta { color:var(--muted); font-size:11px; }
-    .job-description { color:#657064; font-size:11px; line-height:1.55; margin:10px 0; }
-    .job-card a { color:#557d38; font-weight:700; font-size:11px; }
-    .jobs-status { min-height:18px; margin:8px 0 0; color:#71806c; font-size:11px; }
-    .provider-credit { display:flex; align-items:center; gap:7px; margin-top:12px; color:#899085; font-size:9px; }
+    .job-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .linkedin-link { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 17px; border-radius:8px; background:#0a66c2; color:white; font-size:13px; font-weight:700; text-decoration:none; transition:filter .15s, transform .15s; }
+    .linkedin-link:hover { filter:brightness(.94); transform:translateY(-1px); }
+    .jobs-note { margin:13px 0 0; padding:12px 14px; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--muted); font-size:12px; line-height:1.6; }
+    .jobs-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:16px; }
+    .job-card { border:1px solid var(--line); border-radius:12px; background:white; padding:20px; min-width:0; }
+    .job-card h2 { margin:6px 0; font-size:19px; line-height:1.35; }
+    .job-meta { color:var(--muted); font-size:13px; line-height:1.5; }
+    .job-description { color:var(--muted); font-size:14px; line-height:1.65; margin:12px 0; }
+    .job-card a { color:#557d38; font-weight:700; font-size:13px; }
+    .jobs-status { min-height:20px; margin:10px 0 0; color:var(--muted); font-size:13px; line-height:1.5; }
+    .provider-credit { display:flex; align-items:center; gap:7px; margin-top:12px; color:var(--muted); font-size:11px; }
     .provider-credit a { display:inline-flex; align-items:center; justify-content:center; min-width:116px; min-height:23px; padding:2px 8px; border:1px solid var(--line); border-radius:4px; color:#50673c; font-weight:700; text-decoration:none; }
     @media(max-width:850px){.job-search{grid-template-columns:1fr 1fr}.jobs-grid{grid-template-columns:1fr}}
     @media(max-width:520px){.job-search{grid-template-columns:1fr}}
@@ -50,11 +52,12 @@
         <div class="eyebrow muted">PERSONALIZED JOB SEARCH</div>
         <form id="job-search" class="job-search">
           <label for="job-query">Role or keywords<input id="job-query" name="what" maxlength="120" placeholder="e.g. UX Designer" required></label>
-          <label for="job-location">Location<input id="job-location" name="where" maxlength="100" placeholder="City, region, or remote"></label>
+          <label for="job-location">Location<input id="job-location" name="where" maxlength="100" placeholder="e.g. Chennai, Tamil Nadu, India" autocomplete="address-level2"></label>
           <label for="job-country">Country<select id="job-country" name="country"><option value="in">India</option><option value="us">United States</option><option value="gb">United Kingdom</option><option value="ca">Canada</option><option value="au">Australia</option><option value="de">Germany</option><option value="fr">France</option><option value="nl">Netherlands</option><option value="sg">Singapore</option><option value="pl">Poland</option><option value="za">South Africa</option><option value="br">Brazil</option></select></label>
           <button class="action" type="submit">Search vacancies</button>
         </form>
-        <div class="job-actions"><a id="linkedin-search" class="linkedin-link" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">Search live jobs on LinkedIn ↗</a></div>
+        <div class="job-actions"><a id="linkedin-search" class="linkedin-link" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">Open matching LinkedIn jobs <span aria-hidden="true">↗</span></a></div>
+        <p class="jobs-note">LinkedIn opens its live results in a new tab using your role and location. Matching vacancies can appear below when the configured job-listing provider is available; LinkedIn does not offer a public embeddable job feed without its API.</p>
         <p class="jobs-status" id="jobs-status" role="status" aria-live="polite">Loading recommendations…</p>
       </section>
       <section aria-label="Latest matching jobs"><div class="section-heading"><div><div class="eyebrow muted">LATEST VACANCIES</div><h2>Recent opportunities</h2></div></div><div id="jobs-list" class="jobs-grid"></div></section>

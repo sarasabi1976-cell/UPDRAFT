@@ -10,6 +10,11 @@ from .config import ADZUNA_APP_ID, ADZUNA_APP_KEY
 from .data import CAREER_DEGREES, CAREER_SKILLS, ROLES
 
 COUNTRIES = {"au", "br", "ca", "de", "fr", "gb", "in", "nl", "pl", "sg", "us", "za"}
+COUNTRY_NAMES = {
+    "au": "Australia", "br": "Brazil", "ca": "Canada", "de": "Germany",
+    "fr": "France", "gb": "United Kingdom", "in": "India", "nl": "Netherlands",
+    "pl": "Poland", "sg": "Singapore", "us": "United States", "za": "South Africa",
+}
 
 
 class _TextOnly(HTMLParser):
@@ -38,8 +43,19 @@ def _default_query(profile):
     return next((role["label"] for role in ROLES if role["id"] == profile.get("roleId")), "Software Developer")
 
 
-def _linkedin_url(query, location):
-    params = {"keywords": query, "sortBy": "DD", "f_TPR": "r604800"}
+def _linkedin_url(query, location, country=None):
+    location = str(location or "").strip()
+    country_name = COUNTRY_NAMES.get(str(country or "").strip().lower(), "")
+    includes_country = any(name.casefold() in location.casefold() for name in COUNTRY_NAMES.values())
+    if country_name and not includes_country:
+        location = f"{location}, {country_name}".strip(", ")
+    params = {
+        "keywords": query,
+        "sortBy": "DD",
+        "f_TPR": "r604800",
+        "refresh": "true",
+        "origin": "JOB_SEARCH_PAGE_JOB_FILTER",
+    }
     if location:
         params["location"] = location
     return "https://www.linkedin.com/jobs/search/?" + urlencode(params)
@@ -70,7 +86,7 @@ def search_jobs(profile, query="", location="", country="in"):
     country = str(country or "in").strip().lower()
     if country not in COUNTRIES:
         country = "in"
-    linkedin = _linkedin_url(query, location)
+    linkedin = _linkedin_url(query, location, country)
     result = {
         "query": query,
         "location": location,
