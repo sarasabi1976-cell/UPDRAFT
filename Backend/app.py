@@ -10,6 +10,7 @@ from .database import initialize
 
 
 app = Flask(__name__)
+initialize()
 
 
 class FlaskRequestAdapter:
@@ -48,6 +49,8 @@ class FlaskRequestAdapter:
                     target = (PROJECT_ROOT / relative[len("Frontend/"):]).resolve()
         else:
             target = (FRONTEND_ROOT / relative).resolve()
+            if not target.is_file() and relative == "index.html":
+                target = (FRONTEND_ROOT / "Index.html").resolve()
             if not target.is_file():
                 target = (PROJECT_ROOT / relative).resolve()
 
