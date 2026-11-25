@@ -20,7 +20,9 @@
   function addList(parent, heading, items) {
     if (!Array.isArray(items) || items.length === 0) return;
 
-    addText(parent, 'h3', '', heading);
+    const group = document.createElement('section');
+    group.className = 'career-detail-group';
+    addText(group, 'h3', '', heading);
     const list = document.createElement('ul');
 
     items.forEach(item => {
@@ -29,7 +31,8 @@
       list.append(li);
     });
 
-    parent.append(list);
+    group.append(list);
+    parent.append(group);
   }
 
   function addLinks(parent, links) {
@@ -78,12 +81,39 @@
       const card = document.createElement('section');
       card.className = 'panel career-result-card';
 
-      const matchLabel = match.matchPercent == null
-        ? 'CAREER MATCH'
-        : `${match.matchPercent}% MATCH`;
-      addText(card, 'div', 'eyebrow muted', matchLabel);
-      addText(card, 'h2', '', match.title || 'Career option');
-      addText(card, 'p', 'panel-copy', match.description || '');
+      const percent = Number.isFinite(Number(match.matchPercent))
+        ? Math.max(0, Math.min(100, Number(match.matchPercent)))
+        : null;
+      const header = document.createElement('div');
+      header.className = 'career-card-header';
+      const heading = document.createElement('div');
+      addText(heading, 'div', 'eyebrow muted', 'CAREER MATCH');
+      addText(heading, 'h2', '', match.title || 'Career option');
+      header.append(heading);
+      if (percent !== null) {
+        const score = document.createElement('div');
+        score.className = 'career-score';
+        score.setAttribute('aria-label', `${percent}% skill match`);
+        addText(score, 'strong', '', `${percent}%`);
+        addText(score, 'span', '', 'MATCH');
+        header.append(score);
+      }
+      card.append(header);
+
+      if (percent !== null) {
+        const track = document.createElement('div');
+        track.className = 'career-match-track';
+        track.setAttribute('role', 'progressbar');
+        track.setAttribute('aria-label', `Skill match for ${match.title || 'career option'}`);
+        track.setAttribute('aria-valuemin', '0');
+        track.setAttribute('aria-valuemax', '100');
+        track.setAttribute('aria-valuenow', String(percent));
+        const fill = document.createElement('span');
+        fill.style.width = `${percent}%`;
+        track.append(fill);
+        card.append(track);
+      }
+      addText(card, 'p', 'career-description', match.description || '');
 
       addList(card, 'Skills needed for this role', match.requiredSkills);
       addList(card, 'Your skill gaps', match.skillGaps);
@@ -94,7 +124,7 @@
     });
 
     statusMessage.textContent =
-      `${matches.length} career match${matches.length === 1 ? '' : 'es'} found.`;
+      `${matches.length} career match${matches.length === 1 ? '' : 'es'} found. Match scores use your ratings for each role’s required skills.`;
   }
 
   async function loadMatches() {
