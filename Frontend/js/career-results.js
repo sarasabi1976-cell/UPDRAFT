@@ -131,80 +131,9 @@
       `${matches.length} career match${matches.length === 1 ? '' : 'es'} found. Match scores use your ratings for each role’s required skills.`;
   }
 
-  function makePdfText(value) {
-    return String(value ?? '')
-      .normalize('NFKD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[–—]/g, '-')
-      .replace(/[’‘]/g, "'")
-      .replace(/[“”]/g, '"')
-      .replace(/[^\x20-\x7E]/g, '')
-      .replace(/\\/g, '\\\\')
-      .replace(/\(/g, '\\(')
-      .replace(/\)/g, '\\)');
-  }
-
   function downloadMatchesPdf() {
     if (!currentMatches.length) return;
-    const lines = [
-      'UPDRAFT - PERSONALIZED CAREER MATCHES',
-      `Generated ${new Date().toLocaleDateString()}`,
-      "Match scores reflect your ratings for each role's required skills.",
-      ''
-    ];
-    currentMatches.forEach((match, index) => {
-      lines.push(`${index + 1}. ${match.title || 'Career option'} - ${match.matchPercent ?? 0}% match`);
-      lines.push(match.description || '');
-      lines.push(`Skills needed: ${(match.requiredSkills || []).join(', ') || 'Not listed'}`);
-      lines.push(`Skill gaps: ${(match.skillGaps || []).join(', ') || 'No priority gaps'}`);
-      lines.push('Suggested study order:');
-      (match.studyTasks || []).forEach((task, taskIndex) => lines.push(`  ${taskIndex + 1}. ${task}`));
-      lines.push('');
-    });
-
-    const wrapped = [];
-    lines.forEach(line => {
-      const text = String(line);
-      if (!text) { wrapped.push(''); return; }
-      for (let offset = 0; offset < text.length; offset += 86) wrapped.push(text.slice(offset, offset + 86));
-    });
-    const pages = [];
-    for (let offset = 0; offset < wrapped.length; offset += 46) pages.push(wrapped.slice(offset, offset + 46));
-    const objects = [null];
-    const addObject = value => { objects.push(value); return objects.length - 1; };
-    const fontId = addObject('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>');
-    const pageIds = [];
-    pages.forEach(pageLines => {
-      const commands = ['BT', '/F1 10 Tf', '48 794 Td', '14 TL'];
-      pageLines.forEach((line, lineIndex) => {
-        if (lineIndex) commands.push('T*');
-        commands.push(`(${makePdfText(line)}) Tj`);
-      });
-      commands.push('ET');
-      const stream = commands.join('\n');
-      const contentId = addObject(`<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`);
-      pageIds.push(addObject(`<< /Type /Page /Parent PAGES_ID /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${fontId} 0 R >> >> /Contents ${contentId} 0 R >>`));
-    });
-    const pagesId = addObject(`<< /Type /Pages /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] /Count ${pageIds.length} >>`);
-    pageIds.forEach(id => { objects[id] = objects[id].replace('PAGES_ID', String(pagesId)); });
-    const catalogId = addObject(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`);
-    let pdf = '%PDF-1.4\n';
-    const offsets = [0];
-    for (let id = 1; id < objects.length; id += 1) {
-      offsets[id] = pdf.length;
-      pdf += `${id} 0 obj\n${objects[id]}\nendobj\n`;
-    }
-    const xrefOffset = pdf.length;
-    pdf += `xref\n0 ${objects.length}\n0000000000 65535 f \n`;
-    for (let id = 1; id < objects.length; id += 1) pdf += `${String(offsets[id]).padStart(10, '0')} 00000 n \n`;
-    pdf += `trailer\n<< /Size ${objects.length} /Root ${catalogId} 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`;
-    const blob = new Blob([pdf], { type: 'application/pdf' });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement('a');
-    anchor.href = url;
-    anchor.download = 'updraft-career-matches.pdf';
-    anchor.click();
-    URL.revokeObjectURL(url);
+    window.print();
   }
 
   async function loadMatches() {

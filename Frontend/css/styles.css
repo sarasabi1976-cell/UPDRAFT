@@ -1982,6 +1982,156 @@ footer {
   .bottom-banner button { margin: 6px 0 0; width: 100%; }
 }
 
+@media (max-width: 700px) {
+  /* Keep the compact navigation and dashboard controls clear on phones. */
+  .main {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0 !important;
+    overflow-x: clip;
+  }
+
+  .sidebar {
+    height: calc(76px + env(safe-area-inset-bottom, 0px));
+    padding: 7px 8px calc(7px + env(safe-area-inset-bottom, 0px));
+    z-index: 20;
+  }
+
+  .sidebar nav {
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .sidebar nav .nav-item,
+  .sidebar nav .nav-item.active {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    max-width: none;
+    padding: 3px 1px;
+    gap: 2px;
+    font-size: 8px;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar nav .nav-item > span {
+    height: 18px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .dashboard-page .content {
+    padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .dashboard-page .welcome-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 22px;
+  }
+
+  .dashboard-page .welcome-row > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dashboard-page .welcome-row h1 {
+    max-width: 18ch;
+    font-size: clamp(28px, 7.5vw, 34px);
+    line-height: 1.12;
+    overflow-wrap: normal;
+  }
+
+  .dashboard-page .welcome-row .subhead {
+    max-width: 44ch;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .dashboard-page .welcome-row .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 46px;
+    margin: 10px 0 0;
+    padding: 11px 14px;
+    white-space: normal;
+  }
+
+  .dashboard-page .stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .dashboard-page .stat-card {
+    display: flex;
+    min-width: 0;
+    min-height: 142px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 13px 12px 11px;
+  }
+
+  .dashboard-page .stat-label {
+    min-height: 20px;
+    font-size: 7px;
+    line-height: 1.3;
+    letter-spacing: .45px;
+  }
+
+  .dashboard-page .stat-value {
+    margin: 8px 0 6px;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .dashboard-page .stat-foot {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2px 3px;
+    margin-top: auto;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .dashboard-page .stat-foot .bars,
+  .dashboard-page .stat-foot .micro-line,
+  .dashboard-page .stat-foot .tiny-progress {
+    position: static;
+    inset: auto;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 4px 0 0;
+  }
+
+  .dashboard-page .stat-foot .bars {
+    height: 12px;
+    justify-content: flex-end;
+  }
+
+  .dashboard-page .stat-foot .micro-line {
+    height: 10px;
+    font-size: 12px;
+    line-height: 10px;
+    letter-spacing: -2px;
+    text-align: right;
+  }
+
+  .dashboard-page .stat-foot .tiny-progress {
+    height: 5px;
+  }
+}
 @media (max-width: 380px) {
   .content { padding-right: 12px; padding-left: 12px; }
   .stat-grid { grid-template-columns: minmax(0, 1fr); }
